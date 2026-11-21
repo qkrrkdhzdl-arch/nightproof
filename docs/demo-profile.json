@@ -1,0 +1,132 @@
+{
+ "lang": "en",
+ "bed": "23:00",
+ "wake": "07:00",
+ "alarm": {
+  "enabled": true,
+  "time": "07:00",
+  "dismissed": [],
+  "snoozeUntil": null,
+  "snoozes": {
+   "date": null,
+   "n": 0
+  }
+ },
+ "answers": [
+  {
+   "date": "2026-11-16",
+   "slot": "night",
+   "id": "condition-1-01",
+   "choice": 1,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-17",
+   "slot": "morning",
+   "id": "quantity-2-01",
+   "choice": 0,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-17",
+   "slot": "night",
+   "id": "cause-3-02",
+   "choice": 1,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-18",
+   "slot": "morning",
+   "id": "sample-1-01",
+   "choice": 1,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-18",
+   "slot": "night",
+   "id": "assumption-2-01",
+   "choice": 3,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "morning",
+   "id": "language-1-02",
+   "choice": 1,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-20",
+   "slot": "morning",
+   "id": "condition-4-01",
+   "choice": 0,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-20",
+   "slot": "night",
+   "id": "quantity-4-02",
+   "choice": 4,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "morning",
+   "id": "cause-4-02",
+   "choice": 2,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "night",
+   "id": "sample-3-01",
+   "choice": 0,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "morning",
+   "id": "language-4-02",
+   "choice": 2,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "night",
+   "id": "assumption-3-01",
+   "choice": 3,
+   "correct": true,
+   "ts": 0
+  }
+ ],
+ "urges": [
+  {
+   "date": "2026-11-17",
+   "ts": 0,
+   "note": "headlines"
+  },
+  {
+   "date": "2026-11-19",
+   "ts": 0,
+   "note": ""
+  },
+  {
+   "date": "2026-11-21",
+   "ts": 0,
+   "note": "a fight"
+  }
+ ],
+ "onboarded": true,
+ "coach": false
+}

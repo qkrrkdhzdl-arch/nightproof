@@ -124,7 +124,7 @@
           </div>
           <p class="proof-teaser">${esc(L(item, 'prompt'))}</p>
           ${done
-            ? `<div class="proof-state done">✓ ${t(slot === 'morning' ? 'today.doneMorning' : 'today.doneNight')}</div>`
+            ? `<button class="btn ghost wide" data-act="open" data-slot="${slot}">✓ ${t(slot === 'morning' ? 'today.doneMorning' : 'today.doneNight')} · ${t('common.review')}</button>`
             : locked
               ? `<div class="proof-state">${t(slot === 'morning' ? 'today.waitMorning' : 'today.waitNight')}</div>`
               : `<button class="btn primary wide" data-act="open" data-slot="${slot}">${t(openKey)}</button>`}
@@ -574,7 +574,7 @@
         accuracy: Math.round(s.accuracy * 100)
       }, I18n.getLang());
     } catch (err) {
-      puzzle.noteErr = t('coach.failed');
+      puzzle.noteErr = t('coach.failed') + ' (' + String((err && err.message) || err).slice(0, 90) + ')';
     }
     puzzle.noteBusy = false;
     rerender();

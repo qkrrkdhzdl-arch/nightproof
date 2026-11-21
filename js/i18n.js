@@ -27,6 +27,7 @@
       'common.reveal': 'Show the reasoning',
       'common.lang': '한국어',
       'common.level': 'Level',
+      'common.review': 'read again',
       'common.track': 'Track',
 
       'onboard.title': 'The feed ends here.',
@@ -150,7 +151,7 @@
 
       'coach.title': 'AI Coach',
       'coach.loading': 'Warming the model ({p}%)',
-      'coach.ask': 'Ask the coach about this mistake',
+      'coach.ask': 'Ask the coach about this mistake (about a minute)',
       'coach.thinking': 'The coach is reading your profile…',
       'coach.notLoaded': 'The coach is not loaded on this device. Turn it on in Settings; the rest of the app works without it.',
       'coach.failed': 'The coach could not start here (no WebAssembly or no network for the first download).',
@@ -183,6 +184,7 @@
       'common.reveal': '해설 보기',
       'common.lang': 'English',
       'common.level': '난이도',
+      'common.review': '다시 읽기',
       'common.track': '영역',
 
       'onboard.title': '피드는 여기서 끊깁니다.',
@@ -306,7 +308,7 @@
 
       'coach.title': 'AI 코치',
       'coach.loading': '모델 준비 중 ({p}%)',
-      'coach.ask': '이 실수에 대해 코치에게 묻기',
+      'coach.ask': '이 실수에 대해 코치에게 묻기 (1분쯤 걸립니다)',
       'coach.thinking': '코치가 내 기록을 읽는 중…',
       'coach.notLoaded': '이 기기에 코치가 없습니다. 설정에서 켜면 되고, 나머지 기능은 그대로 동작합니다.',
       'coach.failed': '이 환경에서는 코치를 시작하지 못했습니다(WebAssembly 없음 또는 첫 다운로드 불가).',

@@ -86,7 +86,7 @@
     if (status !== 'ready') throw new Error('not-loaded');
     const prompt = buildPrompt(ctx, lang);
     const out = await pipe([{ role: 'user', content: prompt }], {
-      max_new_tokens: 140,
+      max_new_tokens: 120,
       temperature: 0.6,
       top_p: 0.9,
       do_sample: true,
@@ -94,7 +94,18 @@
     });
     let text = '';
     const first = Array.isArray(out) ? out[0] : out;
-    if (first && first.generated_text) text = first.generated_text;
+    const g = first && first.generated_text;
+    if (typeof g === 'string') text = g;
+    else if (Array.isArray(g)) {
+      const last = g[g.length - 1];
+      text = (last && (last.content || '')) || '';
+    } else if (g && typeof g === 'object') {
+      text = g.content || '';
+    }
+    if (!text) {
+      lastError = 'empty-generation';
+      throw new Error(lastError);
+    }
     // some builds return the whole conversation; keep only what follows the marker
     const marker = lang === 'ko' ? '코치의 메모:' : 'Coach note:';
     const at = text.lastIndexOf(marker);
