@@ -112,7 +112,7 @@
       'progress.noHistory': 'Nothing yet. The first night writes the first row.',
 
       'about.title': 'What is actually behind this',
-      'about.p1': 'Nightproof ships 56 authored items in the shape of Korea’s LEET reasoning section (추리논증), rewritten so that no outside knowledge is needed: conditions, quantity and scope, cause and evidence, samples, assumptions, meaning. Each item has one defensible key and four decoys that each fail in one named way.',
+      'about.p1': 'Nightproof ships 60 authored items in the shape of Korea’s LEET reasoning section (추리논증), rewritten so that no outside knowledge is needed: conditions, quantity and scope, cause and evidence, samples, assumptions, meaning. Each item has one defensible key and four decoys that each fail in one named way.',
       'about.p2': 'The problem bank was written with GPT-6 Astra on the MoDoo AI Lab relay, then every answer key was re-read by Claude Fable 5.1 as a second, hostile examiner. Anything either model called arguable was rewritten or cut. The audit trail is in the repository: gen/ and docs/content-audit.md.',
       'about.p3': 'The three-line diagnosis you see after a wrong answer is authored per decoy, not generated at the moment you tap: a wrong pick can never be met with a made-up explanation. The weekly profile is arithmetic on your own answers.',
       'about.p4': 'The AI coach is different, and smaller than you might expect. It ships no weights: it asks the browser for the model the browser already has (Chrome’s built-in Prompt API / Gemini Nano) and gives it one narrow job — restate the trap you just hit in plainer words, plus one everyday example, without adding logic that is not already in the three authored lines. No key, no server, and nothing about you leaves the device. When the browser has no such model, the panel says exactly that and the authored diagnosis stands on its own.',
@@ -272,7 +272,7 @@
       'progress.noHistory': '아직 기록이 없습니다. 첫 밤이 첫 줄을 씁니다.',
 
       'about.title': '이 앱의 실제 구성',
-      'about.p1': 'Nightproof에는 한국 LEET 추리논증의 형식을 빌린 56문항이 들어 있습니다. 외부 지식 없이 풀리도록 다시 썼고, 조건·양화와 범위·인과와 근거·표본·전제·의미의 여섯 영역을 다룹니다. 각 문항의 정답은 하나이고, 네 개의 오답은 저마다 한 가지 이름 붙은 이유로 틀립니다.',
+      'about.p1': 'Nightproof에는 한국 LEET 추리논증의 형식을 빌린 60문항이 들어 있습니다. 외부 지식 없이 풀리도록 다시 썼고, 조건·양화와 범위·인과와 근거·표본·전제·의미의 여섯 영역을 다룹니다. 각 문항의 정답은 하나이고, 네 개의 오답은 저마다 한 가지 이름 붙은 이유로 틀립니다.',
       'about.p2': '문제 은행은 모두의 AI 실험실 릴레이의 GPT-6 Astra로 작성하고, 정답은 Claude Fable 5.1이 두 번째 심사위원으로 다시 읽었습니다. 어느 모델이든 “논쟁의 여지가 있다”고 한 문항은 고치거나 버렸습니다. 검증 기록은 저장소의 gen/과 docs/content-audit.md에 있습니다.',
       'about.p3': '틀린 뒤 보이는 세 줄 진단은 선지마다 미리 써 둔 것이고, 누르는 순간 생성하지 않습니다. 그 자리에서 지어낸 해설이 나올 수 없다는 뜻입니다. 주간 프로필은 내 답안에 대한 산술입니다.',
       'about.p4': 'AI 코치는 다르고, 생각보다 작습니다. 가중치를 싣지 않고 브라우저가 이미 가진 모델(크롬 내장 Prompt API)에게 일을 하나만 맡깁니다. 방금 밟은 함정을 쉬운 말로 다시 쓰고, 일상적인 예를 하나 붙이는 것 — 이미 저작된 세 줄에 없는 논리를 더하지 않는 조건입니다. 키도, 서버도, 기기 밖으로 나가는 정보도 없습니다. 브라우저에 그런 모델이 없으면 없다고 화면에 적고, 저작된 진단만으로 충분합니다.',
