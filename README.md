@@ -56,13 +56,14 @@ was rewritten or cut. The pipeline is in [`gen/`](gen/), and
 [`docs/content-audit.md`](docs/content-audit.md) records what was generated, what was
 checked, and what the checker flagged. Nothing about an item is generated at runtime.
 
-**2. The coach runs on your device, if you ask it to.**
-`js/coach.js` loads **Qwen2.5-0.5B-Instruct** (q4 ONNX, ~0.3 GB, one time) through
-**Transformers.js**, inside the tab, on WebAssembly. It receives the item you just missed
-and your own seven-day tally for that trap, and writes three sentences: where the error
-comes from, what it costs, and one drill for today. No API key, no server, no request
-carrying your answers anywhere. If it never loads — no WebAssembly, no network for the
-first download — every other feature keeps working and the app says so in the same panel.
+**2. The coach borrows the model your browser already has.**
+`js/coach.js` asks the browser for its built-in on-device model (Chrome's **Prompt API** /
+Gemini Nano) and, when one exists, asks it to restate the trap you just hit in plainer
+words with one everyday example — from the authored three lines only, never re-reasoning
+the passage. No key, no server, Nightproof ships no weights, and nothing about you leaves
+the device. When the browser reports no model, the panel says exactly that and the
+authored diagnosis stands on its own; that is the state most browsers are in today, so
+the app is built to be complete without it.
 
 What is *not* AI: the diagnosis text, the weekly profile, the streaks, the alarm gate.
 Those are authored content and arithmetic, so they are identical for everyone, instant,
@@ -71,15 +72,15 @@ and offline.
 ## Stack
 
 Vanilla JavaScript, no framework, no build step, no dependencies at runtime. Static files
-on GitHub Pages. State in `localStorage`, exportable and importable as JSON. One optional
-dynamic import (Transformers.js) for the coach.
+on GitHub Pages. State in `localStorage`, exportable and importable as JSON. The coach
+uses the browser's own Prompt API when it exists, so there is nothing to download.
 
 ```
 index.html              shell
 css/app.css             the whole design
 js/engine.js            pure logic: slots, deterministic delivery, streaks, profiles, gate
 js/i18n.js              English/Korean strings, trap names, drills
-js/coach.js             on-device 0.5B coach (Transformers.js)
+js/coach.js             optional coach on the browser's built-in model
 js/app.js               views and events
 js/tests.js             52 assertions over engine, i18n, bank and coach prompt
 tests.html              the same suite in a browser
@@ -113,8 +114,9 @@ vary).
 
 ## Limits, stated plainly
 
-- A 0.5B model is a study companion, not an examiner. Its note is a prompt to think, not
-  a verdict, and the app prints that under every note.
+- The coach is the browser's small on-device model, not an examiner. Its note is a prompt
+  to think, not a verdict, and the app prints that under every note. Many browsers have no
+  such model, and Nightproof then says so rather than pretending.
 - A web alarm cannot ring a phone like a native alarm. The gate blocks this app and, while
   the tab is open, is the thing standing between you and everything else in it. Add
   Nightproof to the home screen for the closest thing the web allows.
@@ -125,8 +127,8 @@ vary).
 ## Credits
 
 - Item bank written with GPT-6 Astra, keys audited with Claude Fable 5.1 (MoDoo AI Lab).
-- Coach: [Qwen2.5-0.5B-Instruct](https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct)
-  (Apache-2.0) via [Transformers.js](https://github.com/huggingface/transformers.js) (Apache-2.0).
+- Coach: the browser's built-in on-device model through Chrome's
+  [Prompt API](https://developer.chrome.com/docs/ai/prompt-api).
 - Design, code and copy: Park Gaon.
 
 MIT licensed. © 2026 Park Gaon.

@@ -72,6 +72,9 @@ Raw call log: `work/aitestbed/usage_log.jsonl`, tags prefixed `nightproof-`.
 
 Nothing in the item bank. The diagnosis lines shown after a wrong answer are the authored
 `traps[i].lines_*` of the option the user picked. The weekly profile is arithmetic over the
-user's own answers (`js/engine.js`). The only runtime model is the optional on-device coach
-(Qwen2.5-0.5B-Instruct via Transformers.js), which writes a short note from the missed item
-plus the user's tally and is labelled as a study prompt, not a verdict.
+user's own answers (`js/engine.js`). The only runtime model is the optional coach, which
+uses the browser's own on-device model through Chrome's Prompt API and is given a narrow
+task: restate the authored three lines in plainer words plus one everyday example, with
+the instruction not to add logic that is not in those lines. Its output is cut to two
+sentences and labelled as a study prompt, not a verdict. Where the browser has no such
+model, the panel reports that instead.

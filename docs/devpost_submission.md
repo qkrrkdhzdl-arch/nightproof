@@ -44,7 +44,7 @@ Vanilla JavaScript, no framework, no build step. Three small modules — a pure 
 
 **The item bank** was written with GPT-6 Astra on the MoDoo AI Lab relay, six tracks × ten items, bilingual, with a strict JSON contract (five options, one key, one trap per decoy, three diagnosis lines each). A validator rejects a set if any of that is missing. Every key was then re-read by Claude Fable 5.1 with one job: is this the *only* defensible option? Anything arguable was rewritten or cut. The whole audit — including the honest part about how many items got the second-model read — is in `docs/content-audit.md`.
 
-**The coach** is a separate, optional thing: Qwen2.5-0.5B-Instruct, q4 ONNX, run in the tab through Transformers.js and ONNX Runtime Web. It takes the item you just missed and *your own* seven-day tally for that trap and writes three sentences. No key, no server, nothing about you leaving the device. If it does not load, the app says so in the same panel and everything else keeps working.
+**The coach** is a separate, optional thing, and it ships no weights: it asks the browser for the model the browser already has (Chrome's Prompt API / Gemini Nano) and hands it a narrow job — restate the authored three lines in plainer words, plus one everyday example, without adding new logic. No key, no server, nothing about you leaving the device. I tried shipping a small ONNX model in the page first; a 0.5B model took minutes and a 135M model wrote nonsense, and both were a 100 MB+ download for a worse answer than the authored lines. Using the browser's model is the honest version, and when the browser has none the panel says so in one line.
 
 ## Challenges
 
@@ -66,5 +66,5 @@ Spaced repetition of the traps you keep missing (the profile already knows them)
 
 ## Required fields
 
-- **AI implementation (required):** item authoring and answer-key auditing with GPT-6 Astra and Claude Fable 5.1 (documented in `docs/content-audit.md`); runtime AI is the optional on-device Qwen2.5-0.5B-Instruct coach via Transformers.js. No API keys ship with the app.
+- **AI implementation (required):** item authoring and answer-key auditing with GPT-6 Astra and Claude Fable 5.1, documented item by item in `docs/content-audit.md`; at runtime, the optional coach on the browser's built-in on-device model (Chrome Prompt API), no keys shipped.
 - **My contribution:** everything — idea, item contract, generation/validation/audit pipeline, engine, UI, English/Korean copy, tests, deployment. AI tools used: GPT-6 Astra and Claude Fable 5.1 for content and audit; an AI coding assistant for scaffolding and review.
