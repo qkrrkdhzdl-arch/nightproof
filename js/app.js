@@ -256,26 +256,31 @@
   function coachBlock(item, chosen) {
     const trap = item.traps[chosen];
     const profile = Engine.tagProfile(state, problems, now(), 7);
-    const s = Engine.summary(state, problems, now());
     const tally = profile[trap ? trap.tag : ''] || { wrong: 0, exposure: 0 };
+    const head = `<h2>${t('coach.title')}</h2>`;
+    const tallyLine = `<p class="fine">${esc(I18n.tagName(trap.tag))} · ${esc(t('progress.weakLine', { w: tally.wrong, e: tally.exposure }))}</p>`;
+
     if (Coach.status === 'ready') {
       if (puzzle.note) {
-        return `<section class="block coach"><h2>${t('coach.title')}</h2>
+        return `<section class="block coach">${head}
           <p class="coach-note">${esc(puzzle.note)}</p>
           <p class="fine">${t('coach.disclaimer')}</p></section>`;
       }
-      return `<section class="block coach"><h2>${t('coach.title')}</h2>
-        <p class="fine">${esc(I18n.tagName(trap.tag))} · ${esc(t('progress.weakLine', { w: tally.wrong, e: tally.exposure }))}</p>
+      return `<section class="block coach">${head}${tallyLine}
         <button class="btn" data-act="coach" ${puzzle.noteBusy ? 'disabled' : ''}>${puzzle.noteBusy ? t('coach.thinking') : t('coach.ask')}</button>
         ${puzzle.noteErr ? `<p class="warn">${esc(puzzle.noteErr)}</p>` : ''}
         <p class="fine">${t('coach.disclaimer')}</p></section>`;
     }
-    if (Coach.status === 'loading') {
-      return `<section class="block coach"><h2>${t('coach.title')}</h2><p class="fine">${t('coach.loading', { p: coachUi.progress })}</p></section>`;
+    if (Coach.status === 'loading' || Coach.status === 'checking') {
+      return `<section class="block coach">${head}<p class="fine">${t('coach.loading', { p: Coach.progress })}</p></section>`;
     }
-    return `<section class="block coach"><h2>${t('coach.title')}</h2>
-      <p class="fine">${Coach.status === 'error' ? t('coach.failed') : t('coach.notLoaded')}</p>
-      <button class="btn ghost" data-act="route" data-route="settings">${t('nav.settings')}</button></section>`;
+    if (Coach.status === 'unavailable') {
+      return `<section class="block coach">${head}<p class="fine">${t('coach.unavailable')}</p></section>`;
+    }
+    return `<section class="block coach">${head}
+      <p class="fine">${t('coach.notLoaded')}</p>
+      <button class="btn ghost" data-act="coach-check">${t('coach.check')}</button>
+      ${puzzle.noteErr ? `<p class="warn">${esc(puzzle.noteErr)}</p>` : ''}</section>`;
   }
 
   /* ---------- progress ---------- */
@@ -404,9 +409,10 @@
         <p class="fine">${t('settings.alarmHint')}</p>
         <button class="btn ghost" data-act="gate-preview">${t('settings.gatePreview')}</button>
         <div class="setting"><span>${t('settings.coach')}</span>
-          ${c === 'ready'
-            ? `<span class="ok-pill">${t('settings.coachReady')}</span>`
-            : `<button class="btn" data-act="coach-load" ${c === 'loading' || coachUi.busy ? 'disabled' : ''}>${c === 'loading' ? t('coach.loading', { p: coachUi.progress }) : t('settings.coachLoad')}</button>`}
+          <span class="row">
+            <span class="${c === 'ready' ? 'ok-pill' : 'fine'}">${c === 'ready' ? t('settings.coachReady') : c === 'checking' ? t('settings.coachChecking') : c === 'unavailable' ? t('settings.coachNone') : t('settings.coachOff')}</span>
+            <button class="btn ghost" data-act="coach-check">${t('coach.check')}</button>
+          </span>
         </div>
         <p class="fine">${t('settings.coachHint')}</p>
         ${coachUi.err ? `<p class="warn">${esc(coachUi.err)}</p>` : ''}
@@ -561,6 +567,8 @@
     puzzle.noteErr = null;
     rerender();
     try {
+      await Coach.ensure();
+      rerender();
       puzzle.note = await Coach.note({
         lines: trap['lines_' + I18n.getLang()] || trap.lines_en,
         trapName: I18n.tagName(trap.tag)
@@ -572,17 +580,18 @@
     rerender();
   }
 
-  async function loadCoach() {
+  async function coachCheck() {
     coachUi.busy = true;
     coachUi.err = null;
+    coachUi.detail = null;
     rerender();
     try {
-      await Coach.load((p) => { coachUi.progress = p; if (route === 'settings') rerender(); });
-      state.coach = true;
+      const st = await Coach.probe();
+      state.coach = st === 'ready' || st === 'idle';
       save();
     } catch (e) {
       coachUi.err = t('coach.failed');
-      coachUi.detail = String((Coach.error || '').slice(0, 160));
+      coachUi.detail = String((Coach.error || e || '').slice(0, 140));
     }
     coachUi.busy = false;
     rerender();
@@ -738,7 +747,7 @@
       rerender();
       return;
     }
-    if (act === 'coach-load') { loadCoach(); return; }
+    if (act === 'coach-check') { coachCheck(); return; }
     if (act === 'export') { exportJson(); return; }
     if (act === 'import') { importJson(); return; }
     if (act === 'reset') { reset(); return; }
@@ -806,7 +815,7 @@
     }
     render();
     checkGate();
-    if (state.coach) loadCoach();
+    Coach.probe().then(() => { if (route === 'solve' || route === 'settings') rerender(); });
     setInterval(() => {
       checkGate();
       if (route === 'today' || route === 'solve') {

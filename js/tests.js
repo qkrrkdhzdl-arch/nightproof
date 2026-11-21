@@ -118,6 +118,9 @@
   ok('coach: the prompt carries the authored lines', prompt.includes('It is a requirement, not a guarantee.'));
   ok('coach: the prompt asks for two sentences and forbids invention', prompt.includes('two sentences') && prompt.toLowerCase().includes('do not add logic'));
   ok('coach: the prompt forbids markdown', prompt.toLowerCase().includes('no markdown'));
+  eq('coach: output is cut to two sentences', Coach.tidy('One. Two. Three. Four.', 'en'), 'One. Two.');
+  ok('coach: markdown is stripped', !/[*#`]/.test(Coach.tidy('**A** trap #1.', 'en')));
+  ok('coach: the coach reports a status without a model', ['idle', 'checking', 'ready', 'unavailable', 'error'].includes(Coach.status));
 
   global.__TEST_RESULTS__ = results;
   const passed = results.filter((r) => r.pass).length;
