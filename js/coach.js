@@ -4,7 +4,7 @@
  * If it does not load, the rest of the app is unaffected. */
 (function (global) {
   const NP = global.NP || (global.NP = {});
-  const CDN = 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.web.js';
+  const CDN = 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/+esm';
   const MODEL = 'onnx-community/Qwen2.5-0.5B-Instruct';
 
   let pipe = null;
