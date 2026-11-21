@@ -106,7 +106,7 @@
     const primary = p === 'morning' ? 'morning' : 'night';
     const primaryDone = primary === 'morning' ? morningDone : nightDone;
     const yesterday = Engine.weekStrip(state, now(), 3)[1];
-    const missed = yesterday && !yesterday.done;
+    const missed = yesterday && !yesterday.done && state.answers.length > 0;
 
     const card = (slot, done, labelKey, openKey, locked) => {
       const item = problemFor(slot);
@@ -133,12 +133,8 @@
       ${header()}
       <main class="wrap">
         <section class="hero-block">
-          <h1 class="hero-line">${p === 'morning' ? 'Good morning.' : p === 'night' ? 'The day is closed.' : 'Between the two.'}</h1>
-          <p class="hero-sub">${p === 'morning'
-            ? 'One problem before anything else opens.'
-            : p === 'night'
-              ? 'One problem instead of the last scroll.'
-              : 'Tonight’s proof opens at 20:00.'}</p>
+          <h1 class="hero-line">${t(p === 'morning' ? 'today.heroMorning' : p === 'night' ? 'today.heroNight' : 'today.heroDay')}</h1>
+          <p class="hero-sub">${t(p === 'morning' ? 'today.subMorning' : p === 'night' ? 'today.subNight' : 'today.subDay')}</p>
         </section>
 
         ${showMorning && p !== 'night' ? card('morning', morningDone, 'today.morning', 'today.openMorning', false) : ''}
