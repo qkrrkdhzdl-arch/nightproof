@@ -5,7 +5,7 @@
 (function (global) {
   const NP = global.NP || (global.NP = {});
   const CDN = 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/+esm';
-  const MODEL = 'onnx-community/Qwen2.5-0.5B-Instruct';
+  const MODEL = 'HuggingFaceTB/SmolLM2-135M-Instruct';
 
   let pipe = null;
   let status = 'idle'; // idle | loading | ready | error

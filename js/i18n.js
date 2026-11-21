@@ -136,10 +136,10 @@
       'settings.notifyOn': 'Reminders on',
       'settings.notifyDenied': 'The browser did not grant notifications.',
       'settings.coach': 'AI Coach (on this device)',
-      'settings.coachLoad': 'Load the coach (0.3 GB, once)',
+      'settings.coachLoad': 'Load the coach (about 100 MB, once)',
       'settings.coachReady': 'Coach loaded',
       'settings.coachClear': 'Remove the coach from this device',
-      'settings.coachHint': 'Runs Qwen2.5-0.5B-Instruct in this tab with WebAssembly. Nothing leaves the device.',
+      'settings.coachHint': 'Runs SmolLM2-135M-Instruct in this tab with WebAssembly: a tiny model that only restates your trap in plainer words. Nothing leaves the device.',
       'settings.data': 'Your data',
       'settings.export': 'Export as JSON',
       'settings.import': 'Import JSON',
@@ -155,7 +155,7 @@
       'coach.thinking': 'The coach is reading your profile…',
       'coach.notLoaded': 'The coach is not loaded on this device. Turn it on in Settings; the rest of the app works without it.',
       'coach.failed': 'The coach could not start here (no WebAssembly or no network for the first download).',
-      'coach.disclaimer': 'Written by a 0.5B model on this device. A prompt to think, not a verdict.',
+      'coach.disclaimer': 'Written by a 135M model on this device. A prompt to think, not a verdict.',
 
       'toast.saved': 'Saved',
       'toast.dismissed': 'Gate dismissed'
@@ -293,10 +293,10 @@
       'settings.notifyOn': '알림 켜짐',
       'settings.notifyDenied': '브라우저가 알림을 허용하지 않았습니다.',
       'settings.coach': 'AI 코치(이 기기에서 실행)',
-      'settings.coachLoad': '코치 내려받기(0.3GB, 1회)',
+      'settings.coachLoad': '코치 내려받기(약 100MB, 1회)',
       'settings.coachReady': '코치 준비됨',
       'settings.coachClear': '이 기기에서 코치 삭제',
-      'settings.coachHint': 'Qwen2.5-0.5B-Instruct를 WebAssembly로 이 탭에서 실행합니다. 아무것도 기기 밖으로 나가지 않습니다.',
+      'settings.coachHint': 'SmolLM2-135M-Instruct를 WebAssembly로 이 탭에서 실행합니다. 방금 밟은 함정을 쉬운 말로 바꿔 주는 작은 모델입니다. 아무것도 기기 밖으로 나가지 않습니다.',
       'settings.data': '내 기록',
       'settings.export': 'JSON으로 내보내기',
       'settings.import': 'JSON 불러오기',
@@ -312,7 +312,7 @@
       'coach.thinking': '코치가 내 기록을 읽는 중…',
       'coach.notLoaded': '이 기기에 코치가 없습니다. 설정에서 켜면 되고, 나머지 기능은 그대로 동작합니다.',
       'coach.failed': '이 환경에서는 코치를 시작하지 못했습니다(WebAssembly 없음 또는 첫 다운로드 불가).',
-      'coach.disclaimer': '이 기기의 0.5B 모델이 쓴 글입니다. 판정이 아니라 생각할 거리입니다.',
+      'coach.disclaimer': '이 기기의 135M 모델이 쓴 글입니다. 판정이 아니라 생각할 거리입니다.',
 
       'toast.saved': '저장했습니다',
       'toast.dismissed': '게이트를 닫았습니다'
