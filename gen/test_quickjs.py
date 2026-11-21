@@ -6,7 +6,7 @@ from pathlib import Path
 
 import quickjs
 
-SITE = Path("/workspace/work/64cha-byaa/site")
+SITE = Path("/workspace/work/64cha-byaa")
 ctx = quickjs.Context()
 
 ctx.eval("globalThis.window = globalThis;")

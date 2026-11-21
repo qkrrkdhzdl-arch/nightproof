@@ -8,7 +8,7 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
-ROOT = Path("/workspace/work/64cha-byaa/site")
+ROOT = Path("/workspace/work/64cha-byaa")
 PORT = 8141
 BASE = f"http://127.0.0.1:{PORT}"
 

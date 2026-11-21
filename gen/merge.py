@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate generated items and merge them into site/data/problems.json."""
+"""Validate generated items and merge them into data/problems.json."""
 import glob
 import json
 import os
@@ -74,7 +74,7 @@ def main():
     # order: track order, then id
     order = ["condition", "quantity", "cause", "sample", "assumption", "language"]
     items.sort(key=lambda i: (order.index(i["track"]), i["id"]))
-    dest = os.path.join(ROOT, "site", "data", "problems.json")
+    dest = os.path.join(ROOT, "data", "problems.json")
     json.dump(items, open(dest, "w"), ensure_ascii=False, indent=1)
     print("wrote", dest, os.path.getsize(dest), "bytes")
 

@@ -9,7 +9,7 @@ sys.path.insert(0, "/workspace/work/aitestbed")
 from ask_model import ask  # noqa: E402
 
 ROOT = "/workspace/work/64cha-byaa"
-ITEMS = json.load(open(os.path.join(ROOT, "site/data/problems.json")))
+ITEMS = json.load(open(os.path.join(ROOT, "data/problems.json")))
 
 SYS = ("You are a strict item-reviewer for a reasoning test. You only look at logic: whether exactly "
        "one option is defensible, whether the stated key is right, and whether any other option could "

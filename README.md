@@ -75,17 +75,16 @@ on GitHub Pages. State in `localStorage`, exportable and importable as JSON. One
 dynamic import (Transformers.js) for the coach.
 
 ```
-site/
-  index.html            shell
-  css/app.css           the whole design
-  js/engine.js          pure logic: slots, deterministic delivery, streaks, profiles, gate
-  js/i18n.js            English/Korean strings, trap names, drills
-  js/coach.js           on-device 0.5B coach (Transformers.js)
-  js/app.js             views and events
-  js/tests.js           52 assertions over engine, i18n, bank and coach prompt
-  tests.html            the same suite in a browser
-  data/problems.json    60 items, bilingual, with per-decoy diagnoses
-  sw.js, manifest.webmanifest
+index.html              shell
+css/app.css             the whole design
+js/engine.js            pure logic: slots, deterministic delivery, streaks, profiles, gate
+js/i18n.js              English/Korean strings, trap names, drills
+js/coach.js             on-device 0.5B coach (Transformers.js)
+js/app.js               views and events
+js/tests.js             52 assertions over engine, i18n, bank and coach prompt
+tests.html              the same suite in a browser
+data/problems.json      60 items, bilingual, with per-decoy diagnoses
+sw.js, manifest.webmanifest, .nojekyll
 gen/                    generation, repair, merge, verify and test scripts
 docs/content-audit.md   what the models wrote, what the checker found
 ```
@@ -93,7 +92,7 @@ docs/content-audit.md   what the models wrote, what the checker found
 ## Run it
 
 ```bash
-cd site
+cd .
 python3 -m http.server 8000
 # http://localhost:8000
 ```
