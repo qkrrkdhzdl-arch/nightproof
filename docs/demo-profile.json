@@ -14,41 +14,97 @@
  },
  "answers": [
   {
-   "date": "2026-11-16",
+   "date": "2026-11-06",
    "slot": "night",
    "id": "condition-1-01",
+   "choice": 2,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-07",
+   "slot": "night",
+   "id": "cause-5-02",
+   "choice": 4,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-08",
+   "slot": "night",
+   "id": "language-4-02",
+   "choice": 4,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-09",
+   "slot": "night",
+   "id": "condition-1-02",
+   "choice": 0,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-10",
+   "slot": "night",
+   "id": "sample-5-01",
+   "choice": 3,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-11",
+   "slot": "night",
+   "id": "language-5-02",
+   "choice": 4,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-12",
+   "slot": "night",
+   "id": "condition-2-01",
+   "choice": 2,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-13",
+   "slot": "night",
+   "id": "language-3-01",
    "choice": 1,
    "correct": true,
    "ts": 0
   },
   {
-   "date": "2026-11-17",
+   "date": "2026-11-14",
+   "slot": "night",
+   "id": "sample-2-02",
+   "choice": 1,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-16",
    "slot": "morning",
-   "id": "quantity-2-01",
+   "id": "condition-2-02",
    "choice": 0,
    "correct": false,
    "ts": 0
   },
   {
    "date": "2026-11-17",
-   "slot": "night",
-   "id": "cause-3-02",
-   "choice": 1,
+   "slot": "morning",
+   "id": "quantity-1-02",
+   "choice": 3,
    "correct": false,
    "ts": 0
   },
   {
    "date": "2026-11-18",
    "slot": "morning",
-   "id": "sample-1-01",
-   "choice": 1,
-   "correct": true,
-   "ts": 0
-  },
-  {
-   "date": "2026-11-18",
-   "slot": "night",
-   "id": "assumption-2-01",
+   "id": "sample-3-02",
    "choice": 3,
    "correct": true,
    "ts": 0
@@ -56,57 +112,33 @@
   {
    "date": "2026-11-19",
    "slot": "morning",
-   "id": "language-1-02",
+   "id": "condition-3-02",
+   "choice": 3,
+   "correct": false,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-20",
+   "slot": "morning",
+   "id": "assumption-2-01",
+   "choice": 3,
+   "correct": true,
+   "ts": 0
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "morning",
+   "id": "quantity-1-01",
    "choice": 1,
    "correct": false,
    "ts": 0
   },
   {
-   "date": "2026-11-20",
-   "slot": "morning",
-   "id": "condition-4-01",
-   "choice": 0,
-   "correct": true,
-   "ts": 0
-  },
-  {
-   "date": "2026-11-20",
-   "slot": "night",
-   "id": "quantity-4-02",
-   "choice": 4,
-   "correct": true,
-   "ts": 0
-  },
-  {
-   "date": "2026-11-21",
-   "slot": "morning",
-   "id": "cause-4-02",
-   "choice": 2,
-   "correct": false,
-   "ts": 0
-  },
-  {
-   "date": "2026-11-21",
-   "slot": "night",
-   "id": "sample-3-01",
-   "choice": 0,
-   "correct": true,
-   "ts": 0
-  },
-  {
    "date": "2026-11-22",
    "slot": "morning",
-   "id": "language-4-02",
+   "id": "condition-3-01",
    "choice": 2,
    "correct": false,
-   "ts": 0
-  },
-  {
-   "date": "2026-11-22",
-   "slot": "night",
-   "id": "assumption-3-01",
-   "choice": 3,
-   "correct": true,
    "ts": 0
   }
  ],
@@ -125,6 +157,11 @@
    "date": "2026-11-21",
    "ts": 0,
    "note": "a fight"
+  },
+  {
+   "date": "2026-11-22",
+   "ts": 0,
+   "note": ""
   }
  ],
  "onboarded": true,
