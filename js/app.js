@@ -143,7 +143,7 @@
         <div class="tiles">
           ${statTile(s.streak, t('today.streakLabel'))}
           ${statTile(detox, t('today.detoxLabel'))}
-          ${statTile(state.alarm.enabled ? t('today.alarmOn') : t('today.alarmOff'), t('settings.alarm'))}
+          ${statTile(Math.round(s.accuracy * 100) + '%', t('progress.accuracy'))}
         </div>
 
         <section class="block">
@@ -279,7 +279,7 @@
     const n = Engine.TAGS.length;
     const cx = 150, cy = 150, R = 96;
     const vals = Engine.TAGS.map((tg) => (tags[tg] ? tags[tg].wrong : 0));
-    const max = Math.max(1, ...vals);
+    const max = Math.max(3, ...vals);
     const pt = (i, r) => {
       const a = -Math.PI / 2 + (i * 2 * Math.PI) / n;
       return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
