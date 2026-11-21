@@ -410,6 +410,7 @@
         </div>
         <p class="fine">${t('settings.coachHint')}</p>
         ${coachUi.err ? `<p class="warn">${esc(coachUi.err)}</p>` : ''}
+        ${coachUi.detail ? `<p class="fine mono">${esc(coachUi.detail)}</p>` : ''}
         <div class="setting"><span>${t('settings.data')}</span>
           <span class="row">
             <button class="btn ghost" data-act="export">${t('settings.export')}</button>
@@ -589,6 +590,7 @@
       save();
     } catch (e) {
       coachUi.err = t('coach.failed');
+      coachUi.detail = String((Coach.error || '').slice(0, 160));
     }
     coachUi.busy = false;
     rerender();

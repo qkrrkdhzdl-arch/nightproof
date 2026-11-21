@@ -25,18 +25,24 @@
       const { pipeline, env } = mod;
       env.allowLocalModels = false;
       env.useBrowserCache = true;
-      pipe = await pipeline('text-generation', MODEL, {
-        dtype: 'q4',
-        device: 'wasm',
-        progress_callback: (p) => {
-          if (p && p.status === 'progress' && typeof p.progress === 'number') {
-            progress = Math.round(p.progress);
-            if (onProgress) onProgress(progress);
-          }
+      const progress_callback = (p) => {
+        if (p && p.status === 'progress' && typeof p.progress === 'number') {
+          progress = Math.round(p.progress);
+          if (onProgress) onProgress(progress);
         }
-      });
-      status = 'ready';
-      return pipe;
+      };
+      const options = [{ dtype: 'q4' }, { dtype: 'q4f16' }, {}];
+      let last;
+      for (const opt of options) {
+        try {
+          pipe = await pipeline('text-generation', MODEL, Object.assign({ progress_callback }, opt));
+          status = 'ready';
+          return pipe;
+        } catch (err) {
+          last = err;
+        }
+      }
+      throw last || new Error('pipeline failed');
     } catch (err) {
       status = 'error';
       lastError = String(err && err.message ? err.message : err);
