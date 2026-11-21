@@ -114,9 +114,10 @@
   }
 
   /* ---- coach prompt ---- */
-  const prompt = Coach.buildPrompt({ passage: 'P', prompt: 'Q', choice: 'C', trapName: 'T', key: 'K', wrong: 2, exposure: 5, accuracy: 50 }, 'en');
-  ok('coach: the prompt carries the tally, not a generic question', prompt.includes('2 times') && prompt.includes('5 times'));
-  ok('coach: the prompt forbids invention', prompt.toLowerCase().includes('invent nothing'));
+  const prompt = Coach.buildPrompt({ lines: ['You read only if as if.', 'It is a requirement, not a guarantee.', 'Read the rule backwards.'], trapName: 'Necessary / sufficient swap' }, 'en');
+  ok('coach: the prompt carries the authored lines', prompt.includes('It is a requirement, not a guarantee.'));
+  ok('coach: the prompt asks for two sentences and forbids invention', prompt.includes('two sentences') && prompt.toLowerCase().includes('do not add logic'));
+  ok('coach: the prompt forbids markdown', prompt.toLowerCase().includes('no markdown'));
 
   global.__TEST_RESULTS__ = results;
   const passed = results.filter((r) => r.pass).length;

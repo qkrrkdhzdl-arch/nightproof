@@ -561,17 +561,9 @@
     puzzle.noteErr = null;
     rerender();
     try {
-      const s = Engine.summary(state, problems, now());
-      const tally = s.tags[trap.tag] || { wrong: 0, exposure: 0 };
       puzzle.note = await Coach.note({
-        passage: L(item, 'passage'),
-        prompt: L(item, 'prompt'),
-        choice: (item['options_' + I18n.getLang()] || item.options_en)[rec.choice],
-        trapName: I18n.tagName(trap.tag),
-        key: (item['options_' + I18n.getLang()] || item.options_en)[item.answer],
-        wrong: tally.wrong,
-        exposure: tally.exposure,
-        accuracy: Math.round(s.accuracy * 100)
+        lines: trap['lines_' + I18n.getLang()] || trap.lines_en,
+        trapName: I18n.tagName(trap.tag)
       }, I18n.getLang());
     } catch (err) {
       puzzle.noteErr = t('coach.failed') + ' (' + String((err && err.message) || err).slice(0, 90) + ')';

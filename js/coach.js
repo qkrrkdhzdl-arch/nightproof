@@ -50,47 +50,39 @@
     }
   }
 
-  /* The note is written from the item the reader just got wrong plus their own
-   * weekly tally. The prompt is deliberately narrow: 3 short sentences, no
-   * lecture, no invented facts about the passage. */
+  /* The note is written from the authored trap the reader just hit. The task is
+   * deliberately narrow — restate given lines in plainer words and give one
+   * everyday example — because a 0.5B model should not be inventing new logic
+   * about the passage. Anything outside those two sentences is cut. */
   function buildPrompt(ctx, lang) {
-    const lines = lang === 'ko'
-      ? [
-        '너는 논리 학습 코치다. 아래는 학습자가 방금 틀린 추리 문제의 요약과, 학습자의 일주일 함정 기록이다.',
-        '규칙: 3문장 이내. 문장마다 25단어 이내. 지문에 없는 사실을 만들지 말 것. 칭찬으로 시작하지 말 것.',
-        '마지막 문장은 오늘 바로 해 볼 구체적인 행동 하나.',
-        '지문 요지: ' + ctx.passage,
-        '질문: ' + ctx.prompt,
-        '학습자가 고른 선지: ' + ctx.choice,
-        '그 선지의 함정: ' + ctx.trapName,
-        '정답 선지: ' + ctx.key,
-        '학습자의 최근 7일: 이 함정에 ' + ctx.wrong + '번 빠짐(노출 ' + ctx.exposure + '번). 전체 정답률 ' + ctx.accuracy + '%.',
-        '코치의 메모:'
-      ]
-      : [
-        'You are a logic coach. Below is the item a student just missed, and their tally of traps for the week.',
-        'Rules: at most 3 sentences. At most 25 words each. Invent nothing that is not in the passage. Do not open with praise.',
-        'The last sentence must be one concrete action they can take today.',
-        'Passage gist: ' + ctx.passage,
-        'Question: ' + ctx.prompt,
-        'Option the student chose: ' + ctx.choice,
-        'The trap in that option: ' + ctx.trapName,
-        'The key: ' + ctx.key,
-        'Student’s last 7 days: fell for this trap ' + ctx.wrong + ' times (it was on the board ' + ctx.exposure + ' times). Overall accuracy ' + ctx.accuracy + '%.',
-        'Coach note:'
-      ];
-    return lines.join('\n');
+    const lines = (ctx.lines || []).join(' ');
+    if (lang === 'ko') {
+      return [
+        '아래 세 줄은 방금 학습자가 밟은 논리 함정에 대한 설명이다. 이 내용만 써서 두 문장을 만들어라.',
+        '규칙: 1문장은 쉬운 말로 다시 쓴 것(20단어 이내), 2문장은 일상적인 예 하나(20단어 이내).',
+        '머리말, 목록, 마크다운 금지. 주어진 세 줄에 없는 논리를 새로 만들지 말 것.',
+        '설명: ' + lines,
+        '출력:'
+      ].join('\n');
+    }
+    return [
+      'The three lines below explain a logical trap a reader just fell into. Using only this content, write two sentences.',
+      'Rules: sentence 1 restates it in plainer words (max 20 words). Sentence 2 gives one everyday example (max 20 words).',
+      'No preamble, no list, no markdown. Do not add logic that is not in the three lines.',
+      'The three lines: ' + lines,
+      'Output:'
+    ].join('\n');
   }
 
   async function note(ctx, lang) {
     if (status !== 'ready') throw new Error('not-loaded');
     const prompt = buildPrompt(ctx, lang);
     const out = await pipe([{ role: 'user', content: prompt }], {
-      max_new_tokens: 120,
-      temperature: 0.6,
-      top_p: 0.9,
+      max_new_tokens: 90,
+      temperature: 0.35,
+      top_p: 0.85,
       do_sample: true,
-      repetition_penalty: 1.1
+      repetition_penalty: 1.25
     });
     let text = '';
     const first = Array.isArray(out) ? out[0] : out;
@@ -107,10 +99,19 @@
       throw new Error(lastError);
     }
     // some builds return the whole conversation; keep only what follows the marker
-    const marker = lang === 'ko' ? '코치의 메모:' : 'Coach note:';
+    const marker = lang === 'ko' ? '출력:' : 'Output:';
     const at = text.lastIndexOf(marker);
     if (at >= 0) text = text.slice(at + marker.length);
-    text = text.replace(/<\|[^>]*\|>/g, '').trim();
+    text = text
+      .replace(/<\|[^>]*\|>/g, ' ')
+      .replace(/[*#>`_]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    // keep at most the first two sentences, and at most 60 words
+    const sentences = text.match(/[^.!?\u3002]+[.!?\u3002]?/g) || [text];
+    text = sentences.slice(0, 2).join(' ').trim();
+    const words = text.split(' ');
+    if (words.length > 60) text = words.slice(0, 60).join(' ') + '…';
     return text;
   }
 
