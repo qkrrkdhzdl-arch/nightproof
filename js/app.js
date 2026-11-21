@@ -736,8 +736,13 @@
   document.addEventListener('change', (e) => {
     const el = e.target.closest('[data-act]');
     if (!el) return;
-    if (el.dataset.act === 'bed') { state.bed = el.value; save(); }
+    if (el.dataset.act === 'bed') {
+      if (!el.value) return;
+      state.bed = el.value;
+      save();
+    }
     if (el.dataset.act === 'wake') {
+      if (!el.value) return;
       state.wake = el.value;
       state.alarm.time = el.value;
       save();
