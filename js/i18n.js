@@ -83,6 +83,9 @@
       'gate.snoozesLeft': 'snoozes left',
       'gate.read': 'Dismiss by reading the reasoning',
       'gate.closed': 'Gate dismissed for today.',
+      'gate.previewTag': 'preview',
+      'gate.previewBody': 'This is a preview, not your morning. Nothing is recorded; close it and the app is yours again.',
+      'settings.gatePreview': 'Preview the morning gate',
 
       'urge.title': 'Sixty seconds instead of the feed.',
       'urge.body': 'Breathe once for four counts, hold for four, out for six. Then name what you were about to look for — the reason matters less than noticing it.',
@@ -236,6 +239,9 @@
       'gate.snoozesLeft': '회 남음',
       'gate.read': '해설을 읽고 닫기',
       'gate.closed': '오늘 게이트는 닫혔습니다.',
+      'gate.previewTag': '미리보기',
+      'gate.previewBody': '지금은 아침이 아닙니다. 여기서 고른 답은 기록되지 않으며, 닫으면 그대로 돌아갑니다.',
+      'settings.gatePreview': '아침 게이트 미리보기',
 
       'urge.title': '피드 대신 60초.',
       'urge.body': '네 박자 들이쉬고, 네 박자 멈추고, 여섯 박자 내쉬세요. 그리고 방금 무엇을 보려 했는지 적어 보세요. 이유보다 알아차림이 먼저입니다.',

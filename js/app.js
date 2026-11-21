@@ -8,7 +8,7 @@
   let problems = [];
   let route = 'today';
   let puzzle = { slot: null, reveal: false, note: null, noteBusy: false, noteErr: null };
-  let gate = { open: false, choice: null, reveal: false };
+  let gate = { open: false, preview: false, choice: null, reveal: false };
   let coachUi = { busy: false, progress: 0, err: null };
 
   /* ---------- state ---------- */
@@ -32,7 +32,12 @@
       if (!raw) return defaults();
       const parsed = JSON.parse(raw);
       const base = defaults();
-      return Object.assign(base, parsed, { alarm: Object.assign(base.alarm, parsed.alarm || {}) });
+      const merged = Object.assign(base, parsed, { alarm: Object.assign(base.alarm, parsed.alarm || {}) });
+      const time = /^\d{2}:\d{2}$/;
+      if (!time.test(merged.bed)) merged.bed = base.bed;
+      if (!time.test(merged.wake)) merged.wake = base.wake;
+      if (!time.test(merged.alarm.time)) merged.alarm.time = merged.wake;
+      return merged;
     } catch (e) {
       return defaults();
     }
@@ -397,6 +402,7 @@
         <div class="setting"><span>${t('settings.alarm')}</span>
           <label class="switch"><input type="checkbox" data-act="alarm" ${state.alarm.enabled ? 'checked' : ''}><i></i></label></div>
         <p class="fine">${t('settings.alarmHint')}</p>
+        <button class="btn ghost" data-act="gate-preview">${t('settings.gatePreview')}</button>
         <div class="setting"><span>${t('settings.coach')}</span>
           ${c === 'ready'
             ? `<span class="ok-pill">${t('settings.coachReady')}</span>`
@@ -457,7 +463,8 @@
     return `
       <div class="overlay gate">
         <div class="gate-box">
-          <span class="eyebrow">${t('gate.eyebrow')}</span>
+          <span class="eyebrow">${t('gate.eyebrow')}${gate.preview ? ' · ' + t('gate.previewTag') : ''}</span>
+          ${gate.preview ? `<p class="fine">${t('gate.previewBody')}</p>` : ''}
           <h2 class="gate-title">${t('gate.title')}</h2>
           <p class="gate-body">${t('gate.body')}</p>
           <article class="paper gate-paper">
@@ -475,7 +482,8 @@
           <div class="gate-actions">
             ${right ? `<button class="btn primary" data-act="gate-close">${t('common.next')}</button>` : ''}
             <button class="btn ghost" data-act="gate-read">${t('gate.read')}</button>
-            <button class="btn ghost" data-act="gate-snooze">${t('gate.snooze')} · ${remainingSnoozes()} ${t('gate.snoozesLeft')}</button>
+            ${gate.preview ? `<button class="btn ghost" data-act="gate-close">${t('common.close')}</button>`
+              : `<button class="btn ghost" data-act="gate-snooze">${t('gate.snooze')} · ${remainingSnoozes()} ${t('gate.snoozesLeft')}</button>`}
           </div>
         </div>
       </div>`;
@@ -634,6 +642,7 @@
     const shouldOpen = due && !snoozed;
     if (shouldOpen !== gate.open) {
       gate.open = shouldOpen;
+      gate.preview = false;
       gate.choice = null;
       gate.reveal = false;
       rerender();
@@ -685,6 +694,7 @@
       const i = Number(el.dataset.i);
       const item = problemFor('morning');
       gate.choice = i;
+      if (gate.preview) { rerender(); return; }
       if (i === item.answer) {
         if (!Engine.answered(state, todayKey(), 'morning')) {
           state.answers.push({ date: todayKey(), slot: 'morning', id: item.id, choice: i, correct: true, ts: Date.now() });
@@ -696,6 +706,7 @@
       return;
     }
     if (act === 'gate-read') {
+      if (gate.preview) { gate.reveal = true; rerender(); return; }
       const item = problemFor('morning');
       if (!Engine.answered(state, todayKey(), 'morning')) {
         state.answers.push({ date: todayKey(), slot: 'morning', id: item.id, choice: null, correct: null, read: true, ts: Date.now() });
@@ -709,6 +720,7 @@
       return;
     }
     if (act === 'gate-close') {
+      if (gate.preview) { gate = { open: false, preview: false, choice: null, reveal: false }; rerender(); return; }
       if (!state.alarm.dismissed.includes(todayKey())) state.alarm.dismissed.push(todayKey());
       save();
       gate.open = false;
@@ -724,6 +736,11 @@
       state.alarm.snoozeUntil = new Date(Date.now() + 5 * 60000).toISOString();
       save();
       gate.open = false;
+      rerender();
+      return;
+    }
+    if (act === 'gate-preview') {
+      gate = { open: true, preview: true, choice: null, reveal: false };
       rerender();
       return;
     }
