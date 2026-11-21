@@ -7,7 +7,7 @@
 **Live app:** https://qkrrkdhzdl-arch.github.io/nightproof/
 **Source:** https://github.com/qkrrkdhzdl-arch/nightproof (MIT)
 **Test suite:** https://qkrrkdhzdl-arch.github.io/nightproof/tests.html (52/52)
-**Demo video:** <YouTube link — unlisted>
+**Demo video:** https://youtu.be/9teTXbyuWd8
 
 **Theme:** AI Study Assistants / AI for Social Good
 **Built with:** JavaScript, HTML5, CSS3, GitHub Pages, Transformers.js, ONNX Runtime Web, Qwen2.5, WebAssembly, Service Worker / PWA, localStorage

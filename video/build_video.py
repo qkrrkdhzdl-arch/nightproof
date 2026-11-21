@@ -27,8 +27,12 @@ DIM = (147, 163, 182)
 AMBER = (232, 180, 106)
 BG = (7, 10, 15)
 
-FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+import matplotlib
+_TTF = os.path.join(os.path.dirname(matplotlib.__file__), "mpl-data", "fonts", "ttf")
+FONT_BOLD = os.path.join(_TTF, "DejaVuSans-Bold.ttf")
+FONT_REG = os.path.join(_TTF, "DejaVuSans.ttf")
+FONT_SERIF = "/usr/share/fonts/truetype/freefont/FreeSerif.ttf"
+FONT_SERIF_B = "/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf"
 
 
 def font(path, size):
@@ -49,16 +53,25 @@ def dur_of(path):
 
 
 def caption_png(text, out, kicker=None):
-    img = Image.new("RGBA", (W, 210), (0, 0, 0, 0))
+    img = Image.new("RGBA", (W, 230), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    # soft gradient plate
-    for i in range(210):
-        a = int(210 * max(0, (i - 40) / 170))
-        d.line([(0, i), (W, i)], fill=(5, 8, 12, a))
-    y = 118
+    for i in range(230):
+        a = int(215 * max(0, (i - 30) / 200))
+        d.line([(0, i), (W, i)], fill=(4, 6, 10, a))
+    f_cap = font(FONT_REG, 30)
+    f_kick = font(FONT_BOLD, 14)
+    tw = d.textlength(text, font=f_cap)
+    pad = 26
+    box_w = min(W - 96, int(tw) + pad * 2)
+    bx0 = 60
+    by0 = 92
+    by1 = by0 + (74 if kicker else 62)
+    d.rounded_rectangle([bx0, by0, bx0 + box_w, by1], radius=14, fill=(10, 14, 20, 232), outline=(39, 54, 74, 255))
     if kicker:
-        d.text((72, y - 30), kicker.upper(), font=font(FONT_BOLD, 15), fill=AMBER)
-    d.text((72, y), text, font=font(FONT_REG, 27), fill=INK)
+        d.text((bx0 + pad, by0 + 14), kicker.upper(), font=f_kick, fill=AMBER)
+        d.text((bx0 + pad, by0 + 34), text, font=f_cap, fill=INK)
+    else:
+        d.text((bx0 + pad, by0 + 16), text, font=f_cap, fill=INK)
     img.save(out)
 
 
@@ -66,33 +79,41 @@ def card(title, sub, out, foot=None, big=False):
     img = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(img)
     for i in range(H):
-        shade = 10 - int(6 * (i / H))
-        d.line([(0, i), (W, i)], fill=(max(6, shade), max(9, shade + 2), max(13, shade + 6)))
-    d.text((72, 250), "◐", font=font(FONT_REG, 54), fill=AMBER)
-    d.text((132, 258), "Nightproof", font=font(FONT_BOLD, 40), fill=INK)
-    d.line([(74, 340), (150, 340)], fill=AMBER, width=3)
-    d.text((72, 380), title, font=font(FONT_BOLD, 62 if big else 48), fill=INK)
-    y = 380 + (96 if big else 82)
+        t = i / H
+        d.line([(0, i), (W, i)], fill=(int(10 - 5 * t), int(14 - 7 * t), int(21 - 10 * t)))
+    # mark: a half-lit circle, drawn rather than typed
+    cx, cy, r = 108, 118, 15
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=AMBER)
+    d.ellipse([cx, cy - r, cx + 2 * r, cy + r], fill=(10, 14, 21))
+    d.text((cx + 30, cy - 18), "Nightproof", font=font(FONT_BOLD, 30), fill=INK)
+    d.line([(96, 236), (232, 236)], fill=AMBER, width=3)
+
+    size = 66 if big else 54
+    f_title = font(FONT_SERIF_B, size)
+    y = 300
+    for line in title.split("\n"):
+        d.text((96, y), line, font=f_title, fill=INK)
+        y += int(size * 1.22)
+    y += 26
     for line in sub.split("\n"):
-        d.text((72, y), line, font=font(FONT_REG, 30), fill=DIM)
-        y += 46
+        d.text((96, y), line, font=font(FONT_REG, 26), fill=DIM)
+        y += 40
     if foot:
-        d.text((72, H - 110), foot, font=font(FONT_REG, 24), fill=(100, 116, 140))
+        d.text((96, H - 96), foot, font=font(FONT_REG, 21), fill=(100, 116, 140))
     img.save(out)
 
 
-def scene(img, caption, narration, out, kicker=None, zoom=True):
+def scene(img, caption, narration, out, kicker=None, zoom=True, focus=False):
     audio = VID / "audio" / (Path(out).stem + ".mp3")
     speak(narration, audio)
     d = dur_of(audio) + 0.7
     cap = VID / "audio" / (Path(out).stem + ".png")
     caption_png(caption, cap, kicker)
 
-    if zoom:
-        vf = (f"scale=1600:1000,zoompan=z='min(1.0+0.00035*on,1.10)':"
-              f"x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2':d=1:s={W}x{H}:fps={FPS}")
+    if focus:
+        vf = (f"crop={W}:{H}:(iw-{W})/2:max(0\,(ih-{H})/2),scale={W}:{H},fps={FPS}")
     else:
-        vf = f"scale={W}:{H},fps={FPS}"
+        vf = f"scale={W}:-2,pad={W}:{H}:0:(oh-ih)/2:color=0x090d13,fps={FPS}"
     filt = (
         f"[0:v]{vf},format=rgba[bg];"
         f"[bg][1:v]overlay=0:{H-210}:format=auto[v0];"
@@ -138,7 +159,7 @@ def main():
         elif s["kind"] == "still":
             still(frames / s["image"], s["say"], p, hold=s.get("hold", 3.0))
         else:
-            scene(frames / s["image"], s["caption"], s["say"], p, s.get("kicker"), s.get("zoom", True))
+            scene(frames / s["image"], s["caption"], s["say"], p, s.get("kicker"), s.get("zoom", True), s.get("focus", False))
         parts.append(p)
         print("built", p.name, f"{dur_of(p):.1f}s")
     listing = out / "list.txt"

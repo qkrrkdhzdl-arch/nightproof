@@ -1,0 +1,62 @@
+[
+ {
+  "kind": "card",
+  "big": true,
+  "title": "One proof before sleep.\nOne after you wake.",
+  "sub": "A daily reasoning ritual that replaces the feed.",
+  "foot": "Live: qkrrkdhzdl-arch.github.io/nightproof",
+  "say": "Nightproof. One logic problem before sleep, one after you wake."
+ },
+ {
+  "kind": "screen",
+  "image": "today.png",
+  "kicker": "The ritual",
+  "caption": "Tonight's proof is one problem — not a feed.",
+  "say": "The last thing most students open at night is a feed. Nightproof opens one reasoning problem instead, chosen from the date so it cannot be re-rolled."
+ },
+ {
+  "kind": "screen",
+  "image": "solve.png",
+  "kicker": "The proof",
+  "caption": "One careful read. No timer, no re-roll.",
+  "say": "A LEET-style argument, five options, no timer. This is the skill the exam actually rewards: reading one argument carefully, once.",
+  "focus": true
+ },
+ {
+  "kind": "screen",
+  "image": "diagnosis.png",
+  "kicker": "The diagnosis",
+  "caption": "Three lines: what you did, why it fails, what to remember.",
+  "say": "Miss it, and instead of an answer key you get the trap you fell into, named — in three lines written for that exact option. Not generated at the moment you tap; authored, so it can never invent an explanation.",
+  "focus": true
+ },
+ {
+  "kind": "screen",
+  "image": "profile.png",
+  "kicker": "The profile",
+  "caption": "The mistakes become a map of where you leak points.",
+  "say": "A week of answers becomes a profile. Eight traps on a radar, the two you are leaking points on, and a drill for each."
+ },
+ {
+  "kind": "screen",
+  "image": "gate.png",
+  "kicker": "The morning gate",
+  "caption": "In the morning, the app locks itself until you think.",
+  "say": "And in the morning the app locks itself, for the first ninety minutes after your alarm, until the proof is answered or its reasoning is read."
+ },
+ {
+  "kind": "screen",
+  "image": "tests.png",
+  "kicker": "Under the hood",
+  "caption": "60 items, 8 named traps, English and Korean.",
+  "say": "Sixty items in English and Korean, written with G P T 6 Astra, every answer key re-read by Claude Fable 5.1 as a second examiner, and fifty six tests passing in a real browser."
+ },
+ {
+  "kind": "card",
+  "big": false,
+  "title": "Nightproof",
+  "sub": "qkrrkdhzdl-arch.github.io/nightproof\ngithub.com/qkrrkdhzdl-arch/nightproof",
+  "foot": "Build Your First AI App 2026 · Park Gaon",
+  "say": "Nightproof. Built for Build Your First AI App 2026."
+ }
+]
