@@ -82,7 +82,7 @@ js/engine.js            pure logic: slots, deterministic delivery, streaks, prof
 js/i18n.js              English/Korean strings, trap names, drills
 js/coach.js             optional coach on the browser's built-in model
 js/app.js               views and events
-js/tests.js             52 assertions over engine, i18n, bank and coach prompt
+js/tests.js             56 assertions over engine, i18n, bank and coach prompt
 tests.html              the same suite in a browser
 data/problems.json      60 items, bilingual, with per-decoy diagnoses
 sw.js, manifest.webmanifest, .nojekyll
@@ -103,7 +103,7 @@ nothing to compile.
 
 ## Tests
 
-`52/52` pass — in quickjs on the same files the browser loads
+`56/56` pass — in quickjs on the same files the browser loads
 (`python3 gen/test_quickjs.py`) and in a browser at `/tests.html`. They cover the phase
 boundaries, deterministic delivery (30 days visit every item exactly once), the streak
 with its one-day forgiveness, the trap profile and accuracy denominators, the alarm gate
