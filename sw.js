@@ -1,8 +1,8 @@
 /* Nightproof service worker: the ritual works with no signal.
  * Network first, cache as the fallback — so a published fix reaches the reader on the
  * next load, and an offline night still opens the app. */
-const CACHE = 'nightproof-v13';
-const SHELL = ['./', './index.html', './css/app.css?v=20261122j', './js/app.js?v=20261122j', './js/engine.js?v=20261122j', './js/i18n.js?v=20261122j', './js/coach.js?v=20261122j', './data/problems.json', './manifest.webmanifest'];
+const CACHE = 'nightproof-v14';
+const SHELL = ['./', './index.html', './css/app.css?v=20261122k', './js/app.js?v=20261122k', './js/engine.js?v=20261122k', './js/i18n.js?v=20261122k', './js/coach.js?v=20261122k', './data/problems.json', './manifest.webmanifest'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

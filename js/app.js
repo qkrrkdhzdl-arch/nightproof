@@ -814,6 +814,7 @@
     }
     render();
     checkGate();
+    if (state.coach) loadCoach();
     setInterval(() => {
       checkGate();
       if (route === 'today' || route === 'solve') {
