@@ -32,10 +32,10 @@
       if (!raw) return defaults();
       const parsed = JSON.parse(raw);
       const base = defaults();
-      const merged = Object.assign(base, parsed, { alarm: Object.assign(base.alarm, parsed.alarm || {}) });
+      const merged = Object.assign({}, base, parsed, { alarm: Object.assign({}, base.alarm, parsed.alarm || {}) });
       const validTime = (v) => typeof v === 'string' && v.length === 5 && v[2] === ':' && !isNaN(Number(v.slice(0, 2))) && !isNaN(Number(v.slice(3)));
-      if (!validTime(merged.bed)) merged.bed = base.bed;
-      if (!validTime(merged.wake)) merged.wake = base.wake;
+      if (!validTime(merged.bed)) merged.bed = defaults().bed;
+      if (!validTime(merged.wake)) merged.wake = defaults().wake;
       if (!validTime(merged.alarm.time)) merged.alarm.time = merged.wake;
       return merged;
     } catch (e) {
