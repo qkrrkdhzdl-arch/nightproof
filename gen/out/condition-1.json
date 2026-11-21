@@ -1,0 +1,166 @@
+[
+ {
+  "id": "condition-1-01",
+  "track": "condition",
+  "level": 1,
+  "question_type": "must_be_true",
+  "passage_en": "At a library, a study room booking is approved only if the applicant has a registered library account. Every registered account has a verified email address. An applicant with an unpaid library charge cannot have a study room booking approved, even if the account is registered. These rules apply to all applicants, and no other information about any particular applicant is given.",
+  "passage_ko": "어느 도서관에서 학습실 예약을 승인받으려면 신청자에게 등록된 도서관 계정이 있어야 한다. 등록된 계정에는 모두 인증된 이메일 주소가 있다. 도서관에 미납 요금이 있는 신청자는 등록된 계정이 있더라도 학습실 예약을 승인받을 수 없다. 이 규정은 모든 신청자에게 적용되며, 개별 신청자에 관한 다른 정보는 주어지지 않았다.",
+  "prompt_en": "Which one of the following must be true under these rules?",
+  "prompt_ko": "위 규정에 따를 때 반드시 참인 것은?",
+  "options_en": [
+   "Every applicant with a verified email address has a registered library account.",
+   "An applicant without a verified email address cannot have a study room booking approved.",
+   "Every applicant with a registered account and no unpaid library charge will have a study room booking approved.",
+   "Every applicant whose study room booking is not approved has an unpaid library charge.",
+   "An applicant with a registered account can have a study room booking approved despite an unpaid library charge."
+  ],
+  "options_ko": [
+   "인증된 이메일 주소가 있는 신청자는 모두 등록된 도서관 계정이 있다.",
+   "인증된 이메일 주소가 없는 신청자는 학습실 예약을 승인받을 수 없다.",
+   "등록된 계정이 있고 도서관 미납 요금이 없는 신청자는 모두 학습실 예약을 승인받는다.",
+   "학습실 예약을 승인받지 못한 신청자는 모두 도서관 미납 요금이 있다.",
+   "등록된 계정이 있는 신청자는 도서관 미납 요금이 있더라도 학습실 예약을 승인받을 수 있다."
+  ],
+  "answer": 1,
+  "solution_en": "Approval requires a registered account, and a registered account requires a verified email address. Therefore, approval requires a verified email address. Taking the contrapositive, an applicant without a verified email address cannot receive approval, so option 2 must be true. The rules do not say that a verified email guarantees registration or that meeting the stated requirements guarantees approval. Nor do they make unpaid charges the only obstacle to approval or allow registration to override that obstacle.",
+  "solution_ko": "예약 승인을 받으려면 등록된 계정이 있어야 하고, 등록된 계정에는 인증된 이메일 주소가 있어야 한다. 따라서 예약 승인을 받으려면 인증된 이메일 주소가 있어야 한다. 그 대우에 따라 인증된 이메일 주소가 없는 신청자는 예약을 승인받을 수 없으므로 정답은 ②이다. 인증된 이메일 주소가 계정 등록을 보장한다거나, 제시된 필요조건을 충족하면 반드시 승인된다는 규정은 없다. 또한 미납 요금만이 승인 불가 사유인 것도 아니며, 계정 등록이 미납 요금에 따른 승인 제한을 없애는 것도 아니다.",
+  "traps": [
+   {
+    "tag": "affirming_consequent",
+    "lines_en": [
+     "You inferred account registration from a verified email address.",
+     "Registration requires verification, but verification does not establish registration.",
+     "Keep the conditional's direction: registered account implies verified email."
+    ],
+    "lines_ko": [
+     "이메일 인증을 근거로 계정 등록을 추론한 오류.",
+     "계정 등록에는 이메일 인증이 필요하지만, 인증만으로 등록이 보장되지는 않음.",
+     "조건의 방향은 ‘계정 등록 → 이메일 인증’임에 유의."
+    ]
+   },
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated two requirements as a complete guarantee of approval.",
+     "The passage never says satisfying these requirements is sufficient.",
+     "Distinguish conditions approval requires from conditions that secure approval."
+    ],
+    "lines_ko": [
+     "두 필요조건의 충족을 승인 보장으로 간주한 오류.",
+     "두 조건이 승인에 충분하다는 규정은 제시되지 않음.",
+     "승인에 필요한 조건과 승인을 보장하는 조건을 구별할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You treated unpaid charges as the only possible obstacle to approval.",
+     "An applicant may instead lack a registered account.",
+     "One stated obstacle need not exhaust all reasons for rejection."
+    ],
+    "lines_ko": [
+     "미납 요금을 유일한 승인 불가 사유로 간주한 오류.",
+     "등록된 계정이 없어 승인받지 못하는 경우도 가능.",
+     "제시된 한 가지 장애 사유가 모든 거절 사유를 포괄하지는 않음."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated account registration as sufficient to overcome an unpaid charge.",
+     "The passage expressly blocks approval even when the account is registered.",
+     "Meeting one requirement does not cancel another restriction."
+    ],
+    "lines_ko": [
+     "계정 등록만으로 미납 요금에 따른 제한을 넘을 수 있다고 판단한 오류.",
+     "등록된 계정이 있어도 미납 요금이 있으면 승인 불가.",
+     "한 필요조건의 충족이 다른 제한을 없애지는 않음."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "condition-1-02",
+  "track": "condition",
+  "level": 2,
+  "question_type": "assumption",
+  "passage_en": "Whenever a scheduled class has at least six confirmed participants, a gym assigns it an instructor. Any class assigned an instructor goes ahead if its room is available. For tomorrow evening's class, the room is available and eight people have expressed interest. The manager concludes that the class will go ahead, explaining that the number of interested people exceeds the minimum of six.",
+  "passage_ko": "어느 체육관은 예정된 수업의 참가를 확정한 사람이 여섯 명 이상이면 그 수업에 강사를 배정한다. 강사가 배정된 수업은 수업 공간을 사용할 수 있으면 진행된다. 내일 저녁 수업은 공간을 사용할 수 있으며, 여덟 명이 참가에 관심을 표했다. 관리자는 관심을 표한 사람이 최소 인원인 여섯 명을 넘었으므로 이 수업이 진행될 것이라고 결론 내렸다.",
+  "prompt_en": "Which one of the following, if added as a premise, makes the manager's conclusion follow logically?",
+  "prompt_ko": "다음 중 전제로 추가하면 관리자의 결론이 논리적으로 도출되는 것은?",
+  "options_en": [
+   "Everyone who has confirmed participation in tomorrow evening's class has expressed interest in it.",
+   "Tomorrow evening's class will go ahead only if at least six people have expressed interest in it.",
+   "The gym assigns an instructor to tomorrow evening's class only if its room is available.",
+   "If tomorrow evening's class goes ahead, everyone who has expressed interest in it will confirm participation.",
+   "At least six of the eight people interested in tomorrow evening's class have confirmed participation."
+  ],
+  "options_ko": [
+   "내일 저녁 수업의 참가를 확정한 사람은 모두 그 수업에 관심을 표했다.",
+   "내일 저녁 수업이 진행되려면 적어도 여섯 명이 그 수업에 관심을 표했어야 한다.",
+   "체육관이 내일 저녁 수업에 강사를 배정하려면 그 수업의 공간을 사용할 수 있어야 한다.",
+   "내일 저녁 수업이 진행되면 그 수업에 관심을 표한 사람은 모두 참가를 확정할 것이다.",
+   "내일 저녁 수업에 관심을 표한 여덟 명 중 적어도 여섯 명이 참가를 확정했다."
+  ],
+  "answer": 4,
+  "solution_en": "The gym's threshold concerns confirmed participants, not people who merely expressed interest. Option 5 establishes that at least six participants have confirmed, so an instructor must be assigned. Because the room is available, the class must then go ahead. Options 1 through 3 add only necessary conditions and do not establish six confirmations or an instructor assignment. Option 4 makes confirmation conditional on the class going ahead, so it cannot establish that the class will go ahead in the first place.",
+  "solution_ko": "체육관의 강사 배정 기준은 관심을 표한 사람의 수가 아니라 참가를 확정한 사람의 수이다. ⑤를 추가하면 참가를 확정한 사람이 여섯 명 이상이므로 강사가 배정된다. 수업 공간도 사용할 수 있으므로 이 수업은 진행된다. ①부터 ③까지는 필요조건만 추가할 뿐, 여섯 명 이상의 참가 확정이나 강사 배정을 보장하지 않는다. ④는 수업 진행을 조건으로 참가 확정을 제시하므로, 이를 통해 수업이 진행된다는 결론을 먼저 도출할 수는 없다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You used confirmed participants' interest to infer interested people's confirmation.",
+     "The added premise runs from confirmation to interest, not the reverse.",
+     "Check whether the bridge points from your known fact toward your needed fact."
+    ],
+    "lines_ko": [
+     "참가 확정자가 관심을 표했다는 사실에서 관심자의 참가 확정을 추론한 오류.",
+     "추가 전제의 방향은 ‘참가 확정 → 관심 표명’이며 그 역이 아님.",
+     "연결 전제가 알려진 사실에서 필요한 사실로 향하는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You read the minimum interest requirement as a guarantee that the class proceeds.",
+     "The added premise makes interest necessary, not sufficient.",
+     "For 'A only if B,' establishing B alone does not establish A."
+    ],
+    "lines_ko": [
+     "최소 관심 인원 충족을 수업 진행의 보장으로 해석한 오류.",
+     "추가 전제에서 관심 인원 충족은 필요조건이지 충분조건이 아님.",
+     "‘A이려면 B’에서 B만으로 A를 도출할 수 없음에 유의."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated room availability as enough to secure an instructor.",
+     "The added premise says instructor assignment requires availability, not that availability guarantees assignment.",
+     "Do not reverse a requirement into a sufficient trigger."
+    ],
+    "lines_ko": [
+     "공간을 사용할 수 있으면 강사가 배정된다고 판단한 오류.",
+     "추가 전제는 공간 사용 가능성을 강사 배정의 필요조건으로만 제시.",
+     "필요조건을 뒤집어 충분조건으로 삼지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You used a promise conditional on the class proceeding as an unconditional confirmation.",
+     "The added premise supplies confirmations only if the disputed conclusion already holds.",
+     "Establish a conditional's antecedent before relying on its consequent."
+    ],
+    "lines_ko": [
+     "수업 진행을 조건으로 한 참가 확정을 무조건적인 확정으로 취급한 오류.",
+     "추가 전제의 참가 확정은 입증하려는 수업 진행을 전제로 함.",
+     "조건문의 후건을 도출하려면 먼저 전건을 확보할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

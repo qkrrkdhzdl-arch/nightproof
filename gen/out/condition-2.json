@@ -1,0 +1,166 @@
+[
+ {
+  "id": "condition-2-01",
+  "track": "condition",
+  "level": 1,
+  "question_type": "must_be_true",
+  "passage_en": "At a neighborhood library, a study-room booking is confirmed only if the applicant has completed a short orientation. Everyone who completes the orientation is issued an access code, although the rules do not say whether codes can also be issued in other ways. An applicant who is issued an access code receives a notification in their library account. One applicant, Robin, has received no such notification, and all of these rules apply without exception.",
+  "passage_ko": "한 지역 도서관에서는 신청자가 간단한 이용 교육을 이수한 경우에만 학습실 예약이 확정된다. 이용 교육을 이수한 신청자에게는 모두 출입 코드가 발급되지만, 다른 경로로도 코드가 발급될 수 있는지는 규정에 명시되어 있지 않다. 출입 코드가 발급된 신청자는 자신의 도서관 계정으로 발급 알림을 받는다. 신청자 로빈은 이러한 알림을 받지 않았으며, 위 규정에는 예외가 없다.",
+  "prompt_en": "Which one of the following must be true?",
+  "prompt_ko": "위 내용이 참일 때 반드시 참인 것은?",
+  "options_en": [
+   "Every applicant who receives a code notification has a confirmed study-room booking.",
+   "Every applicant issued an access code has completed the orientation.",
+   "An applicant who has not completed the orientation cannot be issued an access code.",
+   "Robin's study-room booking has not been confirmed.",
+   "An applicant whose booking is not confirmed cannot receive a code notification."
+  ],
+  "options_ko": [
+   "코드 발급 알림을 받은 신청자는 모두 학습실 예약이 확정된 상태이다.",
+   "출입 코드가 발급된 신청자는 모두 이용 교육을 이수한 상태이다.",
+   "이용 교육을 이수하지 않은 신청자에게는 출입 코드가 발급될 수 없다.",
+   "로빈의 학습실 예약은 확정되지 않았다.",
+   "예약이 확정되지 않은 신청자는 코드 발급 알림을 받을 수 없다."
+  ],
+  "answer": 3,
+  "solution_en": "A confirmed booking requires completed orientation. Completed orientation guarantees an access code, and an access code guarantees a notification. Therefore, a confirmed booking guarantees a notification; because Robin received none, Robin's booking cannot be confirmed. The other options reverse a stated implication or incorrectly infer the absence of an outcome from the absence of a sufficient condition.",
+  "solution_ko": "예약 확정을 위해서는 이용 교육 이수가 필요하다. 이용 교육을 이수하면 출입 코드가 발급되고, 코드가 발급되면 알림을 받는다. 따라서 예약이 확정되면 반드시 알림을 받으므로, 알림을 받지 않은 로빈의 예약은 확정되지 않았다. 나머지 선택지는 조건의 방향을 뒤집거나 충분조건이 충족되지 않았다는 이유로 그 결과도 발생하지 않는다고 잘못 추론한 것이다.",
+  "traps": [
+   {
+    "tag": "affirming_consequent",
+    "lines_en": [
+     "You treated a notification as proof of a confirmed booking.",
+     "The rules guarantee notifications after confirmation, not confirmation after notifications.",
+     "Follow the conditional chain forward; reverse it only by negating both ends."
+    ],
+    "lines_ko": [
+     "알림 수신을 예약 확정의 증거로 간주함.",
+     "예약 확정은 알림 수신을 보장하지만, 그 역은 보장되지 않음.",
+     "조건 사슬은 순방향으로 연결하고, 역방향 추론에는 양쪽 부정이 필요함."
+    ]
+   },
+   {
+    "tag": "affirming_consequent",
+    "lines_en": [
+     "You inferred completed orientation from an issued code.",
+     "Orientation guarantees a code, but other routes to a code remain possible.",
+     "Do not infer a sufficient condition merely because its consequence holds."
+    ],
+    "lines_ko": [
+     "코드 발급 사실로부터 이용 교육 이수를 추론함.",
+     "교육 이수는 코드 발급을 보장하지만, 다른 발급 경로도 가능함.",
+     "결과가 성립한다는 이유만으로 그 충분조건의 성립을 추론하지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated orientation as a requirement for receiving a code.",
+     "The passage makes orientation sufficient for a code, not necessary.",
+     "Failure of a sufficient condition does not rule out its consequence."
+    ],
+    "lines_ko": [
+     "이용 교육 이수를 코드 발급의 필수 요건으로 간주함.",
+     "교육 이수는 코드 발급의 충분조건일 뿐, 필요조건은 아님.",
+     "충분조건의 불충족만으로 결과의 발생을 배제하지 말 것."
+    ]
+   },
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You assumed an unconfirmed booking prevents a notification.",
+     "Confirmation guarantees notification, but notification does not require confirmation.",
+     "Distinguish denying a sufficient condition from denying a necessary condition."
+    ],
+    "lines_ko": [
+     "예약 미확정을 알림 수신이 불가능한 근거로 삼음.",
+     "예약 확정은 알림 수신을 보장하지만, 알림 수신의 필수 요건은 아님.",
+     "충분조건의 부정과 필요조건의 부정을 구분할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "condition-2-02",
+  "track": "condition",
+  "level": 2,
+  "question_type": "flaw",
+  "passage_en": "A community music center guarantees workshop eligibility to every student who practices scales every day. Under a separate rule, every student eligible for a workshop is sent a registration code. Neither rule lists all the ways a student can become eligible or receive a code. A tutor learns that Morgan has received a registration code and concludes that Morgan must practice scales every day.",
+  "passage_ko": "한 지역 음악 교육 센터는 매일 음계 연습을 하는 수강생에게 반드시 워크숍 신청 자격을 부여한다. 별도의 규정에 따라 워크숍 신청 자격이 있는 수강생에게는 모두 등록 코드가 발송된다. 두 규정은 신청 자격을 얻거나 등록 코드를 받는 모든 경로를 열거한 것은 아니다. 한 강사는 모건이 등록 코드를 받았다는 사실을 알고, 모건이 틀림없이 매일 음계 연습을 한다고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately describes the flaw in the tutor's reasoning?",
+  "prompt_ko": "강사의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It treats daily scale practice as sufficient for receiving a code, although the rules do not establish that.",
+   "It treats an outcome guaranteed by daily scale practice as proof that such practice occurred.",
+   "It generalizes from Morgan's practice habits to the practice habits of every student.",
+   "It assumes that receiving a registration code causes students to practice scales daily.",
+   "It treats eligibility for a workshop as equivalent to actually attending that workshop."
+  ],
+  "options_ko": [
+   "규정에서 뒷받침하지 않는데도 매일 음계 연습을 하는 것을 코드 수신의 충분조건으로 간주한다.",
+   "매일 음계 연습을 하면 보장되는 결과가 나타났다는 이유로, 그러한 연습을 했다고 단정한다.",
+   "모건의 연습 습관을 근거로 모든 수강생의 연습 습관을 일반화한다.",
+   "등록 코드를 받는 것이 수강생의 매일 음계 연습을 유발한다고 가정한다.",
+   "워크숍 신청 자격이 있는 것과 실제로 워크숍에 참석하는 것을 동일시한다."
+  ],
+  "answer": 1,
+  "solution_en": "Daily scale practice guarantees workshop eligibility, which in turn guarantees a registration code. These rules establish that daily practice is sufficient for receiving a code, not necessary. The tutor reasons backward from receiving a code to daily practice, overlooking other possible routes to receiving one. The argument neither generalizes to all students nor claims that codes cause practice or that eligible students actually attend.",
+  "solution_ko": "매일 음계 연습을 하면 워크숍 신청 자격을 얻고, 신청 자격이 있으면 등록 코드를 받는다. 따라서 매일 음계 연습을 하는 것은 코드 수신의 충분조건이지만, 필요조건이라고 할 수는 없다. 강사는 코드를 받는 다른 경로가 있을 수 있는데도 코드 수신 사실에서 매일 음계 연습을 한다는 결론을 거꾸로 도출했다. 모든 수강생에 대한 일반화, 코드 수신이 연습을 유발한다는 인과 주장, 신청 자격과 실제 참석의 동일시는 이 논증에 나타나지 않는다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You rejected daily practice as sufficient for receiving a code.",
+     "The two rules establish that sufficiency when linked together.",
+     "Chain the stated implications before judging which direction lacks support."
+    ],
+    "lines_ko": [
+     "매일 연습하는 것이 코드 수신의 충분조건임을 부정함.",
+     "두 규정을 연결하면 바로 그 충분조건 관계가 성립함.",
+     "주어진 조건들을 연결한 뒤 뒷받침되지 않는 추론 방향을 판단할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You read a conclusion about Morgan as a claim about every student.",
+     "The tutor concludes only that Morgan practices daily.",
+     "Check the conclusion's scope before diagnosing a generalization."
+    ],
+    "lines_ko": [
+     "모건에 관한 결론을 모든 수강생에 관한 주장으로 읽음.",
+     "강사의 결론은 모건이 매일 연습한다는 것에 한정됨.",
+     "일반화의 오류를 판단하기 전에 결론의 범위를 확인할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You interpreted the code as a claimed cause of daily practice.",
+     "The tutor uses it as evidence, not as a cause.",
+     "Distinguish inferring that something happened from explaining what caused it."
+    ],
+    "lines_ko": [
+     "등록 코드가 매일 연습하는 원인으로 제시되었다고 해석함.",
+     "강사는 코드를 원인이 아니라 판단의 증거로 사용함.",
+     "어떤 사실의 성립을 추론하는 것과 그 원인을 설명하는 것을 구분할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You shifted the issue from daily practice to actual workshop attendance.",
+     "The tutor makes no claim that Morgan or anyone else attended.",
+     "Keep the alleged flaw tied to a step the argument actually takes."
+    ],
+    "lines_ko": [
+     "매일 연습하는지의 문제를 실제 워크숍 참석 여부로 바꿈.",
+     "강사는 모건이나 다른 수강생이 참석했다고 주장하지 않음.",
+     "논증에서 실제로 이루어진 추론 단계에 근거하여 오류를 판단할 것."
+    ]
+   }
+  ]
+ }
+]

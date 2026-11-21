@@ -1,0 +1,166 @@
+[
+ {
+  "id": "sample-1-01",
+  "track": "sample",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "A gym wants to know whether people who joined last year were satisfied with their experience. It surveys all 900 of those members who renewed for another year, and 810 report being satisfied. The manager concludes that about nine out of ten people who joined last year were satisfied. She argues that surveying so many people leaves little room for error, so there is no need to contact those who did not renew.",
+  "passage_ko": "한 체육관이 지난해 가입한 회원들의 이용 만족도를 알아보려 한다. 이들 중 올해 재등록한 900명 전원을 조사했더니 810명이 만족했다고 답했다. 관리자는 이를 근거로 지난해 가입자 열 명 중 아홉 명 정도가 만족했다고 결론 내렸다. 또한 조사 인원이 이처럼 많으면 오차가 발생할 여지가 작으므로 재등록하지 않은 사람들에게는 따로 물을 필요가 없다고 주장했다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the manager's reasoning?",
+  "prompt_ko": "관리자의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It assumes that renewing a membership guarantees satisfaction.",
+   "It treats a large survey of members who renewed as representative without considering members who did not renew.",
+   "It takes members' satisfaction to prove that renewing their memberships caused that satisfaction.",
+   "It treats a survey as informative even though valid generalizations require responses from every member of the target group.",
+   "It extends a finding about last year's members to people who will join in future years."
+  ],
+  "options_ko": [
+   "재등록한 회원은 반드시 만족했다고 가정한다.",
+   "재등록하지 않은 회원들을 고려하지 않은 채, 재등록자 대상의 대규모 조사 결과가 전체 가입자를 대표한다고 본다.",
+   "회원들이 만족했다는 사실을 근거로 재등록이 만족의 원인이었다고 판단한다.",
+   "타당한 일반화를 위해서는 조사 대상 집단 전원의 응답이 필요한데도 일부의 응답만으로 정보를 얻을 수 있다고 본다.",
+   "지난해 가입자에 관한 조사 결과를 앞으로 가입할 사람들에게까지 확대 적용한다."
+  ],
+  "answer": 1,
+  "solution_en": "The survey covers only members who renewed, while the conclusion concerns everyone who joined last year. Those who did not renew may have had different satisfaction levels. A large number of responses does not remove this selection problem. The manager neither claims that renewal guarantees satisfaction nor argues that renewal caused satisfaction. A valid generalization does not always require surveying the entire target group. Finally, the conclusion concerns last year's members, not future members.",
+  "solution_ko": "조사에는 재등록자만 포함되었지만, 결론은 지난해 가입자 전체에 관한 것이다. 재등록하지 않은 사람들의 만족도는 재등록자의 만족도와 다를 수 있다. 응답자 수가 많다는 사실만으로 이러한 표본 선정의 문제가 해소되지는 않는다. 관리자는 재등록자가 반드시 만족했다거나 재등록이 만족의 원인이라고 주장하지 않았다. 타당한 일반화를 위해 언제나 대상 집단 전원을 조사해야 하는 것도 아니다. 또한 결론의 대상은 미래의 가입자가 아니라 지난해 가입자이다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You read renewal as a guarantee of satisfaction.",
+     "The survey itself includes 90 renewing members who did not report satisfaction.",
+     "Do not replace a sampling error with an absolute condition the argument rejects."
+    ],
+    "lines_ko": [
+     "재등록을 만족의 보장으로 해석한 오류.",
+     "조사 결과에도 만족했다고 답하지 않은 재등록자 90명이 포함됨.",
+     "표본의 문제를 지문과 모순되는 절대적 조건으로 바꾸지 말 것."
+    ]
+   },
+   null,
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You turned an estimate of satisfaction into a causal explanation.",
+     "The manager estimates how many were satisfied, not what caused their satisfaction.",
+     "Identify whether the conclusion concerns a proportion or a cause."
+    ],
+    "lines_ko": [
+     "만족도 비율의 추정을 인과적 설명으로 바꾼 오류.",
+     "관리자의 결론은 만족한 사람의 비율이지 만족의 원인이 아님.",
+     "결론이 비율에 관한 것인지 원인에 관한 것인지 구별할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You made complete participation necessary for any valid generalization.",
+     "A sample can support generalization without including everyone.",
+     "Check how participants were selected, rather than demanding a census."
+    ],
+    "lines_ko": [
+     "전원 응답을 모든 타당한 일반화의 필요조건으로 본 오류.",
+     "일부를 조사한 표본도 일반화의 근거가 될 수 있음.",
+     "전수조사를 요구하기보다 조사 대상의 선정 방식을 확인할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You shifted the conclusion from past members to future members.",
+     "The manager's conclusion explicitly concerns people who joined last year.",
+     "Keep the target population fixed when identifying a generalization error."
+    ],
+    "lines_ko": [
+     "결론의 대상을 과거 가입자에서 미래 가입자로 바꾼 오류.",
+     "관리자가 명시한 결론의 대상은 지난해 가입자임.",
+     "일반화의 오류를 찾을 때 결론의 대상 집단을 유지할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sample-1-02",
+  "track": "sample",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A library system has two branches, each with exactly 200 members, and no member belongs to both. Every member was asked whether they favor later closing; each either favors or opposes it, and all returned answers state their actual views. At the east branch, 160 members replied, with 120 in favor; at the west branch, 40 replied, with 30 in favor. Nothing is known about the views of members who did not reply.",
+  "passage_ko": "어느 도서관의 동부 분관과 서부 분관에는 각각 회원이 정확히 200명 있으며, 두 분관에 모두 속한 회원은 없다. 모든 회원에게 폐관 시각을 늦추는 방안에 대한 찬반을 물었으며, 회원은 모두 찬성 또는 반대 중 하나의 입장을 가지고 있고 응답자는 자신의 실제 입장을 밝혔다. 동부 분관에서는 160명이 응답하여 120명이 찬성했고, 서부 분관에서는 40명이 응답하여 30명이 찬성했다. 응답하지 않은 회원들의 입장은 알려져 있지 않다.",
+  "prompt_en": "Which one of the following must be true?",
+  "prompt_ko": "위 내용으로부터 반드시 참이라고 할 수 있는 것은?",
+  "options_en": [
+   "The proportion favoring later closing among all members is the same at both branches.",
+   "Without replies from every member, a majority favoring later closing cannot be established at either branch.",
+   "Exactly 150 of the system's 400 members favor later closing.",
+   "The east branch's respondent support rate must be closer to its overall support rate than the west branch's is.",
+   "A majority of all east-branch members favor later closing, but a west-branch majority is not established."
+  ],
+  "options_ko": [
+   "전체 회원 중 폐관 시각 연장에 찬성하는 비율은 두 분관이 같다.",
+   "회원 전원의 응답이 없으므로 어느 분관에서도 전체 회원의 과반수가 찬성한다고 확정할 수 없다.",
+   "두 분관의 회원 400명 중 폐관 시각 연장에 찬성하는 사람은 정확히 150명이다.",
+   "응답자의 찬성률과 전체 회원의 실제 찬성률 간 차이는 동부 분관이 서부 분관보다 반드시 작다.",
+   "동부 분관에서는 전체 회원의 과반수가 찬성하지만, 서부 분관에서도 과반수가 찬성하는지는 확정할 수 없다."
+  ],
+  "answer": 4,
+  "solution_en": "The east branch has at least 120 supporters out of 200 members, so a majority is certain. The west branch could have anywhere from 30 to 190 supporters, so its majority status is undetermined. Both respondent groups have a 75 percent support rate, but their overall membership rates need not match. Complete participation is unnecessary when known supporters already exceed half the membership. The 150 reported supporters establish a minimum, not an exact total. More responses also do not guarantee greater accuracy: both branches' overall support rates could be exactly 75 percent.",
+  "solution_ko": "동부 분관은 전체 200명 중 찬성자가 최소 120명이므로 과반수의 찬성이 확실하다. 서부 분관의 찬성자는 최소 30명에서 최대 190명까지 가능하므로 과반수 여부를 확정할 수 없다. 두 분관 모두 응답자의 찬성률은 75%이지만, 전체 회원의 찬성률까지 같을 필요는 없다. 이미 확인된 찬성자가 전체의 절반을 넘으면 전원 응답 없이도 과반수의 찬성을 확정할 수 있다. 확인된 찬성자 150명은 전체 찬성자 수의 최솟값이지 정확한 총수가 아니다. 또한 두 분관의 실제 찬성률이 모두 75%일 수도 있으므로 응답자가 더 많다고 오차가 반드시 더 작은 것은 아니다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You extended equal respondent percentages to equal membership percentages.",
+     "The unobserved members can change each branch's overall percentage differently.",
+     "Keep respondent proportions separate from population proportions."
+    ],
+    "lines_ko": [
+     "응답자의 찬성률이 같다는 사실을 전체 회원에게 확대한 오류.",
+     "미응답자의 입장에 따라 두 분관의 전체 찬성률은 달라질 수 있음.",
+     "응답자의 비율과 전체 집단의 비율을 구별할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You made complete participation necessary for establishing a majority.",
+     "Known supporters can already exceed half of the entire membership.",
+     "Check the minimum possible support before demanding every reply."
+    ],
+    "lines_ko": [
+     "과반수 확인에 전원 응답이 필요하다고 본 오류.",
+     "확인된 찬성자만으로도 전체 회원의 절반을 넘을 수 있음.",
+     "전원 응답을 요구하기 전에 찬성자 수의 최솟값을 확인할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You counted only confirmed supporters as all supporters.",
+     "Nonrespondents may also favor later closing.",
+     "Separate an observed count from the total it bounds."
+    ],
+    "lines_ko": [
+     "확인된 찬성자 수를 전체 찬성자 수로 바꾼 오류.",
+     "미응답자 중에도 폐관 시각 연장에 찬성하는 사람이 있을 수 있음.",
+     "관측된 인원과 그 인원을 포함하는 전체 인원을 구별할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated the larger response count as a guarantee of greater accuracy.",
+     "More replies do not guarantee less distortion from nonresponse.",
+     "Distinguish a larger sample from a provably more representative sample."
+    ],
+    "lines_ko": [
+     "더 많은 응답이 더 높은 정확성을 보장한다고 본 오류.",
+     "응답자가 많아도 미응답에 따른 왜곡이 반드시 더 작지는 않음.",
+     "표본 규모가 크다는 것과 대표성이 더 높다는 것을 구별할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

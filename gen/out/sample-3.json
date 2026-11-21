@@ -1,0 +1,166 @@
+[
+ {
+  "id": "sample-3-01",
+  "track": "sample",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "A library collected workshop preferences from 4,000 adult users entering the building on weekday mornings. Each person was counted once, and 80% chose morning workshops over evening workshops. The manager concludes that a majority of all adult library users prefer morning workshops. She argues that the large number of responses makes this conclusion dependable, even though no survey was offered at other times.",
+  "passage_ko": "한 도서관이 평일 오전에 방문한 성인 이용자 4,000명을 대상으로 강좌 시간대에 관한 선호를 조사하였다. 중복 응답은 없었으며, 응답자의 80%가 저녁 강좌보다 오전 강좌를 선호하였다. 도서관장은 이를 근거로 전체 성인 이용자의 과반수가 오전 강좌를 선호한다고 결론 내렸다. 다른 시간대에는 조사하지 않았지만, 응답자 수가 충분히 많으므로 이 결론을 신뢰할 수 있다는 것이다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the manager's reasoning?",
+  "prompt_ko": "도서관장의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It generalises from respondents whose visiting times may be connected to the preference being measured.",
+   "It uses a sample rather than a complete count, although only a complete count can justify any generalisation.",
+   "It mistakes evidence that morning visitors prefer morning workshops for evidence that morning workshops cause morning visits.",
+   "It claims a majority preference without establishing that all respondents share that preference.",
+   "It assumes that because most respondents prefer morning workshops, most people who prefer morning workshops responded."
+  ],
+  "options_ko": [
+   "조사 대상자의 방문 시간대가 조사하려는 선호와 관련될 수 있는데도 그들의 응답을 전체 이용자에게 일반화하였다.",
+   "전체 이용자를 빠짐없이 조사해야만 일반화할 수 있는데도 일부 이용자만 조사하였다.",
+   "오전 방문자가 오전 강좌를 선호한다는 증거를 오전 강좌가 오전 방문을 유발한다는 증거로 잘못 해석하였다.",
+   "응답자 전원이 같은 시간대를 선호하는지 확인하지 않고 과반수의 선호에 관한 결론을 내렸다.",
+   "응답자 대부분이 오전 강좌를 선호한다는 이유로 오전 강좌를 선호하는 사람 대부분이 조사에 응했다고 가정하였다."
+  ],
+  "answer": 0,
+  "solution_en": "The first option identifies a selection problem: weekday morning visitors may have different scheduling preferences from other users. A large sample does not by itself remove that problem. The second option wrongly requires a complete count, while the fourth wrongly requires unanimity for a majority claim. The third introduces a causal conclusion the manager never makes. The fifth attributes a reversed claim about who responded that is also absent from the argument.",
+  "solution_ko": "①은 조사 대상의 선정 방식에 따른 문제를 지적한다. 평일 오전 방문자의 시간대 선호는 다른 이용자의 선호와 다를 수 있으며, 응답자 수가 많다는 사실만으로 이러한 문제가 해소되지는 않는다. ②는 일반화를 위해 전수조사가 반드시 필요하다고 잘못 전제하고, ④는 과반수에 관한 결론에 전원 일치가 필요하다고 잘못 전제한다. ③이 지적하는 인과관계에 관한 결론은 도서관장의 주장에 없다. ⑤ 역시 도서관장이 하지 않은, 응답 여부에 관한 역방향 추론을 제시한다.",
+  "traps": [
+   null,
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You treated a complete count as the only alternative to an unjustified generalisation.",
+     "A suitably selected sample can support generalisation without including everyone.",
+     "Check how people were selected, not merely whether anyone was omitted."
+    ],
+    "lines_ko": [
+     "전수조사가 아니면 일반화할 수 없다고 판단한 오류.",
+     "적절히 선정한 표본으로도 전체에 관한 추론이 가능함.",
+     "누락 여부만이 아니라 조사 대상의 선정 방식 확인."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You read the preference claim as a claim about what causes visits.",
+     "The manager concludes which time users prefer, not why they visit.",
+     "Identify the actual conclusion before diagnosing a causal mistake."
+    ],
+    "lines_ko": [
+     "시간대 선호에 관한 주장을 방문 원인에 관한 주장으로 읽은 오류.",
+     "도서관장의 결론은 선호 시간대에 관한 것이며 방문 원인에 관한 것이 아님.",
+     "인과 추론의 오류를 찾기 전에 실제 결론 확인."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You required unanimous preferences to support a claim about a majority.",
+     "A majority claim allows some people to prefer the other option.",
+     "Do not make a stronger condition necessary for a weaker conclusion."
+    ],
+    "lines_ko": [
+     "과반수의 선호를 판단하는 데 전원 일치를 요구한 오류.",
+     "과반수에 관한 주장은 일부의 다른 선호를 허용함.",
+     "더 강한 조건을 더 약한 결론의 필요조건으로 삼지 말 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You attributed a reversed group comparison to the manager.",
+     "The conclusion concerns all users' preferences, not supporters' participation in the survey.",
+     "Keep the population being described separate from the group supplying evidence."
+    ],
+    "lines_ko": [
+     "집단 간 관계를 뒤집은 주장을 도서관장에게 부여한 오류.",
+     "결론은 전체 이용자의 선호에 관한 것이며 선호자의 조사 참여 여부에 관한 것이 아님.",
+     "결론의 대상 집단과 증거를 제공한 집단을 구분할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sample-3-02",
+  "track": "sample",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A plant seller followed a batch of 1,000 seedlings for one year. During that year, 800 died and were discarded, and no record was kept of whether they had reached a height of 20 centimetres before dying. Complete height records were kept for the 200 seedlings still alive at the end of the year. Those records showed that 120 had reached at least 20 centimetres during the year, while the other 80 had not.",
+  "passage_ko": "한 식물 판매업자가 모종 1,000그루를 1년 동안 관찰하였다. 그 기간에 800그루가 죽어 폐기되었으며, 이 모종들이 죽기 전에 높이 20센티미터에 도달했는지는 기록되지 않았다. 연말까지 살아남은 200그루에 대해서는 관찰 기간 전체의 높이 기록이 남아 있었다. 이 기록에 따르면 120그루는 관찰 기간 중 높이가 20센티미터 이상이 된 적이 있었고, 나머지 80그루는 그런 적이 없었다.",
+  "prompt_en": "Which one of the following must be true on the information given?",
+  "prompt_ko": "윗글의 정보로부터 반드시 참이라고 할 수 있는 것은?",
+  "options_en": [
+   "Exactly 60% of the original seedlings reached at least 20 centimetres during the year.",
+   "Exactly 12% of the original seedlings reached at least 20 centimetres during the year.",
+   "Exactly 40% of the seedlings that never reached 20 centimetres survived until the end of the year.",
+   "At least 12% of the original seedlings reached at least 20 centimetres during the year.",
+   "Reaching at least 20 centimetres increased a seedling's chance of surviving until the end of the year."
+  ],
+  "options_ko": [
+   "처음 모종 1,000그루 중 정확히 60%가 관찰 기간 중 높이 20센티미터 이상에 도달하였다.",
+   "처음 모종 1,000그루 중 정확히 12%가 관찰 기간 중 높이 20센티미터 이상에 도달하였다.",
+   "높이 20센티미터에 도달한 적이 없는 모종 중 정확히 40%가 연말까지 살아남았다.",
+   "처음 모종 1,000그루 중 적어도 12%가 관찰 기간 중 높이 20센티미터 이상에 도달하였다.",
+   "높이 20센티미터 이상에 도달한 것은 모종이 연말까지 생존할 가능성을 높였다."
+  ],
+  "answer": 3,
+  "solution_en": "The records establish that 120 of the original 1,000 seedlings reached the stated height, so the proportion was at least 12%. Some discarded seedlings may also have reached that height, which rules out inferring exactly 12%. The 60% figure describes only survivors and cannot be assigned to the original batch. Likewise, 40% describes the share of survivors that never reached the height, not the survival rate among all seedlings that never reached it. Nothing given establishes a causal effect of height on survival.",
+  "solution_ko": "기록에 의해 처음 1,000그루 중 120그루가 기준 높이에 도달했음이 확인되므로, 그 비율은 적어도 12%이다. 폐기된 모종 중에도 기준 높이에 도달했던 것이 있을 수 있으므로 정확히 12%라고 단정할 수는 없다. 60%는 살아남은 모종 중 기준 높이에 도달한 비율이지 처음 모종 전체에서의 비율이 아니다. 마찬가지로 40%는 생존한 모종 중 기준 높이에 도달하지 못한 비율이지, 기준 높이에 도달하지 못한 모종 전체의 생존율이 아니다. 높이 도달 여부가 생존 가능성에 미친 인과적 영향도 주어진 정보로는 확인되지 않는다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You applied the survivors' 60% rate to the entire original batch.",
+     "The discarded seedlings may have had a different rate of reaching that height.",
+     "Check whether missing cases could differ before extending a sample percentage."
+    ],
+    "lines_ko": [
+     "생존한 모종의 60%라는 비율을 처음 모종 전체에 적용한 오류.",
+     "폐기된 모종의 기준 높이 도달 비율은 생존한 모종과 다를 수 있음.",
+     "표본의 비율을 일반화하기 전에 누락된 대상의 차이 가능성 확인."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated recorded success as necessary for having reached the height.",
+     "Discarded seedlings could have reached it without leaving records.",
+     "Distinguish confirmed cases from all possible cases."
+    ],
+    "lines_ko": [
+     "도달 기록이 있어야만 실제로도 기준 높이에 도달한 것으로 판단한 오류.",
+     "폐기된 모종도 기록 없이 기준 높이에 도달했을 가능성이 있음.",
+     "확인된 사례와 가능한 전체 사례를 구분할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You changed the denominator from survivors to seedlings that never reached the height.",
+     "The total number that never reached it is unknown.",
+     "Write down the reference group before interpreting a percentage."
+    ],
+    "lines_ko": [
+     "분모를 생존한 모종에서 기준 높이에 도달하지 못한 모종으로 바꾼 오류.",
+     "기준 높이에 도달하지 못한 모종의 전체 수는 알 수 없음.",
+     "백분율을 해석하기 전에 기준 집단 확인."
+    ]
+   },
+   null,
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You inferred a survival benefit from the survivors' height records.",
+     "Those records establish neither comparative survival rates nor a causal effect.",
+     "Do not turn measurements from survivors into explanations of survival."
+    ],
+    "lines_ko": [
+     "생존한 모종의 높이 기록에서 생존에 유리한 효과를 추론한 오류.",
+     "이 기록만으로는 높이별 생존율의 차이도 인과적 효과도 확인할 수 없음.",
+     "생존자의 측정 결과를 생존 원인에 대한 설명으로 바꾸지 말 것."
+    ]
+   }
+  ]
+ }
+]

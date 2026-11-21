@@ -1,0 +1,37 @@
+[
+ {
+  "id": "quantity-4-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "quantity-4-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "cause-1-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "cause-1-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "cause-2-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "cause-2-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "cause-3-01",
+  "verdict": "ok",
+  "issue": ""
+ }
+]

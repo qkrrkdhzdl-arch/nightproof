@@ -1,0 +1,166 @@
+[
+ {
+  "id": "language-4-01",
+  "track": "language",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "The library's catalogue defines a book as “available” exactly when the library owns a usable copy, even if that copy is currently on loan. A catalogue check shows that every gardening guide in the library's collection is marked “available.” The manager therefore concludes that any visitor arriving now can immediately borrow whichever gardening guide they choose. The manager adds that no visitor will need to wait for a current borrower to return a copy.",
+  "passage_ko": "한 도서관의 도서 목록에서는 도서관이 이용 가능한 상태의 책을 소장하고 있으면, 그리고 그런 경우에만 해당 책을 ‘이용 가능’으로 표시한다. 현재 대출 중인 책도 이 조건을 충족하면 그렇게 표시하는데, 목록을 확인한 결과 소장 중인 모든 원예 안내서에 ‘이용 가능’ 표시가 있었다. 이에 도서관 관리자는 지금 방문하는 사람은 누구나 원하는 원예 안내서를 즉시 빌릴 수 있다고 결론 내렸다. 현재 대출한 사람이 책을 반납할 때까지 기다려야 하는 방문자는 없다는 것이다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the manager's reasoning?",
+  "prompt_ko": "관리자의 추론에 나타난 오류를 가장 적절하게 지적한 것은?",
+  "options_en": [
+   "The manager generalizes from the labels on only some gardening guides to the labels on all gardening guides.",
+   "The manager treats a label indicating ownership of a usable copy as if it guaranteed immediate access to that copy.",
+   "The manager wrongly infers ownership from an “available” label, because ownership is only a necessary condition for that label.",
+   "The manager assumes that applying an “available” label causes current borrowers to return books sooner.",
+   "The manager relies on managerial status instead of offering catalogue information as evidence."
+  ],
+  "options_ko": [
+   "관리자는 일부 원예 안내서의 표시만 확인하고 모든 원예 안내서에 같은 표시가 있다고 일반화한다.",
+   "관리자는 이용 가능한 상태의 책을 소장한다는 표시를 그 책을 즉시 빌릴 수 있다는 보장으로 받아들인다.",
+   "관리자는 소장이 ‘이용 가능’ 표시의 필요조건일 뿐인데도, 그 표시가 있다는 사실에서 소장 여부를 잘못 추론한다.",
+   "관리자는 ‘이용 가능’ 표시를 붙이면 현재 대출한 사람들이 책을 더 빨리 반납한다고 가정한다.",
+   "관리자는 도서 목록의 정보를 근거로 제시하는 대신 관리자로서의 지위에 의존한다."
+  ],
+  "answer": 1,
+  "solution_en": "Option 2 identifies the shift in meaning: the catalogue's “available” means owned and usable, while the conclusion requires ready to borrow immediately. A copy can satisfy the catalogue definition while remaining on loan, so the label does not establish the conclusion. Option 1 misdescribes a check covering every gardening guide as a partial sample. Option 3 reverses the logic of a necessary condition: if ownership is required for the label, the label does establish ownership. Option 4 invents a claim about faster returns, and option 5 overlooks the catalogue evidence actually offered.",
+  "solution_ko": "정답은 ②이다. 목록의 ‘이용 가능’은 이용 가능한 상태의 책을 소장한다는 뜻이지만, 결론에서는 즉시 대출할 수 있다는 뜻으로 바뀐다. 현재 대출 중인 책도 목록의 정의를 충족하므로, 표시만으로 즉시 대출이 가능하다는 결론은 나오지 않는다. ①은 모든 원예 안내서를 확인한 것을 일부만 조사한 것으로 잘못 서술한다. ③과 달리 소장이 표시의 필요조건이라면 표시가 있다는 사실에서 소장을 추론할 수 있다. ④는 반납이 빨라진다는 주장을 새로 끼워 넣으며, ⑤는 실제로 제시된 도서 목록의 근거를 무시한다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated a check of every guide as a sample of some guides.",
+     "The passage explicitly reports the label on every gardening guide.",
+     "Check the stated coverage before diagnosing a sampling error."
+    ],
+    "lines_ko": [
+     "전체 안내서에 대한 확인을 일부 표본 조사로 오인한 판단.",
+     "지문은 모든 원예 안내서의 표시를 명시적으로 보고함.",
+     "표본 일반화 오류를 지적하기 전에 조사 범위부터 확인할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You rejected an inference from a label to its necessary condition.",
+     "If ownership is necessary for the label, a correctly applied label establishes ownership.",
+     "A condition's being necessary permits this inference; it does not block it."
+    ],
+    "lines_ko": [
+     "표시에서 그 필요조건을 도출하는 추론을 잘못 부정한 판단.",
+     "소장이 표시의 필요조건이라면, 올바르게 붙은 표시는 소장을 함축함.",
+     "필요조건이라는 사실은 이 추론을 막는 것이 아니라 허용함."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You read a prediction of immediate borrowing as a claim about faster returns.",
+     "The manager never says catalogue labels change borrowers' behavior.",
+     "Distinguish a mistaken inference about access from an invented causal mechanism."
+    ],
+    "lines_ko": [
+     "즉시 대출이 가능하다는 판단을 반납 속도에 관한 주장으로 읽은 판단.",
+     "관리자는 목록의 표시가 대출자의 행동을 바꾼다고 말하지 않음.",
+     "대출 가능성에 관한 추론 오류와 제시되지 않은 인과관계를 구별할 것."
+    ]
+   },
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You treated the speaker's job title as the argument's supporting evidence.",
+     "The stated evidence is the catalogue check, not the manager's authority.",
+     "Identify what supports the conclusion, not merely who states it."
+    ],
+    "lines_ko": [
+     "발언자의 직책을 논증의 근거로 받아들인 판단.",
+     "제시된 근거는 관리자의 권위가 아니라 도서 목록 확인 결과임.",
+     "발언자가 누구인지보다 결론을 무엇으로 뒷받침하는지 확인할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "language-4-02",
+  "track": "language",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A cafe review site applies the label “popular” exactly when more than half of a cafe's reviewers recommend it. It separately applies “widely reviewed” exactly when a cafe has at least twenty reviews. At today's update, one cafe has twelve reviews, eight recommending it, while another has four reviews, three recommending it; each reviewer submitted just one review. The site applies both rules without exceptions, and its labels describe only submitted reviews, not the opinions of customers who have not reviewed.",
+  "passage_ko": "한 카페 후기 사이트는 후기를 작성한 사람 중 절반을 초과하는 사람이 해당 카페를 추천하면, 그리고 그런 경우에만 ‘인기 있음’ 표시를 붙인다. 이와 별도로 후기 수가 20개 이상이면, 그리고 그런 경우에만 ‘후기 많음’ 표시를 붙인다. 오늘 갱신된 자료에 따르면 첫 번째 카페는 후기 12개 중 8개가 추천 후기이고, 두 번째 카페는 후기 4개 중 3개가 추천 후기이며, 작성자마다 후기를 하나씩만 제출했다. 사이트는 두 규칙을 예외 없이 적용하며, 이 표시들은 제출된 후기만을 나타낼 뿐 후기를 쓰지 않은 고객의 의견까지 나타내지는 않는다.",
+  "prompt_en": "Which one of the following must be true under the site's definitions?",
+  "prompt_ko": "사이트의 정의에 따를 때 반드시 참인 것은?",
+  "options_en": [
+   "The first cafe has a higher proportion of recommending reviewers than the second cafe.",
+   "Among all customers, including those who submitted no review, more people recommend the first cafe than the second.",
+   "Any cafe labeled “widely reviewed” must also be labeled “popular.”",
+   "Only the first cafe qualifies as “popular,” because it has more recommending reviewers.",
+   "Both cafes qualify as “popular,” but neither qualifies as “widely reviewed.”"
+  ],
+  "options_ko": [
+   "후기 작성자 중 추천한 사람의 비율은 첫 번째 카페가 두 번째 카페보다 높다.",
+   "후기를 쓰지 않은 사람까지 포함한 전체 고객 중에서는 첫 번째 카페를 추천하는 사람이 두 번째 카페를 추천하는 사람보다 많다.",
+   "‘후기 많음’ 표시가 붙은 카페에는 반드시 ‘인기 있음’ 표시도 붙는다.",
+   "첫 번째 카페를 추천한 후기 작성자가 더 많으므로, 첫 번째 카페만 ‘인기 있음’에 해당한다.",
+   "두 카페 모두 ‘인기 있음’에 해당하지만, 어느 카페도 ‘후기 많음’에는 해당하지 않는다."
+  ],
+  "answer": 4,
+  "solution_en": "Option 5 follows because eight of twelve and three of four both exceed one half, while both review totals are below twenty. Option 1 is false: eight of twelve is two thirds, which is less than three quarters. Option 2 extends the review counts to customers whose opinions are not given. Option 3 confuses a threshold for review quantity with a separate threshold for the proportion recommending. Option 4 replaces the site's proportion-based definition of “popular” with a comparison of recommendation counts.",
+  "solution_ko": "정답은 ⑤이다. 12명 중 8명과 4명 중 3명은 모두 절반을 초과하므로 두 카페 모두 ‘인기 있음’에 해당하고, 후기 수는 모두 20개 미만이므로 ‘후기 많음’에는 해당하지 않는다. ①과 달리 첫 번째 카페의 추천 비율인 3분의 2는 두 번째 카페의 4분의 3보다 낮다. ②는 후기를 쓰지 않은 고객의 의견까지 알려진 것처럼 후기 수를 전체 고객에게 확대한다. ③은 후기 수에 관한 기준을 추천 비율에 관한 별개의 기준과 혼동한다. ④는 추천 비율에 따른 정의를 추천 인원수의 비교로 바꾸어 적용한다.",
+  "traps": [
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You compared recommendation counts as though they were recommendation proportions.",
+     "Eight exceeds three, but eight twelfths is less than three quarters.",
+     "When comparing proportions, keep each numerator attached to its own denominator."
+    ],
+    "lines_ko": [
+     "추천 인원수의 비교를 추천 비율의 비교로 바꾼 판단.",
+     "8명은 3명보다 많지만, 12분의 8은 4분의 3보다 작음.",
+     "비율을 비교할 때는 각 분자에 대응하는 분모를 함께 확인할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You extended the reviewers' recommendation counts to all customers.",
+     "The passage provides no opinions from customers who submitted no review.",
+     "Do not generalize a recorded group's counts to an unreported population."
+    ],
+    "lines_ko": [
+     "후기 작성자의 추천 인원수를 전체 고객에게 확대한 판단.",
+     "지문에는 후기를 쓰지 않은 고객의 의견이 제시되지 않음.",
+     "기록된 집단의 수치를 정보가 없는 전체 집단으로 일반화하지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated enough reviews as sufficient for a majority of recommendations.",
+     "Twenty reviews could contain no recommendations at all.",
+     "Satisfying one label's condition does not automatically satisfy another label's condition."
+    ],
+    "lines_ko": [
+     "충분한 후기 수를 추천 과반수의 충분조건으로 간주한 판단.",
+     "후기가 20개여도 추천 후기는 하나도 없을 수 있음.",
+     "한 표시의 조건 충족이 다른 표시의 조건 충족을 보장하지 않음."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You redefined “popular” as having more recommendations than the other cafe.",
+     "The site's definition uses each cafe's own recommendation proportion, not a ranking.",
+     "Apply the supplied definition instead of substituting an everyday comparative meaning."
+    ],
+    "lines_ko": [
+     "‘인기 있음’을 다른 카페보다 추천 수가 많다는 뜻으로 바꾼 판단.",
+     "사이트의 정의는 카페 간 순위가 아니라 각 카페의 추천 비율을 사용함.",
+     "일상적인 비교 의미를 대신 넣지 말고 제시된 정의를 적용할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

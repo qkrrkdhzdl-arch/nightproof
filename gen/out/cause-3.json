@@ -1,0 +1,166 @@
+[
+ {
+  "id": "cause-3-01",
+  "track": "cause",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "An office offered employees a free journey-planning app and let them decide whether to use it. Employees who had consistently arrived on time before the offer were much more likely to volunteer than employees who had frequently arrived late. After one month, app users had a higher rate of on-time arrival than nonusers. The office manager concluded that using the app had improved punctuality, citing the difference between the two groups as evidence of its effect.",
+  "passage_ko": "한 사무실에서 직원들에게 무료 통근 경로 안내 앱을 제공하고 사용 여부는 각자 선택하도록 했다. 앱이 제공되기 전부터 꾸준히 정시에 출근하던 직원들이 자주 지각하던 직원들보다 앱 사용을 신청한 비율이 훨씬 높았다. 한 달 뒤, 앱 사용자의 정시 출근 비율은 비사용자보다 높았다. 사무실 관리자는 두 집단 간의 차이를 앱의 효과에 대한 근거로 제시하면서, 앱 사용으로 직원들의 정시 출근 비율이 높아졌다고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately describes the flaw in the manager's reasoning?",
+  "prompt_ko": "관리자의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It treats using the app as necessary for arriving on time, rather than merely helpful.",
+   "It attributes a difference between the groups to the app without accounting for their earlier difference in punctuality.",
+   "It assumes that the app caused the volunteers' punctuality before the app was offered.",
+   "It treats the percentage of employees arriving on time as identical to the percentage using the app.",
+   "It infers that the app shortened journeys merely from evidence about arrival times."
+  ],
+  "options_ko": [
+   "앱 사용을 정시 출근에 도움이 되는 조건이 아니라 반드시 필요한 조건으로 간주한다.",
+   "두 집단의 기존 정시 출근 비율 차이를 고려하지 않은 채, 이후에 나타난 집단 간 차이를 앱의 효과로 돌린다.",
+   "앱이 제공되기 전부터 신청자들이 정시에 출근했던 것도 앱 때문이라고 가정한다.",
+   "정시에 출근한 직원의 비율과 앱을 사용한 직원의 비율을 동일한 것으로 취급한다.",
+   "출근 시각에 관한 자료만으로 앱이 통근 시간을 단축했다고 추론한다."
+  ],
+  "answer": 1,
+  "solution_en": "The manager compares app users with nonusers after a month. However, employees who were already punctual were more likely to become users. The later difference therefore does not establish that users became more punctual because of the app. Option 2 identifies this failure to account for a pre-existing difference; the other options attribute claims or inferences the manager did not make.",
+  "solution_ko": "관리자는 한 달 뒤 앱 사용자와 비사용자의 정시 출근 비율을 비교한다. 그러나 원래 정시에 출근하던 직원들이 앱 사용자 집단에 더 많이 포함될 가능성이 높았다. 따라서 나중에 관찰된 집단 간 차이만으로 앱 때문에 사용자의 정시 출근 비율이 높아졌다고 판단할 수는 없다. ②는 이러한 기존 차이를 고려하지 않은 오류를 지적하며, 나머지는 관리자가 하지 않은 주장이나 추론을 오류로 제시한다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You turned a claim of improvement into a claim of necessity.",
+     "The manager never says punctual arrival requires the app.",
+     "Distinguish causing an improvement from being indispensable."
+    ],
+    "lines_ko": [
+     "개선 효과에 관한 주장을 필요조건에 관한 주장으로 바꾸어 읽음.",
+     "관리자는 정시 출근에 앱이 반드시 필요하다고 말하지 않음.",
+     "개선에 기여한다는 주장과 필수적이라는 주장을 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You assigned the manager a claim about an effect preceding its cause.",
+     "The manager attributes later punctuality, not earlier punctuality, to the app.",
+     "Identify the actual causal claim before criticizing its timing."
+    ],
+    "lines_ko": [
+     "관리자가 원인보다 앞선 결과까지 설명하려 했다고 판단함.",
+     "관리자가 앱의 효과로 돌린 것은 이후의 차이이지 이전의 출근 습관이 아님.",
+     "인과관계의 시간 순서를 비판하기 전에 실제 주장을 확인할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You treated two percentages mentioned in the passage as an asserted equality.",
+     "The manager compares punctuality rates across groups, not punctuality with app adoption.",
+     "Keep the measured outcome separate from group membership."
+    ],
+    "lines_ko": [
+     "지문에 등장하는 서로 다른 비율을 관리자가 동일시했다고 판단함.",
+     "관리자는 집단별 정시 출근 비율을 비교했을 뿐 앱 사용률과 동일시하지 않음.",
+     "측정한 결과와 집단을 나누는 기준을 구별할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You replaced the conclusion about punctuality with one about journey duration.",
+     "Arriving on time and spending less time traveling are different outcomes.",
+     "Criticize the stated conclusion, not a nearby claim."
+    ],
+    "lines_ko": [
+     "정시 출근에 관한 결론을 통근 시간에 관한 결론으로 바꾸어 읽음.",
+     "정시에 도착하는 것과 이동 시간이 짧아지는 것은 다른 결과임.",
+     "유사한 주장이 아니라 실제로 제시된 결론을 비판할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cause-3-02",
+  "track": "cause",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A grower randomly assigned seedlings of the same species and initial height to three groups, keeping all conditions except light and watering alike. Under bright light with daily watering, average growth was six centimeters. Under bright light with watering every other day, average growth was four centimeters; under dim light with daily watering, it was also four centimeters. No group received dim light with watering every other day, and the grower had no other evidence about that combination.",
+  "passage_ko": "한 재배자가 품종과 초기 키가 같은 어린 식물들을 세 집단에 무작위로 배정하고, 빛과 물주기 이외의 조건은 모두 동일하게 유지했다. 밝은 빛에서 매일 물을 준 집단은 평균 6센티미터 자랐다. 밝은 빛에서 이틀에 한 번 물을 준 집단은 평균 4센티미터 자랐고, 어두운 빛에서 매일 물을 준 집단도 평균 4센티미터 자랐다. 어두운 빛에서 이틀에 한 번 물을 준 집단은 없었으며, 재배자에게는 이 조건의 조합에 관한 다른 자료도 없었다.",
+  "prompt_en": "Which one of the following must be true about what these results establish?",
+  "prompt_ko": "이 실험 결과로부터 판단할 수 있는 내용으로 반드시 옳은 것은?",
+  "options_en": [
+   "They establish that average growth under dim light with watering every other day would be two centimeters.",
+   "They establish that daily watering is sufficient for average growth of six centimeters, regardless of light.",
+   "They establish that changing the watering schedule has the same effect under dim light as under bright light.",
+   "They establish that bright light is necessary for average growth of at least four centimeters.",
+   "They do not establish whether changing both light and watering would reduce growth more than changing either alone."
+  ],
+  "options_ko": [
+   "어두운 빛에서 이틀에 한 번 물을 주면 평균 2센티미터 자란다는 점이 확인된다.",
+   "빛의 밝기와 관계없이 매일 물을 주기만 하면 평균 6센티미터 자란다는 점이 확인된다.",
+   "물주기 간격을 바꾸는 효과가 어두운 빛에서도 밝은 빛에서와 같다는 점이 확인된다.",
+   "평균 4센티미터 이상 자라려면 반드시 밝은 빛이 필요하다는 점이 확인된다.",
+   "빛을 어둡게 하고 물주기 간격도 늘리면, 둘 중 하나만 바꿀 때보다 성장량이 더 줄어드는지는 확인되지 않는다."
+  ],
+  "answer": 4,
+  "solution_en": "Starting from bright light and daily watering, either single change was associated with two centimeters less average growth. The experiment did not test the combination of both changes. Adding the two observed reductions would require an unsupported assumption that the effects combine additively. Thus, the results do not establish whether the combined change would reduce growth further, making option 5 correct.",
+  "solution_ko": "밝은 빛에서 매일 물을 준 조건과 비교하면, 빛이나 물주기 중 하나만 바꾼 두 집단의 평균 성장량은 각각 2센티미터 적었다. 그러나 두 조건을 모두 바꾼 경우는 실험하지 않았다. 관찰된 두 감소량을 단순히 더하려면 각 변화의 효과가 서로 영향을 주지 않고 합산된다는 추가 가정이 필요하다. 따라서 두 조건을 함께 바꿀 때 성장량이 더 줄어드는지는 확인되지 않으므로 정답은 ⑤이다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You added two separately observed reductions to predict an untested combination.",
+     "The results do not show that the effects add together.",
+     "Do not assume additivity without evidence about combined changes."
+    ],
+    "lines_ko": [
+     "따로 관찰된 두 감소량을 더해 실험하지 않은 조합의 결과를 예측함.",
+     "각 변화의 효과가 단순히 합산된다는 근거는 없음.",
+     "동시 변화에 관한 자료 없이 효과의 합산을 가정하지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated daily watering as sufficient for six centimeters of growth.",
+     "The dim-light group received daily watering but averaged only four centimeters.",
+     "Check every observed case before claiming a condition guarantees an outcome."
+    ],
+    "lines_ko": [
+     "매일 물을 주는 것을 평균 6센티미터 성장의 충분조건으로 판단함.",
+     "어두운 빛에서는 매일 물을 주어도 평균 성장량이 4센티미터였음.",
+     "어떤 조건이 결과를 보장한다고 판단하기 전에 모든 관찰 사례를 확인할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You transferred the watering effect from bright light to dim light.",
+     "Only one watering schedule was tested under dim light.",
+     "An effect under one condition need not persist under another."
+    ],
+    "lines_ko": [
+     "밝은 빛에서 확인한 물주기 간격의 효과를 어두운 빛에도 적용함.",
+     "어두운 빛에서는 한 가지 물주기 간격만 실험함.",
+     "한 조건에서의 효과가 다른 조건에서도 같다고 단정하지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You made bright light a requirement for reaching four centimeters.",
+     "The dim-light group already reached that average.",
+     "One successful case without a condition defeats its claimed necessity."
+    ],
+    "lines_ko": [
+     "밝은 빛을 평균 4센티미터 성장의 필요조건으로 판단함.",
+     "어두운 빛의 집단도 이미 그 평균 성장량에 도달함.",
+     "해당 조건 없이 결과가 나타난 사례는 필요조건 주장을 반박함."
+    ]
+   },
+   null
+  ]
+ }
+]

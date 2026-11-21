@@ -1,0 +1,37 @@
+[
+ {
+  "id": "condition-1-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "condition-1-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "condition-2-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "condition-2-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "condition-3-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "condition-3-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "condition-4-01",
+  "verdict": "ok",
+  "issue": ""
+ }
+]

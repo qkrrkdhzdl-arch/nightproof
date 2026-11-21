@@ -1,0 +1,166 @@
+[
+ {
+  "id": "language-1-01",
+  "track": "language",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "The library's inventory guide calls a book 'available' whenever it is physically on a public shelf, even if it is reserved or restricted to use inside the building. The borrowing guide uses 'available' to mean that a visitor may take the book home immediately. A clerk checks only the inventory guide and finds that every book on a visitor's list is marked available. The clerk concludes that the visitor can take every listed book home immediately.",
+  "passage_ko": "한 도서관의 소장 자료 안내에서는 책이 일반 서가에 꽂혀 있으면, 예약된 책이거나 관내 열람만 허용된 책이라도 ‘이용 가능’으로 표시한다. 반면 대출 안내에서 ‘이용 가능’은 이용자가 그 책을 즉시 관외로 대출할 수 있다는 뜻이다. 직원은 소장 자료 안내만 확인한 뒤, 한 이용자가 가져온 목록의 모든 책이 ‘이용 가능’으로 표시되어 있음을 알게 되었다. 직원은 이용자가 목록의 모든 책을 즉시 관외로 대출할 수 있다고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the clerk's reasoning?",
+  "prompt_ko": "직원의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It extends information about the books on one visitor's list to every book in the library.",
+   "It assumes that marking a book available causes the book to be placed on a public shelf.",
+   "It treats presence on a public shelf as necessary for being marked available in the inventory guide.",
+   "It treats availability in the inventory guide as though it meant availability in the borrowing guide.",
+   "It concludes that all listed books can be borrowed after checking the status of only some listed books."
+  ],
+  "options_ko": [
+   "한 이용자의 목록에 있는 책에 관한 정보를 도서관의 모든 책에 확대하여 적용한다.",
+   "책에 ‘이용 가능’ 표시를 하는 것이 그 책을 일반 서가에 꽂게 하는 원인이라고 가정한다.",
+   "일반 서가에 꽂혀 있는 것을 소장 자료 안내에서 ‘이용 가능’으로 표시되기 위한 필요조건으로 취급한다.",
+   "소장 자료 안내의 ‘이용 가능’을 대출 안내의 ‘이용 가능’과 같은 뜻으로 취급한다.",
+   "목록에 있는 일부 책의 상태만 확인하고 목록의 모든 책을 대출할 수 있다고 결론 내린다."
+  ],
+  "answer": 3,
+  "solution_en": "The fourth option identifies the shift in meaning. In the inventory guide, a book on a public shelf can be marked available even when it cannot be taken home. The borrowing guide uses the same word specifically for immediate borrowing permission. Checking the inventory labels therefore does not establish that every listed book can be borrowed.",
+  "solution_ko": "정답은 네 번째 선택지이다. 소장 자료 안내에서는 관외 대출이 불가능한 책도 일반 서가에 있으면 ‘이용 가능’으로 표시된다. 반면 대출 안내에서 같은 표현은 즉시 관외 대출이 허용된다는 뜻이다. 따라서 소장 자료 안내의 표시를 확인한 것만으로 목록의 모든 책을 대출할 수 있다는 결론은 도출되지 않는다.",
+  "traps": [
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You expanded the clerk's conclusion to the whole library.",
+     "The conclusion concerns only books on the visitor's list.",
+     "Check whether the argument actually changes the group under discussion."
+    ],
+    "lines_ko": [
+     "직원의 결론을 도서관 전체에 관한 주장으로 확대함.",
+     "결론의 대상은 이용자의 목록에 있는 책뿐임.",
+     "추론에서 논의 대상의 범위가 실제로 달라졌는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You read the availability label as a claim about what causes shelf placement.",
+     "The clerk makes no claim about why books reach the shelves.",
+     "Distinguish a classification rule from a causal explanation."
+    ],
+    "lines_ko": [
+     "‘이용 가능’ 표시를 서가 배치의 원인에 관한 주장으로 읽음.",
+     "직원은 책이 서가에 놓이게 된 원인을 주장하지 않음.",
+     "분류 기준과 인과적 설명을 구별할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You attributed a reversed inventory condition to the clerk.",
+     "The clerk never infers shelf presence from an availability label.",
+     "Identify the inference actually made before diagnosing a reversed condition."
+    ],
+    "lines_ko": [
+     "직원이 소장 자료 안내의 조건을 뒤집어 적용했다고 판단함.",
+     "직원은 ‘이용 가능’ 표시로부터 서가에 있다는 결론을 내리지 않음.",
+     "조건의 역전 여부를 따지기 전에 실제 추론 방향을 확인할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You assumed the clerk checked only a sample of the listed books.",
+     "The passage says every listed book was found marked available.",
+     "Separate incomplete checking from misinterpreting what a complete check establishes."
+    ],
+    "lines_ko": [
+     "직원이 목록의 일부 책만 확인했다고 가정함.",
+     "제시문에서는 목록의 모든 책에 표시가 있음을 확인함.",
+     "일부만 확인한 오류와 확인 결과의 의미를 오해한 오류를 구별할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "language-1-02",
+  "track": "language",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "In a packaging supplier's monthly report, 'many returns' means that at least forty units of a container model were returned that month, regardless of the number sold. A store issues a replacement voucher only for models labeled 'many returns' whose returned units also exceed ten percent of units sold that month. Last month, one model had eighty units sold and exactly forty units returned, all from that month's sales.",
+  "passage_ko": "한 포장재 공급업체의 월간 보고서에서 ‘반품이 많음’은 판매량과 관계없이 해당 월에 특정 용기 모델이 40개 이상 반품되었다는 뜻이다. 한 매장은 ‘반품이 많음’으로 분류되고 반품 수량이 그달 판매 수량의 10퍼센트를 초과하는 모델에 한해서만 교환권을 발급한다. 지난달 한 모델은 80개가 판매되고 정확히 40개가 반품되었으며, 반품된 제품은 모두 지난달에 판매된 것이었다.",
+  "prompt_en": "Which one of the following must be true on the basis of the passage?",
+  "prompt_ko": "윗글에서 반드시 도출되는 것은?",
+  "options_en": [
+   "The model meets both stated requirements for a voucher, but the passage does not guarantee that one is issued.",
+   "The store must issue a voucher for the model because it meets both stated requirements.",
+   "Most of this model's units sold last month were returned.",
+   "Every model with more than ten percent of its sold units returned qualifies as having 'many returns.'",
+   "Every model labeled 'many returns' had at least half of its sold units returned that month."
+  ],
+  "options_ko": [
+   "이 모델은 제시된 두 가지 교환권 발급 요건을 모두 충족하지만, 교환권이 발급된다고 단정할 수는 없다.",
+   "이 모델은 제시된 두 가지 요건을 모두 충족하므로 매장은 반드시 교환권을 발급해야 한다.",
+   "지난달 판매된 이 모델의 제품 중 과반수가 반품되었다.",
+   "판매 수량의 10퍼센트를 초과하여 반품된 모델은 모두 ‘반품이 많음’으로 분류된다.",
+   "‘반품이 많음’으로 분류된 모델은 모두 그달 판매 수량의 절반 이상이 반품되었다."
+  ],
+  "answer": 0,
+  "solution_en": "The first option follows from the definitions and the direction of the store's rule. Forty returns meet the report's threshold, and forty out of eighty is fifty percent, which exceeds ten percent. However, issuing vouchers only for qualifying models makes those qualifications necessary, not sufficient. Exactly half the units were returned, not most, and this model's figures establish no general relationship between return counts and return percentages.",
+  "solution_ko": "정답은 첫 번째 선택지이다. 반품 수량 40개는 보고서의 기준을 충족하고, 판매 수량 80개 중 40개가 반품되었으므로 반품 비율은 10퍼센트를 초과하는 50퍼센트이다. 그러나 해당 요건을 충족하는 모델에 한해서만 교환권을 발급한다는 것은 그 요건들이 필요조건이라는 뜻이지 충분조건이라는 뜻은 아니다. 또한 반품된 수량은 정확히 절반이므로 과반수가 아니며, 이 모델의 수치만으로 반품 수량과 반품 비율 사이의 일반적인 관계를 도출할 수 없다.",
+  "traps": [
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated the two voucher requirements as a guarantee.",
+     "The store's rule states necessary conditions, not a promise to every qualifying model.",
+     "For 'only if' rules, meeting the requirements does not secure the result."
+    ],
+    "lines_ko": [
+     "두 가지 발급 요건의 충족을 발급의 보장으로 취급함.",
+     "매장의 규정은 필요조건을 제시할 뿐 모든 충족 모델에 발급을 약속하지 않음.",
+     "필요조건을 충족했다는 사실만으로 결과를 확정하지 말 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You read the report's 'many returns' as meaning most units were returned.",
+     "The report defines a count threshold; forty out of eighty is exactly half.",
+     "Keep a stipulated meaning separate from an everyday interpretation."
+    ],
+    "lines_ko": [
+     "보고서의 ‘반품이 많음’을 판매 제품의 과반수가 반품되었다는 뜻으로 읽음.",
+     "보고서는 수량 기준을 정하며, 80개 중 40개는 정확히 절반임.",
+     "별도로 정한 의미와 일상적인 해석을 구별할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You substituted a percentage threshold for the report's numerical threshold.",
+     "Returning two of ten units exceeds ten percent but falls short of forty returns.",
+     "Check whether a definition measures an absolute count or a proportion."
+    ],
+    "lines_ko": [
+     "보고서의 수량 기준을 비율 기준으로 대체함.",
+     "10개 중 2개가 반품되면 10퍼센트를 초과하지만 40개에는 미달함.",
+     "정의의 기준이 절대 수량인지 비율인지 확인할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You generalized this model's fifty-percent return rate to every model with many returns.",
+     "Forty returns could come from hundreds of sales, producing a much lower percentage.",
+     "Do not turn one example's proportion into a universal rule."
+    ],
+    "lines_ko": [
+     "이 모델의 반품 비율 50퍼센트를 ‘반품이 많음’인 모든 모델에 일반화함.",
+     "수백 개가 판매된 모델에서 40개가 반품되면 비율은 훨씬 낮을 수 있음.",
+     "한 사례의 비율을 보편적인 규칙으로 바꾸지 말 것."
+    ]
+   }
+  ]
+ }
+]

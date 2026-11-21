@@ -1,0 +1,166 @@
+[
+ {
+  "id": "assumption-5-01",
+  "track": "assumption",
+  "level": 1,
+  "question_type": "assumption",
+  "passage_en": "At a library, reserved books remain on the pickup shelf for seven days, and most are collected on the final day. The library plans to send an extra reminder on the second day, without changing the deadline or any other procedure. The manager predicts that this reminder will persuade some final-day collectors to come earlier, reducing the average time books occupy shelf space. The reminder will simply repeat the pickup information already included in the original reservation notice.",
+  "passage_ko": "한 도서관은 예약 도서를 수령대에 7일간 보관하며, 대부분의 예약 도서는 마지막 날에 수령된다. 도서관은 수령 기한이나 다른 절차를 바꾸지 않고 둘째 날에 추가 안내를 보내려 한다. 관리자는 이 안내를 받으면 원래 마지막 날에 오던 이용자 중 일부가 더 일찍 방문하여, 예약 도서가 수령대에 놓여 있는 평균 시간이 줄어들 것이라고 예측한다. 추가 안내에는 최초 예약 안내에 담긴 수령 정보만 다시 제시된다.",
+  "prompt_en": "Which one of the following is an assumption required by the manager's argument?",
+  "prompt_ko": "관리자의 논증에 필요한 가정으로 가장 적절한 것은?",
+  "options_en": [
+   "Without an extra reminder, no user ever collects a reserved book before the final day.",
+   "Some users who would otherwise collect their books on the final day are able to collect them earlier.",
+   "Every user who receives the extra reminder will collect the reserved book before the final day.",
+   "The manager has successfully introduced a similar reminder system at another library.",
+   "Sending an extra reminder is the only way to reduce the time reserved books occupy shelf space."
+  ],
+  "options_ko": [
+   "추가 안내가 없으면 어떤 이용자도 마지막 날보다 일찍 예약 도서를 수령하지 않는다.",
+   "추가 안내가 없다면 마지막 날에 도서를 수령할 이용자 중에는 그보다 일찍 수령할 수 있는 사람이 있다.",
+   "추가 안내를 받은 이용자는 모두 마지막 날보다 일찍 예약 도서를 수령할 것이다.",
+   "관리자는 다른 도서관에서 비슷한 추가 안내 제도를 성공적으로 도입한 경험이 있다.",
+   "예약 도서가 수령대에 놓여 있는 시간을 줄이는 방법은 추가 안내를 보내는 것뿐이다."
+  ],
+  "answer": 1,
+  "solution_en": "The prediction requires some final-day collectors to change their collection timing. If none of those users could collect earlier, the reminder could not produce the change the manager predicts, so option 2 is necessary. Option 1 turns a statement about most users into a claim about every user, while option 3 demands universal success rather than a change among some users. The manager's previous experience in option 4 is not required for the proposed mechanism to work. Option 5 unnecessarily rules out other ways of achieving the same result.",
+  "solution_ko": "관리자의 예측이 성립하려면 원래 마지막 날에 수령하던 이용자 중 일부가 수령 시점을 앞당길 수 있어야 한다. 그런 이용자가 한 명도 없다면 추가 안내로 관리자가 예상한 변화를 일으킬 수 없으므로, ②는 필요한 가정이다. ①은 대부분에 관한 진술을 전체에 관한 진술로 확대하고, ③은 일부 이용자의 변화만 있으면 되는 상황에서 모든 이용자의 변화를 요구한다. ④의 과거 경험은 제안된 방식이 작동하기 위한 필수 조건이 아니다. ⑤처럼 같은 결과를 얻을 다른 방법이 없다고 가정할 필요도 없다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated most final-day collections as if all collections occurred then.",
+     "The argument allows some users to collect earlier without another reminder.",
+     "Keep claims about most cases separate from claims about every case."
+    ],
+    "lines_ko": [
+     "대부분이 마지막 날에 수령한다는 진술을 전원이 그렇다는 뜻으로 확대함.",
+     "추가 안내 없이 일찍 수령하는 이용자가 있어도 논증은 성립함.",
+     "대부분에 관한 진술과 전체에 관한 진술을 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You required the reminder to guarantee early collection for every recipient.",
+     "The prediction needs only some final-day collectors to change their timing.",
+     "Do not replace a necessary possibility with a universal guarantee."
+    ],
+    "lines_ko": [
+     "추가 안내가 모든 수신자의 조기 수령을 보장해야 한다고 판단함.",
+     "예측에 필요한 변화는 마지막 날 수령자 일부의 수령 시점 변경임.",
+     "필요한 가능성을 보편적인 보장으로 바꾸지 말 것."
+    ]
+   },
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You made the manager's past success a requirement for the present prediction.",
+     "The reminder could change collection timing even without that experience.",
+     "Test the proposed mechanism, not the advocate's record."
+    ],
+    "lines_ko": [
+     "관리자의 과거 성공 경험을 현재 예측의 필수 조건으로 삼음.",
+     "그런 경험이 없어도 추가 안내가 수령 시점을 바꿀 수 있음.",
+     "제안자의 이력보다 제안된 작동 원리를 검토할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You assumed the proposal must be the only available solution.",
+     "Other effective methods would not prevent this reminder from working.",
+     "A method can succeed without being the sole possible method."
+    ],
+    "lines_ko": [
+     "제안된 방법이 유일한 해결책이어야 한다고 가정함.",
+     "다른 효과적인 방법이 있어도 추가 안내의 효과는 부정되지 않음.",
+     "방법의 효과와 방법의 유일성을 구별할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "assumption-5-02",
+  "track": "assumption",
+  "level": 2,
+  "question_type": "strengthen",
+  "passage_en": "An online seller currently ships each order in a lightweight box that is discarded after one delivery. It proposes using heavier returnable boxes and predicts that the switch will reduce the total mass of box material discarded over a year, while shipping the same number of orders. The prediction rests on the claim that each returnable box will replace many lightweight boxes before being discarded. Critics note that the heavier boxes may be lost or damaged before completing many trips.",
+  "passage_ko": "한 온라인 판매업체는 현재 주문 건마다 가벼운 상자를 사용하며, 이 상자는 한 번 배송된 뒤 폐기된다. 업체는 더 무거운 회수용 상자로 전환하면 연간 주문 건수가 같더라도 한 해 동안 폐기되는 상자 재료의 총질량이 줄어들 것이라고 예측한다. 이 예측은 회수용 상자 하나가 폐기되기 전까지 가벼운 상자 여러 개를 대신할 것이라는 주장에 근거한다. 이에 대해 비판자들은 무거운 상자가 여러 차례 사용되기 전에 분실되거나 파손될 수 있다고 지적한다.",
+  "prompt_en": "Which one of the following, if true, most strengthens the seller's argument?",
+  "prompt_ko": "다음 중 참일 경우, 업체의 논증을 가장 강화하는 것은?",
+  "options_en": [
+   "Unlike the current lightweight boxes, the returnable boxes are made entirely from recycled material.",
+   "During a trial using returnable boxes, the seller shipped half as many orders but discarded only one quarter less box material by mass.",
+   "During a trial, fewer returnable boxes were discarded per delivery, but their discarded mass per delivery exceeded that of lightweight boxes.",
+   "The seller has no packaging option other than the current lightweight boxes or the proposed returnable boxes.",
+   "A yearlong trial with comparable orders found less discarded box mass per delivery using returnable boxes, even counting lost boxes as discarded."
+  ],
+  "options_ko": [
+   "현재의 가벼운 상자와 달리, 회수용 상자는 전부 재활용 원료로 만들어진다.",
+   "회수용 상자를 사용한 시험 운영 기간에 주문 건수는 절반으로 줄었지만, 폐기된 상자 재료의 질량은 4분의 1만 줄었다.",
+   "시험 운영에서 배송 건당 폐기된 회수용 상자의 개수는 더 적었지만, 그 질량은 가벼운 상자를 사용할 때보다 더 컸다.",
+   "업체가 선택할 수 있는 포장 방식은 현재의 가벼운 상자와 제안된 회수용 상자뿐이다.",
+   "유사한 주문을 대상으로 1년간 시험한 결과, 분실된 상자까지 폐기된 것으로 계산해도 회수용 상자의 배송 건당 폐기 질량이 더 작았다."
+  ],
+  "answer": 4,
+  "solution_en": "The argument concerns discarded mass at a fixed number of orders, not the number of discarded boxes. Option 5 directly supports a lower discarded mass per delivery under comparable conditions and includes losses, addressing the critics' concern. Option 1 concerns the source of the material rather than how much is discarded. In option 2, discarded mass falls less than order volume, so discarded mass per order actually rises; option 3 explicitly reports a higher discarded mass per delivery. Option 4 restricts the available choices without showing that the proposed choice reduces waste.",
+  "solution_ko": "논증의 쟁점은 주문 건수가 같을 때 폐기되는 상자 재료의 질량이지, 폐기되는 상자의 개수가 아니다. ⑤는 유사한 조건에서 배송 건당 폐기 질량이 줄었다는 직접적인 근거이며, 분실된 상자도 계산에 포함하여 비판자들의 우려에 대응한다. ①은 재료의 출처에 관한 정보일 뿐 폐기 질량이 줄어든다는 근거가 아니다. ②에서는 주문 건수보다 폐기 질량이 적은 비율로 감소했으므로 주문 건당 폐기 질량은 오히려 증가하며, ③도 배송 건당 폐기 질량이 더 크다고 명시한다. ④는 선택 가능한 방식을 제한할 뿐 제안된 방식이 폐기량을 줄인다는 점을 뒷받침하지 않는다.",
+  "traps": [
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You substituted recycled content for reduced discarded mass.",
+     "The material's origin does not establish how much will be discarded.",
+     "Match the evidence to the exact outcome being predicted."
+    ],
+    "lines_ko": [
+     "재활용 원료 사용을 폐기 질량 감소로 바꾸어 판단함.",
+     "원료의 출처만으로 폐기될 재료의 양을 알 수 없음.",
+     "근거가 예측 대상인 지표를 직접 뒷받침하는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You credited the boxes for a decline accompanied by fewer orders.",
+     "Discarded mass fell proportionally less than orders, so mass per order increased.",
+     "Compare waste at equal order volumes before attributing improvement to packaging."
+    ],
+    "lines_ko": [
+     "주문 감소와 함께 나타난 폐기량 감소를 상자 전환의 효과로 판단함.",
+     "폐기 질량의 감소율이 주문 감소율보다 작아 주문 건당 질량은 증가함.",
+     "포장 방식의 효과는 주문 규모를 같게 놓고 비교할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You read fewer discarded boxes as less discarded material by mass.",
+     "The option explicitly reports a higher discarded mass per delivery.",
+     "Keep item counts distinct from the total mass those items represent."
+    ],
+    "lines_ko": [
+     "폐기 상자 수 감소를 폐기 재료의 질량 감소로 해석함.",
+     "선택지는 배송 건당 폐기 질량이 더 크다고 명시함.",
+     "물건의 개수와 그 물건들의 총질량을 구별할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You treated having only two choices as evidence favoring the proposed choice.",
+     "Either choice could produce more waste, regardless of whether alternatives exist.",
+     "A restricted choice set does not establish which option performs better."
+    ],
+    "lines_ko": [
+     "선택지가 둘뿐이라는 사실을 제안된 선택에 유리한 근거로 판단함.",
+     "다른 대안의 유무와 무관하게 어느 쪽의 폐기량이 더 많을 수도 있음.",
+     "선택 범위의 제한과 선택지의 우열을 구별할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

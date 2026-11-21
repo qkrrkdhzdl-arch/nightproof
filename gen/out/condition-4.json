@@ -1,0 +1,166 @@
+[
+ {
+  "id": "condition-4-01",
+  "track": "condition",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "At a library, a visitor is allowed to use a reserved study room only if the visitor has a confirmed booking. A visitor has a confirmed booking only if the visitor has an active library card. Every visitor who has completed orientation has an active library card, but submitting a booking form alone guarantees nothing. An evening visitor has submitted a booking form but does not have an active library card.",
+  "passage_ko": "어느 도서관에서 예약제 학습실을 이용하려면 반드시 예약이 확정되어 있어야 한다. 예약이 확정된 이용자는 모두 유효한 도서관 이용증을 가지고 있다. 이용 안내 교육을 이수한 이용자는 모두 유효한 이용증을 가지고 있지만, 예약 신청서를 제출했다는 사실만으로는 아무것도 보장되지 않는다. 저녁에 방문한 한 이용자는 예약 신청서를 제출했으나 유효한 이용증은 가지고 있지 않다.",
+  "prompt_en": "Which one of the following must be true?",
+  "prompt_ko": "위 내용이 참일 때 반드시 참인 것은?",
+  "options_en": [
+   "The evening visitor is not allowed to use a reserved study room.",
+   "Every visitor with an active library card has a confirmed booking.",
+   "Every visitor who has completed orientation is allowed to use a reserved study room.",
+   "Every visitor allowed to use a reserved study room has completed orientation.",
+   "Every visitor without a confirmed booking has not completed orientation."
+  ],
+  "options_ko": [
+   "저녁에 방문한 그 이용자는 예약제 학습실을 이용할 수 없다.",
+   "유효한 도서관 이용증을 가진 이용자는 모두 예약이 확정되어 있다.",
+   "이용 안내 교육을 이수한 이용자는 모두 예약제 학습실을 이용할 수 있다.",
+   "예약제 학습실을 이용할 수 있는 이용자는 모두 이용 안내 교육을 이수했다.",
+   "예약이 확정되지 않은 이용자는 모두 이용 안내 교육을 이수하지 않았다."
+  ],
+  "answer": 0,
+  "solution_en": "Permission to use a reserved study room requires a confirmed booking, which requires an active library card. By contraposition, the evening visitor's lack of an active card rules out a confirmed booking and therefore room access. Option 2 reverses the booking-to-card condition. Option 3 treats possession of a card, obtained through orientation, as sufficient for room access. Options 4 and 5 wrongly treat orientation as necessary for card possession or a confirmed booking as necessary for completing orientation.",
+  "solution_ko": "예약제 학습실을 이용할 수 있으려면 예약이 확정되어 있어야 하고, 예약이 확정되어 있으려면 유효한 이용증이 있어야 한다. 이를 대우로 적용하면, 유효한 이용증이 없는 그 이용자는 예약이 확정된 상태일 수 없으므로 학습실을 이용할 수 없다. 두 번째 선택지는 예약 확정에서 이용증 보유로 이어지는 조건의 방향을 뒤집었다. 세 번째 선택지는 교육 이수로 확보되는 이용증만으로 학습실 이용까지 보장된다고 보았다. 네 번째와 다섯 번째 선택지는 각각 교육 이수를 이용증 보유의 필요조건으로, 예약 확정을 교육 이수의 필요조건으로 잘못 보았다.",
+  "traps": [
+   null,
+   {
+    "tag": "affirming_consequent",
+    "lines_en": [
+     "You inferred a confirmed booking from possession of an active card.",
+     "The card is required for a booking, but does not guarantee one.",
+     "Keep the implication pointing from confirmed booking to active card."
+    ],
+    "lines_ko": [
+     "유효한 이용증 보유로부터 예약 확정을 추론한 오류.",
+     "이용증은 예약 확정에 필요하지만, 예약 확정을 보장하지는 않음.",
+     "조건의 방향은 예약 확정에서 유효한 이용증 보유로 유지."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated orientation's guarantee of a card as a guarantee of room access.",
+     "An active card is necessary for access, not sufficient.",
+     "Chain conditions only when each conclusion supplies the next rule's starting condition."
+    ],
+    "lines_ko": [
+     "교육 이수가 이용증을 보장한다는 사실을 학습실 이용 보장으로 확대한 오류.",
+     "유효한 이용증은 학습실 이용의 필요조건일 뿐 충분조건은 아님.",
+     "앞 조건의 결론이 다음 조건의 전제와 일치할 때만 연쇄 추론."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You assumed every required active card must come from completing orientation.",
+     "Orientation guarantees a card, but the passage never makes it the only route.",
+     "Do not turn a sufficient condition into a necessary one."
+    ],
+    "lines_ko": [
+     "학습실 이용에 필요한 이용증은 반드시 교육 이수를 통해 얻는다고 판단한 오류.",
+     "교육 이수는 이용증 보유를 보장하지만 유일한 경로로 제시되지는 않음.",
+     "충분조건을 필요조건으로 바꾸지 않도록 주의."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated a confirmed booking as necessary for completing orientation.",
+     "Orientation requires an active card's presence, but does not require a booking.",
+     "Allow an oriented cardholder to lack a confirmed booking."
+    ],
+    "lines_ko": [
+     "예약 확정을 교육 이수의 필요조건으로 판단한 오류.",
+     "교육 이수자는 유효한 이용증을 보유하지만, 예약까지 확정되어 있어야 하는 것은 아님.",
+     "교육을 이수하고 이용증을 보유하더라도 예약은 확정되지 않을 수 있음에 주목."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "condition-4-02",
+  "track": "condition",
+  "level": 1,
+  "question_type": "assumption",
+  "passage_en": "At a parcel depot, every parcel packed in a reusable box receives a green label. Every parcel with a green label is placed on the collection shelf for that day. A worker concludes that every parcel packed in a reusable box will be collected before closing that day. The worker bases this conclusion only on the two rules and has no information about which parcels will be packed in reusable boxes.",
+  "passage_ko": "어느 택배 집하장에서는 재사용 상자에 포장된 모든 소포에 초록색 표지를 붙인다. 초록색 표지가 붙은 소포는 모두 당일 수거용 선반에 놓는다. 한 직원은 이를 근거로 재사용 상자에 포장된 소포는 모두 그날 영업이 끝나기 전에 수거될 것이라고 결론 내렸다. 이 직원이 근거로 삼은 것은 위의 두 규칙뿐이며, 어떤 소포가 재사용 상자에 포장될지는 알지 못한다.",
+  "prompt_en": "Which one of the following, if added as a premise, makes the worker's conclusion follow logically?",
+  "prompt_ko": "다음 중 전제로 추가하면 직원의 결론이 논리적으로 도출되는 것은?",
+  "options_en": [
+   "Every parcel collected before closing is placed on that day's collection shelf.",
+   "Every parcel placed on the collection shelf has a green label.",
+   "Every parcel collected before closing is packed in a reusable box.",
+   "Every parcel placed on the collection shelf is collected before closing that day.",
+   "Every parcel with a green label is packed in a reusable box."
+  ],
+  "options_ko": [
+   "영업이 끝나기 전에 수거되는 소포는 모두 당일 수거용 선반에 놓인다.",
+   "수거용 선반에 놓인 소포에는 모두 초록색 표지가 붙어 있다.",
+   "영업이 끝나기 전에 수거되는 소포는 모두 재사용 상자에 포장되어 있다.",
+   "수거용 선반에 놓인 소포는 모두 그날 영업이 끝나기 전에 수거된다.",
+   "초록색 표지가 붙은 소포는 모두 재사용 상자에 포장되어 있다."
+  ],
+  "answer": 3,
+  "solution_en": "The existing rules establish a chain from reusable packaging to a green label and then to the collection shelf. Option 4 extends that chain from the shelf to collection before closing, establishing the conclusion. Options 1 and 3 begin with timely collection, so neither establishes that collection will occur. Options 2 and 5 connect stages already mentioned without linking either stage to timely collection. Under any wrong option, a reusable-box parcel could have a green label and reach the shelf yet remain uncollected at closing.",
+  "solution_ko": "주어진 규칙에 따르면 재사용 상자 포장에서 초록색 표지 부착을 거쳐 수거용 선반 배치까지 이어진다. 네 번째 선택지를 추가하면 선반에 놓인 소포가 영업 종료 전에 수거된다는 단계가 연결되므로 직원의 결론이 도출된다. 첫 번째와 세 번째 선택지는 영업 종료 전 수거를 전제로 삼으므로 수거 자체가 이루어진다는 점을 보장하지 못한다. 두 번째와 다섯 번째 선택지는 기존 단계들 사이의 관계만 추가할 뿐 영업 종료 전 수거와 연결하지 않는다. 어느 오답을 추가하더라도 재사용 상자에 포장된 소포가 초록색 표지를 달고 선반에 놓였지만 영업 종료까지 수거되지 않는 경우가 가능하다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You read a requirement for timely collection as a guarantee of timely collection.",
+     "This option makes shelf placement necessary, not sufficient, for collection before closing.",
+     "Add a rule running from shelf placement to timely collection, not backward."
+    ],
+    "lines_ko": [
+     "영업 종료 전 수거의 필요조건을 수거를 보장하는 조건으로 읽은 오류.",
+     "이 선택지는 선반 배치를 영업 종료 전 수거의 필요조건으로만 제시.",
+     "선반 배치에서 영업 종료 전 수거로 나아가는 방향의 규칙이 필요."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You strengthened the label rule instead of connecting shelf placement to timely collection.",
+     "Even matching labels and shelf placement leaves the collection deadline unsettled.",
+     "Find the missing connection to the conclusion's new condition."
+    ],
+    "lines_ko": [
+     "선반 배치와 수거 시점을 연결하는 대신 표지 관련 규칙을 강화한 오류.",
+     "표지 부착과 선반 배치가 서로 대응해도 수거 시점은 보장되지 않음.",
+     "결론에서 새로 등장한 조건으로 이어지는 연결 고리를 확인."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You accepted the reverse of the worker's conclusion as support for that conclusion.",
+     "Making reusable packaging necessary for timely collection does not make it sufficient.",
+     "Check that your added rule points toward collection, not away from it."
+    ],
+    "lines_ko": [
+     "직원 결론의 역을 결론의 근거로 받아들인 오류.",
+     "재사용 상자 포장을 수거의 필요조건으로 삼아도 충분조건이 되지는 않음.",
+     "추가한 규칙이 수거를 전제로 삼는지, 수거로 이어지는지 구별."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You made packaging and labeling equivalent instead of establishing timely collection.",
+     "This option adds no rule about whether or when shelf parcels are collected.",
+     "Bridge the established chain to the deadline stated in the conclusion."
+    ],
+    "lines_ko": [
+     "수거 시점을 보장하는 대신 포장 방식과 표지 부착을 동치로 만든 오류.",
+     "이 선택지는 선반에 놓인 소포의 수거 여부나 시점에 관한 규칙을 추가하지 않음.",
+     "이미 확보된 조건의 연쇄를 결론의 수거 기한과 연결."
+    ]
+   }
+  ]
+ }
+]

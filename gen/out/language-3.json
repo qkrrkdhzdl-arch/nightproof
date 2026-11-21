@@ -1,0 +1,166 @@
+[
+ {
+  "id": "language-3-01",
+  "track": "language",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "The library classifies a room as 'quiet' whenever users are not allowed to talk there, regardless of other sounds. In the new reading room, talking is prohibited, but a ventilation fan produces a steady hum. The manager therefore calls the room quiet and concludes that anyone seeking a place with very little noise should choose it. The manager offers the room's official classification as the sole reason for that recommendation.",
+  "passage_ko": "한 도서관은 다른 소리가 나는지와 관계없이 이용자의 대화가 금지된 공간을 ‘조용한 공간’으로 분류한다. 새 열람실에서는 대화가 금지되어 있지만, 환풍기에서 윙윙거리는 소리가 계속 난다. 관리자는 이 열람실이 조용한 공간이므로 소음이 거의 없는 곳을 찾는 사람이라면 이곳을 선택해야 한다고 주장한다. 관리자가 이러한 추천의 근거로 제시한 것은 도서관의 공식 분류뿐이다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the manager's reasoning?",
+  "prompt_ko": "관리자의 추론에 나타난 오류로 가장 적절한 것은?",
+  "options_en": [
+   "It assumes that officially calling a room quiet will cause its users to stop talking.",
+   "It treats a classification based on a speech rule as evidence that overall noise is very low.",
+   "It generalizes from conditions in the new reading room to conditions in every library room.",
+   "It infers that talking is prohibited merely from the room's official classification as quiet.",
+   "It assumes that a room must either prohibit every kind of sound or permit every kind."
+  ],
+  "options_ko": [
+   "공간을 공식적으로 조용하다고 부르면 이용자들이 대화를 멈추게 된다고 가정한다.",
+   "대화 규칙에 따른 분류를 전체적인 소음 수준이 매우 낮다는 근거로 삼는다.",
+   "새 열람실의 상황을 도서관의 모든 공간에 일반화한다.",
+   "조용한 공간이라는 공식 분류만으로 그곳에서 대화가 금지되어 있다고 추론한다.",
+   "공간에서는 모든 종류의 소리를 금지하거나 모든 종류의 소리를 허용해야 한다고 가정한다."
+  ],
+  "answer": 1,
+  "solution_en": "The correct answer is option 2. The official classification concerns whether talking is permitted, not how much noise a room contains. The recommendation silently shifts to 'quiet' meaning very little noise, which the classification alone cannot establish. Option 1 invents a causal claim, while option 3 expands the argument beyond the single room discussed. Option 4 reverses the manager's actual inference, and option 5 invents an all-or-nothing choice about sound.",
+  "solution_ko": "정답은 ②이다. 도서관의 공식 분류는 대화 허용 여부에 관한 것이지 공간의 전체적인 소음 수준에 관한 것이 아니다. 그러나 추천에서는 ‘조용하다’를 소음이 거의 없다는 뜻으로 바꾸어 사용하며, 공식 분류만으로는 이를 뒷받침할 수 없다. ①은 제시되지 않은 인과관계를 덧붙이고, ③은 한 열람실에 관한 주장을 도서관 전체로 확대한다. ④는 관리자가 실제로 추론한 방향을 뒤집으며, ⑤는 제시되지 않은 양자택일을 가정한다.",
+  "traps": [
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You treated the classification as a cause of users' silence.",
+     "The manager uses an existing prohibition to classify the room, not to explain behavior.",
+     "Distinguish a classification rule from a claim about what causes behavior."
+    ],
+    "lines_ko": [
+     "공식 분류를 이용자의 침묵을 유발하는 원인으로 해석한 선택.",
+     "관리자는 기존의 대화 금지 규칙으로 공간을 분류했을 뿐, 행동의 원인을 설명하지 않음.",
+     "분류 기준과 행동에 관한 인과 주장을 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You expanded a claim about one room into a claim about every room.",
+     "The manager recommends only the new reading room.",
+     "Match the alleged error to the actual scope of the conclusion."
+    ],
+    "lines_ko": [
+     "한 공간에 관한 주장을 모든 공간에 관한 주장으로 확대한 선택.",
+     "관리자가 추천한 대상은 새 열람실뿐임.",
+     "오류를 판단할 때 실제 결론의 범위를 확인할 것."
+    ]
+   },
+   {
+    "tag": "affirming_consequent",
+    "lines_en": [
+     "You read the manager's inference in reverse.",
+     "The prohibition supports the classification; the classification is not used to establish the prohibition.",
+     "Track which statement supplies the premise and which statement follows."
+    ],
+    "lines_ko": [
+     "관리자의 추론 방향을 거꾸로 읽은 선택.",
+     "대화 금지에서 공식 분류를 도출했으며, 공식 분류에서 대화 금지를 도출한 것이 아님.",
+     "어느 진술이 전제이고 어느 진술이 도출되는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You attributed an all-or-nothing rule about sound to the manager.",
+     "The argument never limits room policies to those two alternatives.",
+     "Identify an actual excluded alternative before diagnosing a false dilemma."
+    ],
+    "lines_ko": [
+     "관리자에게 소리의 전면 금지와 전면 허용이라는 양자택일을 부여한 선택.",
+     "공간의 운영 방침을 이 두 가지로 제한한 내용은 없음.",
+     "양자택일의 오류를 지적하려면 실제로 배제된 대안부터 확인할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "language-3-02",
+  "track": "language",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A second-hand marketplace uses 'active' differently in two monthly reports covering the same members. Its buyer report calls a member active exactly when that member opened the app on at least three different days that month. Its seller report calls a member active exactly when that member listed at least three items that month, regardless of when they were listed. Every member classified as active in the seller report is active in the buyer report, but some active buyers are not active sellers.",
+  "passage_ko": "한 중고 거래 플랫폼은 동일한 회원들을 대상으로 작성한 두 월간 보고서에서 ‘활동 회원’을 서로 다르게 정의한다. 구매자 보고서에서는 해당 월에 앱을 실행한 날이 사흘 이상인 회원만을, 그리고 그러한 회원 모두를 활동 회원으로 분류한다. 판매자 보고서에서는 등록 시점과 관계없이 해당 월에 물품을 세 개 이상 등록한 회원만을, 그리고 그러한 회원 모두를 활동 회원으로 분류한다. 판매자 보고서의 활동 회원은 모두 구매자 보고서에서도 활동 회원이지만, 구매자 보고서의 활동 회원 중 일부는 판매자 보고서에서는 활동 회원이 아니다.",
+  "prompt_en": "Which one of the following must be true of the month described?",
+  "prompt_ko": "윗글에 따르면 해당 월에 관하여 반드시 참인 것은?",
+  "options_en": [
+   "Every member who opened the app on at least three different days listed at least three items.",
+   "Some members who listed at least three items opened the app on fewer than three different days.",
+   "Every member who listed at least three items listed them on at least three different days.",
+   "More than half of the members opened the app on at least three different days.",
+   "Some members opened the app on at least three different days but listed fewer than three items."
+  ],
+  "options_ko": [
+   "앱을 실행한 날이 사흘 이상인 회원은 모두 물품을 세 개 이상 등록했다.",
+   "물품을 세 개 이상 등록한 회원 중 일부는 앱을 실행한 날이 사흘 미만이다.",
+   "물품을 세 개 이상 등록한 회원은 모두 사흘 이상의 서로 다른 날에 걸쳐 물품을 등록했다.",
+   "전체 회원의 절반을 넘는 회원이 사흘 이상의 서로 다른 날에 앱을 실행했다.",
+   "앱을 실행한 날이 사흘 이상이지만 등록한 물품은 세 개 미만인 회원이 일부 있다."
+  ],
+  "answer": 4,
+  "solution_en": "The correct answer is option 5. Some members are active under the buyer definition but not under the seller definition, so they opened the app on at least three different days and listed fewer than three items. Option 1 reverses the stated inclusion and contradicts these members' existence. Option 2 contradicts the requirement that every active seller is an active buyer. Option 3 transfers the different-days requirement to listings, while option 4 turns 'some' into an unsupported majority.",
+  "solution_ko": "정답은 ⑤이다. 구매자 보고서에서는 활동 회원이지만 판매자 보고서에서는 활동 회원이 아닌 사람이 일부 있으므로, 앱을 실행한 날이 사흘 이상이면서 등록한 물품은 세 개 미만인 회원이 존재한다. ①은 제시된 포함관계의 방향을 뒤집으며, 이러한 회원의 존재와 모순된다. ②는 판매자 보고서의 활동 회원이 모두 구매자 보고서에서도 활동 회원이라는 조건에 어긋난다. ③은 앱 실행에 적용되는 날짜 기준을 물품 등록에 옮겨 적용하며, ④는 ‘일부’를 근거 없이 ‘절반 초과’로 확대한다.",
+  "traps": [
+   {
+    "tag": "affirming_consequent",
+    "lines_en": [
+     "You reversed the inclusion between the two active groups.",
+     "All active sellers are active buyers, but some active buyers are not active sellers.",
+     "Do not infer the converse of a stated inclusion."
+    ],
+    "lines_ko": [
+     "두 활동 회원 집단의 포함관계를 뒤집은 선택.",
+     "판매자 활동 회원은 모두 구매자 활동 회원이지만, 그 역은 성립하지 않음.",
+     "제시된 포함관계의 역을 추론하지 말 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You moved 'some are not' from active buyers to active sellers.",
+     "The passage excludes no active seller from the active buyer group.",
+     "Keep the subject and comparison group fixed in statements about exceptions."
+    ],
+    "lines_ko": [
+     "‘일부는 아니다’의 주어를 구매자 활동 회원에서 판매자 활동 회원으로 바꾼 선택.",
+     "판매자 활동 회원 중 구매자 활동 회원에서 제외되는 사람은 없음.",
+     "예외에 관한 진술에서는 주어와 비교 집단을 그대로 유지할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You applied the buyer report's day count to the seller report's listings.",
+     "Seller activity depends on item count, regardless of when those items were listed.",
+     "Apply each definition only to the measure it specifies."
+    ],
+    "lines_ko": [
+     "구매자 보고서의 날짜 기준을 판매자 보고서의 물품 등록에 적용한 선택.",
+     "판매자 활동 여부는 등록 시점과 관계없이 물품 개수로 결정됨.",
+     "각 정의가 지정한 측정 대상에만 해당 기준을 적용할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You interpreted 'some' as more than half.",
+     "The passage establishes existence, not the proportion of active buyers among all members.",
+     "Do not turn an existence claim into a numerical majority."
+    ],
+    "lines_ko": [
+     "‘일부’를 ‘절반 초과’로 해석한 선택.",
+     "제시된 것은 해당 회원의 존재이며, 전체 회원 중 구매자 활동 회원의 비율이 아님.",
+     "존재에 관한 진술을 수적 다수에 관한 진술로 바꾸지 말 것."
+    ]
+   },
+   null
+  ]
+ }
+]

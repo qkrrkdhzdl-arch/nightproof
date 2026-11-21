@@ -1,0 +1,166 @@
+[
+ {
+  "id": "cause-1-01",
+  "track": "cause",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "A workplace surveyed its employees about planner use and checked their deadline records for the same month. Employees who used a daily planner completed a higher average proportion of assignments on time than employees who did not, although some planner users missed deadlines. The survey did not examine employees' work habits before they began using planners. The manager concludes that giving every employee a planner will raise the workplace's average rate of completing assignments on time.",
+  "passage_ko": "한 직장에서 직원들의 일정 수첩 사용 여부를 조사하고, 같은 달의 업무 마감 준수 기록을 확인하였다. 일정 수첩을 사용하는 직원들은 사용하지 않는 직원들보다 기한 내 업무 완료 비율이 평균적으로 높았지만, 수첩 사용자 중에도 마감을 지키지 못한 직원이 있었다. 이번 조사에서는 직원들이 수첩을 사용하기 전의 업무 습관을 살펴보지 않았다. 관리자는 모든 직원에게 일정 수첩을 지급하면 직장 전체의 평균 기한 내 업무 완료 비율이 높아질 것이라고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the manager's reasoning?",
+  "prompt_ko": "관리자의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It treats meeting deadlines as a necessary condition for using a planner.",
+   "It overlooks the possibility that employees with better existing work habits are more likely to use planners.",
+   "It rejects any benefit from planners because some planner users missed deadlines.",
+   "It infers that every employee will improve from a difference between group averages.",
+   "It assumes that planners and good work habits cannot both contribute to meeting deadlines."
+  ],
+  "options_ko": [
+   "마감을 지키는 것을 일정 수첩 사용의 필요조건으로 간주한다.",
+   "원래 업무 습관이 좋은 직원일수록 일정 수첩을 사용할 가능성이 높다는 점을 간과한다.",
+   "일부 수첩 사용자가 마감을 지키지 못했다는 이유로 수첩의 효과를 전면 부정한다.",
+   "집단 간 평균 차이로부터 모든 직원의 성과가 향상될 것이라고 추론한다.",
+   "일정 수첩과 좋은 업무 습관이 마감 준수에 함께 기여할 수 없다고 가정한다."
+  ],
+  "answer": 1,
+  "solution_en": "Option 2 identifies an alternative explanation: existing work habits could influence both planner use and deadline performance. The survey therefore does not establish that distributing planners will improve performance. Option 1 introduces a necessary condition the manager never asserts, while option 3 reverses the manager's favorable conclusion about planners. Option 4 confuses an increase in the workplace average with improvement for every employee. Option 5 attributes an exclusive choice to the manager, who never claims that planners and work habits cannot both help.",
+  "solution_ko": "②는 기존의 업무 습관이 수첩 사용 여부와 마감 준수 실적에 모두 영향을 줄 수 있다는 대안적 설명을 제시한다. 따라서 이 조사만으로 수첩을 지급하면 업무 성과가 향상된다고 단정할 수 없다. ①은 관리자가 제시하지 않은 필요조건을 끌어들이며, ③은 수첩의 효과를 긍정하는 관리자의 결론을 반대로 읽은 것이다. ④는 직장 전체 평균의 상승을 직원 전원의 성과 향상과 혼동한다. ⑤는 수첩과 업무 습관이 함께 효과를 낼 수 없다는 주장을 관리자에게 부당하게 부여한다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You turned a higher average into a requirement for planner use.",
+     "The manager never says employees must meet deadlines before they can use planners.",
+     "Separate statistical comparisons from necessary conditions."
+    ],
+    "lines_ko": [
+     "더 높은 평균을 수첩 사용의 필수 요건으로 바꾼 판단.",
+     "관리자는 마감을 지켜야만 수첩을 사용할 수 있다고 말하지 않음.",
+     "통계적 비교와 필요조건을 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You read the reported exceptions as the manager's reason to reject planners.",
+     "The manager actually predicts that distributing planners will improve the average.",
+     "Identify the conclusion before deciding how the evidence is being used."
+    ],
+    "lines_ko": [
+     "제시된 예외 사례를 관리자가 수첩의 효과를 부정한 근거로 읽은 판단.",
+     "관리자는 오히려 수첩 지급으로 평균 실적이 향상될 것이라고 예측함.",
+     "증거의 쓰임을 판단하기 전에 결론부터 확인할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You changed improvement in the workplace average into improvement for every employee.",
+     "Giving everyone planners does not mean the manager predicts everyone will improve.",
+     "Keep the scope of the intervention separate from the scope of the predicted benefit."
+    ],
+    "lines_ko": [
+     "직장 전체 평균의 향상을 직원 전원의 향상으로 확대한 판단.",
+     "전원에게 지급한다는 말이 전원의 성과 향상을 예측한다는 뜻은 아님.",
+     "조치의 대상 범위와 예상 효과의 범위를 구별할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You attributed an either-or choice to the manager.",
+     "Claiming that planners help does not exclude a contribution from good work habits.",
+     "Do not infer exclusivity merely because an argument highlights one possible cause."
+    ],
+    "lines_ko": [
+     "관리자에게 양자택일의 주장을 부여한 판단.",
+     "수첩이 도움이 된다는 주장은 좋은 업무 습관의 기여를 배제하지 않음.",
+     "하나의 원인을 강조했다고 다른 원인을 배제한 것으로 보지 말 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cause-1-02",
+  "track": "cause",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "Forty similar seedlings were randomly divided into two groups, with equal average starting heights. For four weeks, the first group received eight hours of light daily and one measured portion of water, while the second received twelve hours and two portions. Soil and temperature were kept the same. The first group grew an average of four centimeters, and the second grew six. Neither longer light alone nor extra water alone was tested.",
+  "passage_ko": "비슷한 묘목 40개를 무작위로 두 집단에 배정하였으며, 두 집단의 실험 시작 시 평균 높이는 같았다. 4주 동안 첫째 집단에는 매일 8시간의 빛과 정해진 양의 물을 주었고, 둘째 집단에는 매일 12시간의 빛과 그 두 배의 물을 주었다. 토양과 온도는 동일하게 유지하였다. 첫째 집단은 평균 4센티미터, 둘째 집단은 평균 6센티미터 자랐다. 빛을 받는 시간만 늘리거나 물의 양만 늘리는 조건은 시험하지 않았다.",
+  "prompt_en": "Which one of the following must be true on the basis of the passage?",
+  "prompt_ko": "윗글에 근거할 때 반드시 참인 것은?",
+  "options_en": [
+   "Receiving twelve hours of light daily is necessary for a seedling to grow more than four centimeters.",
+   "The second group's greater average growth was caused entirely by its extra water.",
+   "If both groups had received eight hours of light, the second group would still have grown two centimeters more on average.",
+   "Every seedling in the second group grew more than every seedling in the first group.",
+   "This comparison does not establish whether increasing light alone would increase average growth."
+  ],
+  "options_ko": [
+   "묘목이 4센티미터 넘게 자라려면 매일 12시간의 빛을 받아야 한다.",
+   "둘째 집단의 평균 성장량이 더 컸던 것은 전적으로 추가로 공급한 물 때문이었다.",
+   "두 집단 모두 매일 8시간의 빛을 받았더라도 둘째 집단의 평균 성장량은 2센티미터 더 컸을 것이다.",
+   "둘째 집단의 모든 묘목은 첫째 집단의 어느 묘목보다도 더 많이 자랐다.",
+   "이 비교만으로는 빛을 받는 시간만 늘렸을 때 평균 성장량이 증가할지 알 수 없다."
+  ],
+  "answer": 4,
+  "solution_en": "Option 5 follows because light duration and water amount changed together, leaving the effect of increasing light alone unresolved. Option 1 turns an observed group difference into a necessary condition for individual growth. Option 2 assigns the entire difference to water even though light also differed. Option 3 predicts the result of an untested comparison without evidence separating the two factors. Option 4 mistakes a difference between averages for a difference between every pair of seedlings.",
+  "solution_ko": "⑤는 빛을 받는 시간과 물의 양이 함께 달라져, 빛을 받는 시간만 늘렸을 때의 효과는 확인되지 않았다는 점에서 반드시 참이다. ①은 관찰된 집단 간 차이를 개별 묘목 성장의 필요조건으로 바꾼 것이다. ②는 빛을 받는 시간도 달랐는데 성장량 차이를 전적으로 물에 귀속한다. ③은 두 요인의 효과를 분리할 근거 없이 시험하지 않은 조건에서의 결과를 예측한다. ④는 평균의 차이를 모든 개체 사이의 차이로 잘못 확대한다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You made longer light a requirement for growth beyond four centimeters.",
+     "The experiment neither tested every lighting duration nor reported each seedling's growth.",
+     "An observed result under one condition does not establish that condition as necessary."
+    ],
+    "lines_ko": [
+     "4센티미터를 넘는 성장에 더 긴 조명 시간이 필수라고 판단함.",
+     "모든 조명 시간을 시험한 것도, 묘목별 성장량을 제시한 것도 아님.",
+     "특정 조건에서 관찰된 결과만으로 그 조건의 필요성을 인정하지 말 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You assigned the entire growth difference to extra water.",
+     "Light duration also changed, so this comparison cannot isolate water's contribution.",
+     "When two factors change together, do not credit one with the entire effect."
+    ],
+    "lines_ko": [
+     "성장량 차이 전체를 추가로 공급한 물의 효과로 판단함.",
+     "빛을 받는 시간도 달라졌으므로 물의 기여만 분리할 수 없음.",
+     "두 요인이 함께 달라졌다면 효과 전체를 한 요인에 귀속하지 말 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You preserved the observed growth gap after changing the lighting conditions.",
+     "The passage provides no separate estimate of water's effect under equal lighting.",
+     "Do not transfer an observed difference to an untested controlled comparison."
+    ],
+    "lines_ko": [
+     "조명 조건을 바꾼 뒤에도 관찰된 성장량 차이가 유지된다고 판단함.",
+     "같은 조명 조건에서 물이 미치는 효과는 별도로 제시되지 않음.",
+     "관찰된 차이를 시험하지 않은 통제 비교에 그대로 적용하지 말 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You extended the difference between averages to every individual seedling.",
+     "Different group averages are compatible with overlapping individual growth measurements.",
+     "Compare averages only at the group level unless individual results are supplied."
+    ],
+    "lines_ko": [
+     "평균의 차이를 묘목 개체 전부의 차이로 확대한 판단.",
+     "집단 평균이 달라도 개별 성장량의 범위는 겹칠 수 있음.",
+     "개별 결과가 없다면 평균의 비교는 집단 수준에 한정할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

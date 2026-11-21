@@ -1,0 +1,166 @@
+[
+ {
+  "id": "condition-6-01",
+  "track": "condition",
+  "level": 2,
+  "question_type": "weaken",
+  "passage_en": "A library automatically renews a borrowed book only if the borrower's account is clear and nobody else has requested that book. Whenever a book is automatically renewed, the library sends the borrower a confirmation message. A borrower has a clear account, and nobody else has requested the book that the borrower currently holds. The borrower therefore concludes that the book will be automatically renewed tonight and that a confirmation message will follow.",
+  "passage_ko": "어느 도서관에서는 대출자의 계정에 이용 제한이 없고 다른 이용자의 예약도 없는 경우에만 도서의 대출 기간을 자동으로 연장한다. 자동 연장이 이루어지면 도서관은 대출자에게 확인 메시지를 보낸다. 한 대출자의 계정에는 이용 제한이 없으며, 현재 빌린 책을 예약한 다른 이용자도 없다. 이에 그 대출자는 오늘 밤 이 책의 대출 기간이 자동으로 연장되고 확인 메시지도 올 것이라고 결론 내렸다.",
+  "prompt_en": "Which one of the following, if true, most weakens the borrower's conclusion?",
+  "prompt_ko": "다음 중 참일 경우 대출자의 결론을 가장 약화하는 것은?",
+  "options_en": [
+   "A borrower whose account is not clear can still borrow a different book at the service desk.",
+   "Several books requested by other borrowers were not automatically renewed last night.",
+   "An experienced library volunteer says that meeting the two listed conditions guarantees automatic renewal.",
+   "This book has reached the library's renewal limit, and books at that limit cannot be automatically renewed.",
+   "Some borrowers with clear accounts hold books that other borrowers have requested."
+  ],
+  "options_ko": [
+   "계정에 이용 제한이 있는 대출자도 안내 데스크에서는 다른 책을 빌릴 수 있다.",
+   "다른 이용자가 예약한 여러 책은 어젯밤 자동으로 연장되지 않았다.",
+   "도서관에서 오래 활동한 자원봉사자는 제시된 두 조건을 충족하면 반드시 자동 연장이 이루어진다고 말한다.",
+   "이 책은 도서관이 정한 연장 횟수의 상한에 도달했으며, 상한에 도달한 책은 자동으로 연장할 수 없다.",
+   "계정에 이용 제한이 없는 대출자 중에도 다른 이용자가 예약한 책을 빌리고 있는 사람이 있다."
+  ],
+  "answer": 3,
+  "solution_en": "The first rule makes a clear account and the absence of requests necessary for automatic renewal, not sufficient. Option 4 supplies an additional restriction that this particular book fails to satisfy. The book therefore cannot be automatically renewed tonight, directly undermining the conclusion. The message rule does not repair the argument because it applies only once automatic renewal occurs.",
+  "solution_ko": "첫 번째 규칙에서 계정에 이용 제한이 없고 다른 이용자의 예약이 없다는 것은 자동 연장의 필요조건이지 충분조건이 아니다. ④는 이 책이 충족하지 못하는 추가적인 제한 조건을 제시한다. 따라서 이 책은 오늘 밤 자동으로 연장될 수 없으므로 대출자의 결론이 직접적으로 약화된다. 확인 메시지에 관한 규칙은 자동 연장이 이루어진 경우에 적용되므로 이러한 문제를 해소하지 못한다.",
+  "traps": [
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You used a rule about borrowing another book to challenge automatic renewal.",
+     "Borrowing at the desk and automatically renewing the current book are different transactions.",
+     "Keep the activity and the book fixed when testing a conditional."
+    ],
+    "lines_ko": [
+     "다른 책의 대출 규칙으로 자동 연장 여부를 판단한 오류.",
+     "데스크에서의 신규 대출과 현재 책의 자동 연장은 서로 다른 절차.",
+     "조건문 검토 시 대상 도서와 행위의 범위 유지."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated failed renewals lacking a required condition as counterexamples.",
+     "Those books had requests; this borrower's book does not.",
+     "Test whether renewal can fail when both stated requirements are met."
+    ],
+    "lines_ko": [
+     "필요조건을 충족하지 못한 책의 연장 실패를 반례로 선택한 오류.",
+     "선택지의 책에는 예약이 있지만 해당 대출자의 책에는 예약이 없음.",
+     "제시된 두 조건을 모두 충족해도 연장이 실패하는지 확인."
+    ]
+   },
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You selected an experienced volunteer's assurance as a challenge to the conclusion.",
+     "The assurance supports the borrower's inference rather than weakening it.",
+     "Check what an authority's claim supports, not merely who makes it."
+    ],
+    "lines_ko": [
+     "경험 많은 자원봉사자의 확언을 결론에 대한 반박으로 선택한 오류.",
+     "그 확언은 대출자의 추론을 약화하는 것이 아니라 지지하는 내용.",
+     "발언자의 경력보다 발언이 결론을 지지하는지 반박하는지 확인."
+    ]
+   },
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You focused on borrowers meeting only one of the two requirements.",
+     "Their requested books differ from the unrequested book in the argument.",
+     "A counterexample must preserve both conditions that the borrower treats as sufficient."
+    ],
+    "lines_ko": [
+     "두 필요조건 중 하나만 충족한 대출자에 주목한 오류.",
+     "예약이 있는 책은 논증에 등장하는 예약 없는 책과 조건이 다름.",
+     "반례에서는 대출자가 충분하다고 여긴 두 조건을 모두 유지."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "condition-6-02",
+  "track": "condition",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "Under a station's current travel arrangements, any commuter who takes the early bus reaches the station before eight. Anyone who reaches the station before eight is eligible to use the express train that morning. Today, a particular commuter is eligible to use the express train, although nothing else is known about the commuter's journey. A colleague concludes that the commuter must therefore have taken the early bus.",
+  "passage_ko": "현재 한 역의 교통편 운영 조건에 따르면, 이른 버스를 탄 통근자는 누구나 8시 전에 역에 도착한다. 8시 전에 역에 도착한 사람은 누구나 그날 아침 급행열차를 이용할 자격이 있다. 오늘 한 통근자에게 급행열차 이용 자격이 있다는 사실은 알려져 있지만, 그 통근자의 이동 과정에 대해서는 알려진 바가 없다. 한 동료는 따라서 그 통근자가 반드시 이른 버스를 탔을 것이라고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the colleague's reasoning?",
+  "prompt_ko": "동료의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It treats an outcome guaranteed by taking the early bus as proof that the early bus was taken.",
+   "It fails to establish that taking the early bus is sufficient for eligibility to use the express train.",
+   "It overlooks that the commuter must either take the early bus or be ineligible to use the express train.",
+   "It wrongly treats arrival before eight as sufficient for eligibility to use the express train.",
+   "It assumes that everyone who takes the early bus actually boards the express train."
+  ],
+  "options_ko": [
+   "이른 버스를 타면 보장되는 결과가 나타났다는 이유로 이른 버스를 탔다고 단정한다.",
+   "이른 버스를 타는 것이 급행열차 이용 자격을 얻기에 충분하다는 점을 입증하지 못한다.",
+   "통근자는 이른 버스를 타거나 급행열차 이용 자격을 얻지 못하거나 둘 중 하나여야 한다는 점을 간과한다.",
+   "8시 전에 도착하는 것을 급행열차 이용 자격을 얻기 위한 충분조건으로 잘못 취급한다.",
+   "이른 버스를 탄 사람은 누구나 실제로 급행열차에 탑승한다고 가정한다."
+  ],
+  "answer": 0,
+  "solution_en": "Taking the early bus guarantees arrival before eight, which in turn guarantees eligibility to use the express train. This chain establishes that taking the early bus is sufficient for eligibility. It does not establish that taking that bus is necessary: the rules leave other ways of becoming eligible open. Option 1 identifies the error of inferring the sufficient condition from its consequence.",
+  "solution_ko": "이른 버스를 타면 8시 전에 도착하고, 8시 전에 도착하면 급행열차 이용 자격을 얻는다. 이 조건들의 연결로부터 이른 버스를 타는 것이 이용 자격의 충분조건이라는 점이 도출된다. 그러나 이른 버스를 타는 것이 필요조건이라는 점은 도출되지 않으며, 다른 경로로 이용 자격을 얻을 가능성도 배제되지 않는다. ①은 결과가 성립한다는 사실로부터 그 결과의 충분조건이 성립했다고 추론한 오류를 지적한다.",
+  "traps": [
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You questioned sufficiency when the argument needs necessity.",
+     "The two stated rules already make the early bus sufficient for eligibility.",
+     "Distinguish a missing reverse implication from an established forward implication."
+    ],
+    "lines_ko": [
+     "필요성이 문제인 추론에서 충분성의 입증 여부를 문제 삼은 오류.",
+     "제시된 두 규칙으로 이른 버스 탑승의 충분성은 이미 확보.",
+     "입증되지 않은 역방향 추론과 입증된 정방향 추론을 구별."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You restricted the commuter to early-bus travel or ineligibility.",
+     "The rules allow eligibility through other routes or arrangements.",
+     "Do not turn one sufficient route into the only possible route."
+    ],
+    "lines_ko": [
+     "이른 버스 탑승과 이용 자격 부재만을 가능한 경우로 한정한 오류.",
+     "제시된 규칙은 다른 경로나 방식으로 이용 자격을 얻는 경우도 허용.",
+     "하나의 충분한 경로를 유일하게 가능한 경로로 바꾸지 않을 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You rejected the exact sufficient condition supplied by the second rule.",
+     "Arrival before eight explicitly guarantees eligibility under the stated arrangements.",
+     "Locate the unsupported reversal instead of challenging an explicit premise."
+    ],
+    "lines_ko": [
+     "두 번째 규칙이 명시한 충분조건 자체를 오류로 판단한 선택.",
+     "제시된 운영 조건에서는 8시 전 도착이 이용 자격을 명시적으로 보장.",
+     "명시된 전제가 아니라 근거 없이 뒤집은 추론을 확인."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You changed eligibility to use the train into actual boarding.",
+     "Neither the premises nor the conclusion asserts that anyone boards.",
+     "Keep permission or eligibility separate from the action it allows."
+    ],
+    "lines_ko": [
+     "열차 이용 자격을 실제 탑승으로 바꾸어 해석한 오류.",
+     "전제와 결론 어디에도 실제 탑승 여부에 관한 주장은 없음.",
+     "허용이나 자격과 그에 따른 실제 행위를 구별."
+    ]
+   }
+  ]
+ }
+]

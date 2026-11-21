@@ -1,0 +1,166 @@
+[
+ {
+  "id": "quantity-4-01",
+  "track": "quantity",
+  "level": 1,
+  "question_type": "must_be_true",
+  "passage_en": "The following facts concern last Saturday at a neighborhood library, with every member's account status unchanged throughout the day. Only members who had booked a session that day entered the music practice room. No member with a suspended account booked a session that day. Some members entered the room, and at least one member booked a session that day but did not enter the room.",
+  "passage_ko": "다음은 지난 토요일 한 동네 도서관에서 있었던 일이며, 각 회원의 계정 정지 여부는 그날 내내 바뀌지 않았다. 음악 연습실에 입장한 사람은 모두 그날 이용 예약을 한 회원이었다. 계정이 정지된 회원 중 그날 이용 예약을 한 사람은 없었다. 연습실에 입장한 회원이 일부 있었으며, 그날 이용 예약을 하고도 입장하지 않은 회원이 적어도 한 명 있었다.",
+  "prompt_en": "Which one of the following must be true about that Saturday?",
+  "prompt_ko": "위 내용에 비추어 볼 때, 그 토요일에 관하여 반드시 참인 것은?",
+  "options_en": [
+   "Every member without a suspended account booked a session that day.",
+   "Some members without suspended accounts entered the music practice room.",
+   "Every member who booked a session that day entered the music practice room.",
+   "No library member had a suspended account that day.",
+   "Most library members entered the music practice room that day."
+  ],
+  "options_ko": [
+   "계정이 정지되지 않은 회원은 모두 그날 이용 예약을 했다.",
+   "계정이 정지되지 않은 회원 중 일부는 음악 연습실에 입장했다.",
+   "그날 이용 예약을 한 회원은 모두 음악 연습실에 입장했다.",
+   "그날 계정이 정지된 도서관 회원은 한 명도 없었다.",
+   "도서관 회원의 과반수가 그날 음악 연습실에 입장했다."
+  ],
+  "answer": 1,
+  "solution_en": "Anyone who entered the room had booked a session that day. Anyone who booked that day had an account that was not suspended. Since some members entered, some members without suspended accounts entered, establishing the second option. The first option wrongly makes an unsuspended account sufficient for booking. The third reverses the entry requirement and contradicts the stated non-entering member who booked. The fourth extends a restriction on those who booked to all members, while the fifth strengthens 'some' to 'most' without evidence.",
+  "solution_ko": "연습실에 입장한 사람은 모두 그날 이용 예약을 한 회원이다. 그날 이용 예약을 한 회원은 모두 계정이 정지되지 않은 사람이다. 입장한 회원이 일부 있으므로, 계정이 정지되지 않은 회원 중 일부가 입장했다는 두 번째 선택지는 반드시 참이다. 첫 번째 선택지는 계정이 정지되지 않았다는 사실만으로 예약했다고 판단한다. 세 번째 선택지는 입장의 필요조건을 충분조건으로 바꾸며, 예약하고도 입장하지 않은 회원이 있다는 사실과도 모순된다. 네 번째 선택지는 예약자에 관한 제한을 전체 회원에게 확대하고, 다섯 번째 선택지는 근거 없이 ‘일부’를 ‘과반수’로 강화한다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated an unsuspended account as a guarantee of booking.",
+     "The passage excludes suspended members from booking; it does not require other members to book.",
+     "Keep a requirement separate from a sufficient condition."
+    ],
+    "lines_ko": [
+     "계정이 정지되지 않았다는 사실을 예약의 보장으로 받아들인 오류.",
+     "정지된 회원의 예약만 배제할 뿐, 나머지 회원의 예약을 보장하지는 않음.",
+     "필요조건과 충분조건을 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You read booking as sufficient for entering the room.",
+     "Booking was necessary, and at least one member booked without entering.",
+     "For entry only with booking, infer booking from entry, not entry from booking."
+    ],
+    "lines_ko": [
+     "예약을 연습실 입장의 충분조건으로 읽은 오류.",
+     "예약은 필요조건이며, 예약하고도 입장하지 않은 회원이 적어도 한 명 존재.",
+     "입장에서 예약을 추론할 수 있지만, 예약에서 입장을 추론할 수는 없음."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You extended the absence of suspended accounts among bookers to all members.",
+     "Suspended members could exist without booking any session.",
+     "Keep a statement about a subgroup within that subgroup."
+    ],
+    "lines_ko": [
+     "예약자 중 정지 계정이 없다는 사실을 전체 회원에게 확대한 오류.",
+     "계정이 정지된 회원은 예약하지 않은 채 존재할 수 있음.",
+     "부분집합에 관한 진술의 범위를 전체로 넓히지 말 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You strengthened 'some members' into 'most members'.",
+     "The passage gives neither total membership nor the proportion who entered.",
+     "An existence claim does not establish a majority."
+    ],
+    "lines_ko": [
+     "‘일부 회원’을 ‘회원의 과반수’로 강화한 오류.",
+     "전체 회원 수와 입장한 회원의 비율은 제시되지 않음.",
+     "존재한다는 사실만으로 과반수라고 판단하지 말 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "quantity-4-02",
+  "track": "quantity",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "A second-hand shop recorded the percentage of its sales that customers returned in each of two months. In April, 12 percent of sales were returned, while in May, 8 percent were returned. Each sale involved exactly one item, and every returned item was recorded in the month of its sale. The manager concludes that customers returned fewer items sold in May than items sold in April.",
+  "passage_ko": "한 중고품 가게는 두 달에 걸쳐 각 달의 전체 판매 건수 중 반품된 건수의 비율을 기록했다. 4월에는 판매 건수의 12퍼센트가 반품되었고, 5월에는 8퍼센트가 반품되었다. 판매 한 건당 물품은 정확히 하나였으며, 반품된 물품은 모두 그 물품이 판매된 달의 반품 실적에 기록되었다. 점장은 이를 근거로 5월에 판매된 물품 중 반품된 수가 4월에 판매된 물품 중 반품된 수보다 적다고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately describes the flaw in the manager's reasoning?",
+  "prompt_ko": "점장의 추론에 나타난 오류를 가장 정확하게 설명한 것은?",
+  "options_en": [
+   "It assumes that the return percentage fell for every type of item because it fell overall.",
+   "It treats the drop in return percentage as proof that the shop's items improved in quality.",
+   "It interprets the difference between 12 percent and 8 percent as a 4 percent decrease.",
+   "It generalizes from returns in two months to the return rate in every later month.",
+   "It treats a lower return percentage as establishing fewer returned items without comparing total sales."
+  ],
+  "options_ko": [
+   "전체 반품 비율이 낮아졌다는 이유로 모든 품목의 반품 비율이 낮아졌다고 가정한다.",
+   "반품 비율의 하락을 판매 물품의 품질이 향상되었다는 증거로 삼는다.",
+   "12퍼센트와 8퍼센트의 차이를 반품 비율이 4퍼센트 감소한 것으로 해석한다.",
+   "두 달의 반품 실적을 근거로 이후 모든 달의 반품 비율을 일반화한다.",
+   "전체 판매 건수를 비교하지 않은 채 반품 비율이 낮다는 사실만으로 반품된 물품 수가 적다고 판단한다."
+  ],
+  "answer": 4,
+  "solution_en": "A lower return percentage does not establish fewer returned items unless the total sales figures support that comparison. For example, 1,000 April sales would yield 120 returns, while 2,000 May sales would yield 160 returns. The first option attributes a claim about every item type that the manager never makes. The second introduces a quality explanation absent from the argument. The third confuses percentage points with percentage change, but the manager calculates neither. The fourth attributes a prediction about later months, whereas the conclusion concerns only April and May.",
+  "solution_ko": "반품 비율이 낮더라도 전체 판매 건수가 얼마인지에 따라 반품된 물품 수는 더 많을 수 있으므로, 다섯 번째 선택지가 정확하다. 예컨대 4월에 1,000건을 판매했다면 반품은 120건이지만, 5월에 2,000건을 판매했다면 반품은 160건이다. 첫 번째 선택지와 달리 점장은 개별 품목의 반품 비율을 주장하지 않았다. 두 번째 선택지가 제시한 품질 향상이라는 설명도 논증에 없다. 세 번째 선택지는 퍼센트포인트와 퍼센트 변화율의 혼동을 지적하지만, 점장은 어느 쪽도 계산하지 않았다. 네 번째 선택지와 달리 점장의 결론은 이후의 달이 아니라 4월과 5월에만 관한 것이다.",
+  "traps": [
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You read an overall comparison as a claim about every item type.",
+     "The manager compares total returns, not return percentages within individual types.",
+     "Check whether the conclusion actually moves from the whole to each subgroup."
+    ],
+    "lines_ko": [
+     "전체 비교를 모든 개별 품목에 관한 주장으로 읽은 오류.",
+     "점장은 전체 반품 수를 비교할 뿐, 품목별 반품 비율을 주장하지 않음.",
+     "결론이 실제로 전체에서 각 부분으로 범위를 옮기는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You supplied a causal explanation about product quality.",
+     "The manager concludes only that fewer items were returned, not why returns changed.",
+     "Distinguish a numerical comparison from an explanation of its cause."
+    ],
+    "lines_ko": [
+     "물품의 품질이라는 인과적 설명을 덧붙인 오류.",
+     "점장은 반품 수가 줄었다고만 결론 내리며, 변화의 원인을 설명하지 않음.",
+     "수량 비교와 그 원인에 관한 설명을 구별할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You attributed a percentage-change calculation to the manager.",
+     "The argument states two percentages but never calculates the size of their decrease.",
+     "Do not diagnose a calculation error unless that calculation occurs."
+    ],
+    "lines_ko": [
+     "점장이 비율의 감소 폭을 계산했다고 잘못 읽은 오류.",
+     "두 비율이 제시되었을 뿐, 그 감소 폭을 계산한 부분은 없음.",
+     "실제로 수행하지 않은 계산의 오류를 지적하지 말 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated the conclusion as a prediction about future months.",
+     "The manager's claim is limited to items sold in April and May.",
+     "Check the conclusion's time scope before diagnosing an overgeneralization."
+    ],
+    "lines_ko": [
+     "결론을 미래의 달에 대한 예측으로 받아들인 오류.",
+     "점장의 주장은 4월과 5월에 판매된 물품에 한정됨.",
+     "성급한 일반화를 지적하기 전에 결론의 시간적 범위를 확인할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

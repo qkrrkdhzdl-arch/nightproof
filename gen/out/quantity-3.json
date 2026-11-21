@@ -1,0 +1,166 @@
+[
+ {
+  "id": "quantity-3-01",
+  "track": "quantity",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A neighborhood gym has 60 members, and exactly 40 of them attended an introductory session this month. Members may reserve the small practice room only if they attended that session, but attendance alone does not guarantee permission to reserve it. Of the 30 members who borrowed a training mat this month, at least 25 received permission to reserve the room. All figures refer to these same 60 members and this month.",
+  "passage_ko": "어느 동네 체육관의 회원은 60명이며, 그중 정확히 40명이 이번 달 이용 안내 교육에 참석했다. 소규모 연습실의 예약 허가를 받으려면 이 교육에 참석해야 하지만, 참석했다고 해서 반드시 예약 허가를 받는 것은 아니다. 이번 달 운동용 매트를 빌린 회원은 30명이며, 그중 적어도 25명이 연습실 예약 허가를 받았다. 모든 수치는 이 체육관의 회원 60명과 이번 달을 기준으로 한다.",
+  "prompt_en": "Which one of the following must be true?",
+  "prompt_ko": "위 내용이 참일 때 반드시 참인 것은?",
+  "options_en": [
+   "Every member who attended the introductory session received permission to reserve the room.",
+   "At most five members who borrowed a training mat missed the introductory session.",
+   "Exactly five members who borrowed a training mat missed the introductory session.",
+   "No member who did not borrow a training mat received permission to reserve the room.",
+   "More than half of all gym members received permission to reserve the room."
+  ],
+  "options_ko": [
+   "이용 안내 교육에 참석한 회원은 모두 연습실 예약 허가를 받았다.",
+   "운동용 매트를 빌린 회원 중 이용 안내 교육에 참석하지 않은 회원은 많아야 5명이다.",
+   "운동용 매트를 빌린 회원 중 이용 안내 교육에 참석하지 않은 회원은 정확히 5명이다.",
+   "운동용 매트를 빌리지 않은 회원은 아무도 연습실 예약 허가를 받지 않았다.",
+   "전체 회원의 절반을 넘는 인원이 연습실 예약 허가를 받았다."
+  ],
+  "answer": 1,
+  "solution_en": "Permission to reserve the room requires attendance at the introductory session. Thus, at least 25 of the 30 mat borrowers attended, leaving at most five who could have missed it. Attendance does not itself establish permission, so option 1 is not guaranteed. The remaining five borrowers might also have attended, and members who did not borrow mats might also have received permission. Finally, the guaranteed minimum of 25 permitted members is less than half of the gym's 60 members.",
+  "solution_ko": "연습실 예약 허가를 받으려면 이용 안내 교육에 참석해야 한다. 따라서 매트를 빌린 30명 중 적어도 25명이 교육에 참석했으므로, 불참자는 많아야 5명이다. 교육 참석만으로 예약 허가가 보장되지는 않으므로 첫 번째 선택지는 반드시 참이 아니다. 나머지 매트 이용자 5명도 교육에 참석했을 수 있으며, 매트를 빌리지 않은 회원도 예약 허가를 받았을 수 있다. 또한 예약 허가를 받은 것으로 보장되는 최소 인원은 25명으로, 전체 60명의 절반보다 적다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated required attendance as a guarantee of permission.",
+     "The passage makes attendance necessary, not sufficient.",
+     "Keep the direction: permission implies attendance, not the reverse."
+    ],
+    "lines_ko": [
+     "필수 조건인 교육 참석을 예약 허가의 보장 조건으로 해석한 오류.",
+     "교육 참석은 필요조건일 뿐 충분조건은 아님.",
+     "예약 허가에서 교육 참석으로만 추론 가능."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You changed 'at least 25' into 'exactly 25.'",
+     "More than 25 borrowers may have attended, leaving fewer than five absentees.",
+     "A lower bound on attendance gives an upper bound, not an exact absentee count."
+    ],
+    "lines_ko": [
+     "'적어도 25명'을 '정확히 25명'으로 바꾼 오류.",
+     "참석자가 25명을 넘으면 불참자는 5명보다 적음.",
+     "참석자의 하한으로 도출되는 것은 불참자의 상한일 뿐."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You restricted permission to the mat borrowers mentioned in the passage.",
+     "The passage gives no such restriction on members who did not borrow mats.",
+     "Information about one subgroup does not exclude everyone outside it."
+    ],
+    "lines_ko": [
+     "예약 허가 대상을 제시문에 언급된 매트 이용자로 한정한 오류.",
+     "매트를 빌리지 않은 회원의 예약 허가를 배제하는 조건은 없음.",
+     "한 집단에 관한 정보만으로 집단 밖의 대상을 배제할 수 없음."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You extended a majority among mat borrowers to the entire gym.",
+     "At least 25 of 30 borrowers had permission, but the gym has 60 members.",
+     "Check which group's total defines the majority."
+    ],
+    "lines_ko": [
+     "매트 이용자 중 다수라는 사실을 전체 회원에게 확대한 오류.",
+     "허가받은 매트 이용자는 적어도 25명이지만 전체 회원은 60명.",
+     "과반수를 판단할 때 기준 집단의 전체 인원 확인 필요."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "quantity-3-02",
+  "track": "quantity",
+  "level": 2,
+  "question_type": "weaken",
+  "passage_en": "Last month, 12 percent of all books returned to a neighborhood library were overdue. This month, only 8 percent of returned books were overdue, and the library used the same rule for deciding whether a return was overdue. The manager therefore concludes that fewer books were returned overdue this month than last month. She adds that this conclusion follows from the reported percentages alone, without any need to check how many books were returned in either month.",
+  "passage_ko": "어느 동네 도서관에서 지난달 반납된 책 중 반납 기한을 넘긴 책의 비율은 12%였다. 이번 달에는 그 비율이 8%로 낮아졌으며, 기한 초과 여부를 판단하는 기준은 두 달 동안 동일했다. 이에 도서관 관리자는 이번 달에 기한을 넘겨 반납된 책의 권수가 지난달보다 적다고 결론 내렸다. 관리자는 각 달의 전체 반납 권수를 확인하지 않아도, 제시된 비율만으로 이 결론을 도출할 수 있다고 덧붙였다.",
+  "prompt_en": "Which one of the following, if true, most weakens the manager's argument?",
+  "prompt_ko": "다음 중 참이라면 관리자의 논증을 가장 약화하는 것은?",
+  "options_en": [
+   "The total number of books returned this month was the same as last month's total.",
+   "The total number of books returned this month was 25 percent greater than last month's total.",
+   "The total number of books returned this month was 25 percent smaller than last month's total.",
+   "The number of books returned on time this month was the same as last month's number.",
+   "The total number of books returned this month was twice last month's total."
+  ],
+  "options_ko": [
+   "이번 달의 전체 반납 권수는 지난달과 같았다.",
+   "이번 달의 전체 반납 권수는 지난달보다 25% 많았다.",
+   "이번 달의 전체 반납 권수는 지난달보다 25% 적었다.",
+   "이번 달에 기한 내에 반납된 책의 권수는 지난달과 같았다.",
+   "이번 달의 전체 반납 권수는 지난달의 두 배였다."
+  ],
+  "answer": 4,
+  "solution_en": "A smaller overdue percentage does not guarantee a smaller overdue count when the total number of returns changes. If last month's total was T, option 5 makes the overdue counts 0.12T last month and 0.08 × 2T = 0.16T this month, contradicting the conclusion. Equal totals or a 25 percent decrease in total returns instead support the conclusion. A 25 percent increase also supports it, since 0.08 × 1.25T = 0.10T, still below 0.12T. With equal on-time counts, the overdue counts are respectively 12/88 and 8/92 of that common count, so option 4 likewise supports the conclusion.",
+  "solution_ko": "전체 반납 권수가 달라질 수 있으므로, 기한 초과 반납 비율의 하락만으로 그 권수의 감소가 보장되지는 않는다. 지난달 전체 반납 권수를 T라고 하면, 다섯 번째 선택지에서 기한 초과 반납 권수는 지난달 0.12T, 이번 달 0.08 × 2T = 0.16T이므로 관리자의 결론과 반대이다. 전체 반납 권수가 같거나 25% 줄었다면 오히려 결론이 뒷받침된다. 전체 반납 권수가 25% 늘어난 경우에도 이번 달 기한 초과 반납 권수는 0.08 × 1.25T = 0.10T이므로 지난달보다 적다. 기한 내 반납 권수가 같다면 기한 초과 반납 권수는 그 공통 권수의 각각 12/88와 8/92이므로, 네 번째 선택지 역시 결론을 뒷받침한다.",
+  "traps": [
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You treated an unchanged total as evidence against a smaller overdue count.",
+     "With equal totals, the lower overdue percentage directly gives a lower overdue count.",
+     "When denominators match, compare the percentages directly."
+    ],
+    "lines_ko": [
+     "전체 권수가 같다는 사실을 기한 초과 반납 권수 감소의 반증으로 선택한 오류.",
+     "전체 권수가 같으면 비율이 낮은 쪽의 기한 초과 반납 권수도 적음.",
+     "분모가 같을 때는 비율의 대소가 권수의 대소와 일치."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You assumed any increase in total returns would outweigh the percentage decrease.",
+     "Eight percent of 125 is 10, still below 12 percent of 100.",
+     "Calculate the count; a larger denominator alone does not settle the comparison."
+    ],
+    "lines_ko": [
+     "전체 권수가 조금이라도 늘면 비율 하락을 상쇄한다고 판단한 오류.",
+     "125권의 8%는 10권으로, 100권의 12%인 12권보다 적음.",
+     "분모의 증가만으로 판단하지 말고 실제 권수 비교 필요."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You treated fewer total returns as a challenge to the manager's conclusion.",
+     "A smaller total and a smaller overdue percentage together make the overdue count smaller.",
+     "Track both changes: here, they reinforce rather than offset each other."
+    ],
+    "lines_ko": [
+     "전체 반납 권수 감소를 관리자의 결론에 대한 반증으로 선택한 오류.",
+     "전체 권수와 기한 초과 비율이 모두 낮아지면 기한 초과 권수도 감소.",
+     "두 변화가 서로 상쇄하는지 같은 방향으로 작용하는지 확인 필요."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You treated an unchanged on-time count as an unchanged overdue count.",
+     "Overdue books per on-time book fell from 12/88 to 8/92.",
+     "Compare overdue-to-on-time ratios when the on-time count is fixed."
+    ],
+    "lines_ko": [
+     "기한 내 반납 권수가 같다는 사실을 기한 초과 권수도 같다는 뜻으로 해석한 오류.",
+     "기한 내 반납 권수 대비 기한 초과 권수의 비는 12/88에서 8/92로 하락.",
+     "기한 내 반납 권수가 고정되면 그 권수에 대한 기한 초과 권수의 비를 비교."
+    ]
+   },
+   null
+  ]
+ }
+]

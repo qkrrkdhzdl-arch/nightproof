@@ -1,0 +1,166 @@
+[
+ {
+  "id": "quantity-6-01",
+  "track": "quantity",
+  "level": 2,
+  "question_type": "strengthen",
+  "passage_en": "An online second-hand marketplace compares all buyer reviews posted during two successive months. In the first month, 20 percent of reviews gave sellers one or two stars; in the second month, only 10 percent did. Every review uses the same five-star scale, and the marketplace calls one- or two-star reviews low-rated reviews. Its manager concludes that the marketplace received fewer low-rated reviews in the second month than in the first.",
+  "passage_ko": "한 온라인 중고 거래 플랫폼이 연속된 두 달 동안 구매자가 남긴 후기 전체를 비교하였다. 첫째 달에는 전체 후기의 20%가 판매자에게 별 한 개 또는 두 개를 주었지만, 둘째 달에는 그 비율이 10%에 그쳤다. 모든 후기는 동일한 5점 척도를 사용하며, 플랫폼은 별 한 개 또는 두 개를 준 후기를 ‘낮은 평점 후기’로 분류한다. 플랫폼 관리자는 이를 근거로 둘째 달에 접수된 낮은 평점 후기의 수가 첫째 달보다 적었다고 결론 내렸다.",
+  "prompt_en": "Which one of the following, if true, most strengthens the manager's argument?",
+  "prompt_ko": "다음 중 참일 경우 관리자의 논증을 가장 강화하는 것은?",
+  "options_en": [
+   "The total number of reviews in the second month was exactly twice that in the first month.",
+   "The number of reviews giving three, four, or five stars was three times as large in the second month.",
+   "The first month had 50 reviews in total, and the second month had 100 more reviews than the first.",
+   "The total number of reviews in the second month was at most 150 percent of that in the first month.",
+   "The total number of reviews in the second month was more than twice that in the first month."
+  ],
+  "options_ko": [
+   "둘째 달의 전체 후기 수는 첫째 달의 정확히 두 배였다.",
+   "별 세 개, 네 개 또는 다섯 개를 준 후기의 수는 둘째 달이 첫째 달의 세 배였다.",
+   "첫째 달의 전체 후기 수는 50개였고, 둘째 달에는 첫째 달보다 후기가 100개 더 많았다.",
+   "둘째 달의 전체 후기 수는 첫째 달의 150% 이하였다.",
+   "둘째 달의 전체 후기 수는 첫째 달의 두 배를 넘었다."
+  ],
+  "answer": 3,
+  "solution_en": "Halving the low-rated share reduces the low-rated count only if the total review count grows to less than twice its original size. Option 4 ensures this: the later low-rated count is at most 10 percent of 150 percent of the earlier total, below the earlier 20 percent. Option 1 instead leaves the low-rated count unchanged. Under option 2, the three-to-five-star share rises from 80 to 90 percent while its count triples, making the total count grow by a factor of 8/3 and the low-rated count increase. Option 3 gives 10 low-rated reviews initially and 15 later. Option 5 also makes the low-rated count increase because the total more than doubles.",
+  "solution_ko": "낮은 평점 후기의 비율이 절반으로 줄었을 때 그 수까지 감소하려면, 전체 후기 수가 이전의 두 배 미만이어야 한다. ④에 따르면 둘째 달의 낮은 평점 후기 수는 첫째 달 전체 후기 수의 최대 15%이므로, 첫째 달의 20%보다 적다. ①에서는 낮은 평점 후기의 수가 그대로 유지된다. ②에서는 별 세 개 이상인 후기의 비율이 80%에서 90%로 높아지면서 그 수가 세 배가 되므로, 전체 후기 수는 8/3배가 되고 낮은 평점 후기의 수도 증가한다. ③에서는 낮은 평점 후기가 10개에서 15개로 늘어난다. ⑤ 역시 전체 후기 수가 두 배를 넘으므로 낮은 평점 후기의 수가 증가한다.",
+  "traps": [
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You counted the halved share but overlooked the doubled total.",
+     "Ten percent of twice the total equals twenty percent of the original total.",
+     "Compare percentage times total, not percentages alone."
+    ],
+    "lines_ko": [
+     "비율이 절반으로 줄었다는 점만 보고 전체 수의 두 배 증가를 누락함.",
+     "두 배가 된 전체의 10%는 원래 전체의 20%와 같음.",
+     "비율만이 아니라 비율과 전체 수의 곱을 비교할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You treated more higher-rated reviews as evidence of fewer low-rated reviews.",
+     "Tripling higher-rated reviews here makes the total more than double.",
+     "Track each category's count separately; one category's growth need not shrink another."
+    ],
+    "lines_ko": [
+     "높은 평점 후기의 증가를 낮은 평점 후기의 감소 근거로 판단함.",
+     "이 조건에서는 높은 평점 후기가 세 배가 되면 전체는 두 배를 넘음.",
+     "범주별 수를 따로 계산하고 한쪽의 증가를 다른 쪽의 감소로 보지 말 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You let the lower percentage outweigh the increase in total reviews.",
+     "The counts are ten initially and fifteen later, so low-rated reviews increase.",
+     "Convert each percentage into a count before comparing."
+    ],
+    "lines_ko": [
+     "전체 후기 수의 증가를 계산하지 않고 낮아진 비율만 중시함.",
+     "낮은 평점 후기는 처음 10개, 나중 15개이므로 오히려 증가함.",
+     "각 비율을 실제 개수로 바꾼 뒤 비교할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You assumed a halved share guarantees a smaller count despite unrestricted growth.",
+     "More than doubling the total outweighs halving the low-rated share.",
+     "Identify the total-growth threshold that cancels the percentage decrease."
+    ],
+    "lines_ko": [
+     "전체 증가 폭과 무관하게 비율이 절반이면 개수도 줄어든다고 판단함.",
+     "전체가 두 배를 넘으면 비율의 절반 감소를 상쇄하고도 남음.",
+     "비율 감소를 상쇄하는 전체 증가의 기준점을 확인할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "quantity-6-02",
+  "track": "quantity",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "Only people who have completed a gym's orientation may book its practice room. Every member of the weekend exercise group has completed that orientation. The group leader therefore says that every member of the group is entitled to book the room. The leader bases this claim entirely on the orientation rule and the group's completion records, without citing any other booking rules.",
+  "passage_ko": "한 체육관에서는 사전 안내 교육을 이수한 사람만 연습실을 예약할 수 있다. 주말 운동 모임의 구성원은 모두 이 교육을 이수하였다. 이에 모임 대표는 구성원 모두에게 연습실 예약 자격이 있다고 주장하였다. 대표는 다른 예약 규정은 제시하지 않은 채, 안내 교육에 관한 규정과 구성원들의 이수 기록만을 근거로 들었다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the group leader's reasoning?",
+  "prompt_ko": "다음 중 모임 대표의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It treats a necessary condition for booking the room as sufficient for booking it.",
+   "It infers that every gym member completed orientation from records covering only the weekend group.",
+   "It accepts the booking claim solely because the group leader has special expertise.",
+   "It interprets permission to book the room as an obligation to book it.",
+   "It assumes that completing orientation causes members to want to use the room."
+  ],
+  "options_ko": [
+   "연습실 예약의 필요조건을 충족하면 예약의 충분조건도 충족한 것으로 간주한다.",
+   "주말 모임 구성원들의 기록만으로 체육관 회원 모두가 안내 교육을 이수했다고 추론한다.",
+   "모임 대표에게 전문성이 있다는 이유만으로 예약에 관한 주장을 받아들인다.",
+   "연습실을 예약할 수 있다는 허용을 예약해야 한다는 의무로 해석한다.",
+   "안내 교육 이수가 구성원들에게 연습실을 이용하려는 욕구를 일으킨다고 전제한다."
+  ],
+  "answer": 0,
+  "solution_en": "The rule makes completed orientation necessary for booking, but does not say it is sufficient. The leader reverses that condition by concluding that everyone who completed orientation is entitled to book. Option 2 misstates the conclusion's scope, which remains limited to the weekend group. Option 3 invents an appeal to expertise, although the leader cites a rule and completion records. Options 4 and 5 introduce an obligation and a desire, respectively, neither of which the argument asserts.",
+  "solution_ko": "제시된 규정에서 안내 교육 이수는 예약의 필요조건일 뿐, 충분조건이라고 명시되어 있지 않다. 대표는 이 조건의 방향을 뒤집어 교육을 이수한 구성원 모두에게 예약 자격이 있다고 결론 내렸다. ②와 달리 결론의 범위는 주말 모임 구성원으로 한정되어 있다. ③과 달리 대표는 자신의 전문성이 아니라 규정과 이수 기록을 근거로 제시하였다. ④와 ⑤는 각각 예약 의무와 이용 욕구를 끌어들이지만, 원래 논증은 어느 쪽도 주장하지 않는다.",
+  "traps": [
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You expanded the leader's conclusion from the weekend group to the entire gym.",
+     "Both the completion records and the conclusion concern only the weekend group.",
+     "Check the actual population before diagnosing an overgeneralization."
+    ],
+    "lines_ko": [
+     "대표의 결론 범위를 주말 모임에서 체육관 전체로 확대함.",
+     "이수 기록과 결론 모두 주말 모임 구성원만을 대상으로 함.",
+     "성급한 일반화인지 판단하기 전에 실제 대상 범위를 확인할 것."
+    ]
+   },
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You treated the speaker's leadership role as the argument's evidence.",
+     "The stated evidence is a booking rule and completion records, not expertise.",
+     "Distinguish who makes a claim from what supports it."
+    ],
+    "lines_ko": [
+     "발언자의 대표 지위를 논증의 근거로 간주함.",
+     "제시된 근거는 전문성이 아니라 예약 규정과 이수 기록임.",
+     "주장하는 사람과 주장을 뒷받침하는 근거를 구별할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You replaced the claim about permission with a claim about obligation.",
+     "The leader says members are entitled to book, not required to book.",
+     "Criticize the stated claim without strengthening it into a different claim."
+    ],
+    "lines_ko": [
+     "허용에 관한 주장을 의무에 관한 주장으로 바꾸어 읽음.",
+     "대표의 주장은 예약 자격이 있다는 것이지 예약해야 한다는 것이 아님.",
+     "원래 주장을 더 강한 다른 주장으로 바꾸지 말 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You read a claim about eligibility as a causal claim about motivation.",
+     "The argument never says orientation changes anyone's desire to use the room.",
+     "Separate eligibility conditions from causes of personal preferences."
+    ],
+    "lines_ko": [
+     "자격에 관한 주장을 동기의 발생 원인에 관한 주장으로 읽음.",
+     "논증은 교육 이수가 연습실 이용 욕구를 바꾼다고 주장하지 않음.",
+     "자격 요건과 개인적 선호의 원인을 구별할 것."
+    ]
+   }
+  ]
+ }
+]

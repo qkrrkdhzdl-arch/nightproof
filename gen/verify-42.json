@@ -1,0 +1,37 @@
+[
+ {
+  "id": "assumption-4-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "assumption-4-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "assumption-5-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "assumption-5-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "language-1-01",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "language-1-02",
+  "verdict": "ok",
+  "issue": ""
+ },
+ {
+  "id": "language-2-01",
+  "verdict": "ok",
+  "issue": ""
+ }
+]

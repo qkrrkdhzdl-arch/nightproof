@@ -1,0 +1,166 @@
+[
+ {
+  "id": "assumption-4-01",
+  "track": "assumption",
+  "level": 1,
+  "question_type": "assumption",
+  "passage_en": "An office worker can either walk directly from home to the office or take a shuttle that stops outside both buildings. Walking takes exactly 30 minutes, while the shuttle ride takes exactly 20 minutes. Taking the shuttle involves no extra time except waiting for it, and these travel times will remain fixed next week. Therefore, on every workday next week, the worker would reach the office sooner by taking the shuttle rather than walking.",
+  "passage_ko": "한 직장인은 집에서 사무실까지 걸어가거나, 두 건물 바로 앞에 정차하는 셔틀을 이용할 수 있다. 걸어가는 데에는 정확히 30분이 걸리고, 셔틀에 탑승하여 이동하는 데에는 정확히 20분이 걸린다. 셔틀을 이용할 때 대기 시간 외에 추가로 드는 시간은 없으며, 다음 주에도 도보 이동 시간과 셔틀 탑승 시간은 변하지 않는다. 따라서 다음 주 모든 근무일에 이 직장인은 걸어갈 때보다 셔틀을 이용할 때 사무실에 더 일찍 도착할 것이다.",
+  "prompt_en": "Which one of the following is an assumption required by the argument?",
+  "prompt_ko": "위 논증에 필요한 가정은?",
+  "options_en": [
+   "The worker would have no waiting time at all when taking the shuttle on any workday next week.",
+   "The worker's waiting time for the shuttle would be identical on all workdays next week.",
+   "The shuttle will depart more frequently next week than it does this week.",
+   "The worker's waiting time for the shuttle would be less than 10 minutes on every workday next week.",
+   "The worker will actually choose the shuttle rather than walking on every workday next week."
+  ],
+  "options_ko": [
+   "다음 주 어느 근무일에도 이 직장인은 셔틀을 기다리지 않고 바로 탑승할 수 있다.",
+   "다음 주 모든 근무일에 이 직장인의 셔틀 대기 시간은 동일하다.",
+   "다음 주에는 이번 주보다 셔틀이 더 자주 출발한다.",
+   "다음 주 모든 근무일에 이 직장인의 셔틀 대기 시간은 10분 미만이다.",
+   "다음 주 모든 근무일에 이 직장인은 실제로 도보 대신 셔틀을 선택한다."
+  ],
+  "answer": 3,
+  "solution_en": "The fourth option supplies the necessary limit on waiting time. The shuttle journey takes 20 minutes plus the wait, which must total less than the 30-minute walk. A wait of exactly 10 minutes would produce a tie, so even that would defeat the claim of arriving sooner every day. Waiting need not be zero or identical across days, provided it stays below 10 minutes. Neither increased service frequency nor the worker's actual choice is required for this comparison of travel times.",
+  "solution_ko": "네 번째 선택지는 결론에 필요한 대기 시간의 한계를 제시한다. 셔틀 이용에 드는 총시간은 탑승 시간 20분에 대기 시간을 더한 값이며, 이 값이 도보 이동 시간인 30분보다 작아야 한다. 대기 시간이 정확히 10분이어도 도착 시간이 같아지므로, 모든 근무일에 더 일찍 도착한다는 결론은 성립하지 않는다. 대기 시간이 매일 10분 미만이기만 하면, 대기 시간이 전혀 없거나 날마다 동일할 필요는 없다. 또한 이 이동 시간 비교에는 운행 빈도의 증가나 직장인의 실제 선택이 필요하지 않다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated zero waiting as necessary for a faster journey.",
+     "A five-minute wait would still make the shuttle faster.",
+     "Distinguish a sufficient condition from a condition the argument requires."
+    ],
+    "lines_ko": [
+     "더 빠른 도착을 위해 대기 시간이 반드시 없어야 한다고 판단함.",
+     "5분을 기다리더라도 셔틀 이용이 도보보다 빠름.",
+     "충분한 조건과 반드시 필요한 조건을 구별할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You extended the fixed travel times to the waiting times.",
+     "Different waits can all remain below the required limit.",
+     "A conclusion covering every day does not require identical conditions each day."
+    ],
+    "lines_ko": [
+     "고정된 이동 시간의 특성을 대기 시간에까지 확대함.",
+     "대기 시간이 날마다 달라도 모두 필요한 한계 미만일 수 있음.",
+     "모든 날에 성립하는 결론이 매일 동일한 조건을 요구하는 것은 아님."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You substituted a comparison between weeks for the comparison between travel methods.",
+     "An unchanged shuttle schedule could already keep every wait below ten minutes.",
+     "Check which two alternatives the conclusion actually compares."
+    ],
+    "lines_ko": [
+     "이동 수단 간 비교를 이번 주와 다음 주의 비교로 바꿈.",
+     "운행 일정이 그대로여도 모든 대기 시간이 10분 미만일 수 있음.",
+     "결론이 실제로 비교하는 두 대상을 확인할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You turned a comparison of possible journeys into a prediction of actual choices.",
+     "The shuttle could be faster even if the worker chooses to walk.",
+     "Separate an option's consequences from whether someone selects it."
+    ],
+    "lines_ko": [
+     "가능한 이동 방식의 비교를 실제 선택에 관한 예측으로 바꿈.",
+     "직장인이 걷기를 선택하더라도 셔틀 이용이 더 빠를 수 있음.",
+     "선택지의 결과와 그 선택지의 실제 채택 여부를 구별할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "assumption-4-02",
+  "track": "assumption",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "At a collection desk, every returned battery receives exactly one of three labels: ready, test, or recycle. A battery receives the ready label only if its case is intact and its charge is above half of full capacity. Every battery with an intact case that does not receive the ready label receives the test label. The desk applies these rules to all returned batteries without exception.",
+  "passage_ko": "한 수거 창구에서는 반납된 모든 배터리에 ‘사용 가능’, ‘검사’, ‘재활용’ 중 정확히 하나의 표지를 붙인다. ‘사용 가능’ 표지를 받으려면 배터리의 외관이 온전하고 충전량이 전체 용량의 절반을 초과해야 한다. 외관이 온전한 배터리 중 ‘사용 가능’ 표지를 받지 않은 배터리에는 모두 ‘검사’ 표지를 붙인다. 이 규칙은 반납된 모든 배터리에 예외 없이 적용된다.",
+  "prompt_en": "If the statements above are true, which one of the following must also be true?",
+  "prompt_ko": "위 진술이 모두 참이라면 반드시 참인 것은?",
+  "options_en": [
+   "Every returned battery labelled recycle has a case that is not intact.",
+   "Every returned battery with an intact case is labelled ready.",
+   "Every returned battery labelled test has a charge at or below half of full capacity.",
+   "Every returned battery with a charge above half of full capacity is labelled ready.",
+   "Every returned battery whose case is not intact is labelled recycle."
+  ],
+  "options_ko": [
+   "‘재활용’ 표지를 받은 모든 반납 배터리는 외관이 온전하지 않다.",
+   "외관이 온전한 모든 반납 배터리는 ‘사용 가능’ 표지를 받는다.",
+   "‘검사’ 표지를 받은 모든 반납 배터리는 충전량이 전체 용량의 절반 이하이다.",
+   "충전량이 전체 용량의 절반을 초과하는 모든 반납 배터리는 ‘사용 가능’ 표지를 받는다.",
+   "외관이 온전하지 않은 모든 반납 배터리는 ‘재활용’ 표지를 받는다."
+  ],
+  "answer": 0,
+  "solution_en": "The first option follows because an intact case leaves only the ready and test labels available. If an intact battery is not labelled ready, the third sentence requires it to be labelled test, and the one-label rule excludes recycle. The other options incorrectly reverse or strengthen the stated conditions. An intact case or a charge above half does not guarantee the ready label, and a test label does not imply a low charge. A battery whose case is not intact could receive the test label, since no rule forbids that.",
+  "solution_ko": "첫 번째 선택지는 외관이 온전한 배터리가 받을 수 있는 표지가 ‘사용 가능’과 ‘검사’뿐이라는 점에서 도출된다. 외관이 온전한 배터리가 ‘사용 가능’ 표지를 받지 않으면 세 번째 문장에 따라 ‘검사’ 표지를 받아야 하며, 표지를 정확히 하나만 받으므로 ‘재활용’ 표지를 받을 수 없다. 나머지 선택지는 제시된 조건의 방향을 뒤집거나 조건을 부당하게 강화한다. 외관이 온전하거나 충전량이 절반을 초과한다는 사실만으로 ‘사용 가능’ 표지가 보장되지 않으며, ‘검사’ 표지를 받았다고 해서 충전량이 절반 이하인 것도 아니다. 외관이 온전하지 않은 배터리에 ‘검사’ 표지를 붙이는 것을 금지하는 규칙도 없다.",
+  "traps": [
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated an intact case as sufficient for the ready label.",
+     "The rules explicitly allow intact batteries to receive the test label.",
+     "A requirement for a label does not guarantee that label."
+    ],
+    "lines_ko": [
+     "외관이 온전하다는 조건을 ‘사용 가능’ 표지의 충분조건으로 판단함.",
+     "규칙상 외관이 온전한 배터리도 ‘검사’ 표지를 받을 수 있음.",
+     "어떤 표지의 필요조건이 그 표지를 보장하는 것은 아님."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You assumed every sufficiently charged battery must be labelled ready.",
+     "The rules permit a highly charged battery to receive the test label.",
+     "Not receiving a label does not establish failure of its necessary conditions."
+    ],
+    "lines_ko": [
+     "충전량이 충분한 배터리는 모두 ‘사용 가능’ 표지를 받아야 한다고 판단함.",
+     "규칙상 충전량이 많은 배터리도 ‘검사’ 표지를 받을 수 있음.",
+     "표지를 받지 않았다는 사실만으로 그 필요조건의 불충족을 단정하지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You read the charge requirement as a guarantee of the ready label.",
+     "Charge above half is necessary for ready, but the converse is not stated.",
+     "Keep the direction of an only-if condition unchanged."
+    ],
+    "lines_ko": [
+     "충전량 요건을 ‘사용 가능’ 표지를 보장하는 조건으로 판단함.",
+     "절반 초과의 충전량은 필요조건일 뿐, 그 역방향은 제시되지 않음.",
+     "필요조건을 나타내는 문장의 조건 방향을 유지할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You treated recycle as the only alternative when ready is unavailable.",
+     "A damaged battery could receive test without violating any stated rule.",
+     "Check all permitted alternatives before forcing a two-way choice."
+    ],
+    "lines_ko": [
+     "‘사용 가능’ 표지를 받을 수 없으면 ‘재활용’만 가능하다고 판단함.",
+     "외관이 온전하지 않은 배터리에 ‘검사’ 표지를 붙여도 규칙 위반이 아님.",
+     "양자택일로 좁히기 전에 허용된 모든 대안을 확인할 것."
+    ]
+   }
+  ]
+ }
+]

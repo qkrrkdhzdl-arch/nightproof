@@ -1,0 +1,166 @@
+[
+ {
+  "id": "cause-5-01",
+  "track": "cause",
+  "level": 1,
+  "question_type": "weaken",
+  "passage_en": "A delivery company compared order-entry errors across twelve offices during one month. Employees in six offices had placed plants beside their desks, while employees in the other six had not. The offices with plants recorded fewer errors per hundred orders, although all offices used the same software and provided the same training. The manager concluded that adding plants had reduced errors and recommended placing plants in the remaining offices to achieve a similar reduction.",
+  "passage_ko": "한 배송 회사가 한 달 동안 12개 사무실의 주문 입력 오류를 비교했다. 여섯 사무실의 직원들은 책상 옆에 화분을 두었고, 나머지 여섯 사무실의 직원들은 그러지 않았다. 모든 사무실이 같은 소프트웨어를 사용하고 같은 교육을 제공했지만, 화분이 있는 사무실은 주문 100건당 오류가 더 적었다. 관리자는 화분을 둔 덕분에 오류가 줄었다고 결론짓고, 나머지 사무실에도 화분을 두어 같은 효과를 얻자고 제안했다.",
+  "prompt_en": "Which one of the following, if true, most weakens the manager's argument?",
+  "prompt_ko": "다음 중 참일 경우 관리자의 논증을 가장 약화하는 것은?",
+  "options_en": [
+   "A prominent workspace designer reported that errors declined at one office after plants were introduced.",
+   "Before any plants were introduced, the same six offices already had lower error rates by approximately the same margin.",
+   "During the comparison month, the offices with plants handled more complicated orders than the offices without plants.",
+   "When plants were later removed from several offices, their error rates increased.",
+   "Some offices with plants still made occasional order-entry errors during the comparison month."
+  ],
+  "options_ko": [
+   "한 저명한 업무 공간 설계자는 어느 사무실에 화분을 들인 뒤 오류가 줄었다고 보고했다.",
+   "화분을 들이기 전부터 해당 여섯 사무실의 오류율은 나머지 사무실보다 이미 낮았으며, 그 차이도 이번과 거의 같았다.",
+   "비교가 이루어진 달에 화분이 있는 사무실은 화분이 없는 사무실보다 복잡한 주문을 처리했다.",
+   "이후 몇몇 사무실에서 화분을 치우자 해당 사무실의 오류율이 높아졌다.",
+   "비교가 이루어진 달에 화분이 있는 사무실 중 일부에서도 주문 입력 오류가 간혹 발생했다."
+  ],
+  "answer": 1,
+  "solution_en": "The manager treats a difference between offices as an effect of adding plants. Option 2 shows that essentially the same difference existed before the plants were introduced. The observed gap therefore provides little evidence that plants reduced errors. Using the same software and training does not rule out other, preexisting differences between the offices.",
+  "solution_ko": "관리자는 사무실 간 오류율 차이를 화분을 둔 효과로 해석한다. ②에 따르면 화분을 들이기 전에도 거의 같은 차이가 존재했다. 따라서 관찰된 차이만으로는 화분이 오류를 줄였다는 근거를 얻기 어렵다. 소프트웨어와 교육이 같다는 사실만으로 사무실 사이에 원래 존재하던 다른 차이까지 배제할 수는 없다.",
+  "traps": [
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You treated a prominent designer's anecdote as evidence against the manager.",
+     "The anecdote actually points toward the manager's conclusion, although it establishes no causal effect.",
+     "Check the direction of evidence before considering the speaker's reputation."
+    ],
+    "lines_ko": [
+     "유명 설계자의 일화를 관리자 주장에 대한 반증으로 선택한 오류.",
+     "해당 일화는 인과관계를 입증하지는 못하나 관리자 주장과 같은 방향의 사례.",
+     "발언자의 명성보다 증거가 어느 방향을 가리키는지 먼저 확인할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You assumed that any difference between the groups weakens the causal claim.",
+     "Harder orders do not explain why the plant offices made fewer errors.",
+     "An alternative explanation must account for the observed result in the correct direction."
+    ],
+    "lines_ko": [
+     "집단 사이에 차이가 있으면 인과 주장이 약화된다고 판단한 오류.",
+     "주문이 더 복잡하다는 사실은 화분 있는 사무실의 낮은 오류율을 설명하지 못함.",
+     "대안 설명이 관찰된 결과와 같은 방향으로 작용하는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You read increased errors after plant removal as evidence against the plants' benefit.",
+     "That pattern is consistent with plants reducing errors, not evidence against it.",
+     "Track both changes: removing a proposed benefit should worsen the outcome."
+    ],
+    "lines_ko": [
+     "화분을 치운 뒤 오류가 늘어난 것을 화분의 효과에 대한 반증으로 해석한 오류.",
+     "이는 화분이 오류를 줄인다는 주장과 부합하는 양상.",
+     "원인 후보의 제거와 결과의 변화 방향을 함께 확인할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated reducing errors as requiring the elimination of every error.",
+     "The manager claims a lower error rate, not guaranteed error-free work.",
+     "A beneficial cause need not prevent every unfavorable outcome."
+    ],
+    "lines_ko": [
+     "오류 감소를 모든 오류의 제거가 필요한 주장으로 해석한 오류.",
+     "관리자의 주장은 오류율 감소이지 무오류 작업의 보장이 아님.",
+     "유익한 원인이 모든 불리한 결과를 막아야 하는 것은 아님."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cause-5-02",
+  "track": "cause",
+  "level": 2,
+  "question_type": "strengthen",
+  "passage_en": "An online shop introduced a new arrangement of paper padding inside its shipping boxes. During the first month, packers could choose either the new arrangement or the old one for each parcel. Parcels using the new arrangement were reported damaged less often, so the supervisor concluded that the arrangement itself provided better protection. A colleague objected that packers might have selected the new arrangement mainly for goods that were less likely to break.",
+  "passage_ko": "한 온라인 상점이 배송 상자 안에 종이 완충재를 배치하는 새로운 방식을 도입했다. 첫 달에는 포장 담당자가 소포마다 새 방식과 기존 방식 중 하나를 선택할 수 있었다. 새 방식으로 포장한 소포의 파손 신고 비율이 더 낮자, 관리자는 새 배치 방식 자체가 물품을 더 잘 보호한다고 결론지었다. 한 동료는 포장 담당자들이 원래 잘 깨지지 않는 물품에 주로 새 방식을 적용했을 수 있다고 반박했다.",
+  "prompt_en": "Which one of the following, if true, most strengthens the supervisor's argument against the colleague's objection?",
+  "prompt_ko": "다음 중 참일 경우 동료의 반박에 맞서 관리자의 논증을 가장 강화하는 것은?",
+  "options_en": [
+   "An experienced packer recalled a week with no damaged deliveries while using only the old arrangement.",
+   "The new arrangement was used mainly for sturdy books, while the old arrangement was used mainly for fragile glassware.",
+   "Packers became more likely to choose the new arrangement after noticing an increase in damaged deliveries.",
+   "The shop's overall damage rate had already fallen before anyone began using the new arrangement.",
+   "In a large follow-up test, otherwise identical parcels were randomly assigned to the two arrangements and shipped under the same conditions; the new arrangement had a lower damage rate."
+  ],
+  "options_ko": [
+   "한 숙련된 포장 담당자는 기존 방식만 사용했는데도 배송 파손이 한 건도 없었던 주가 있었다고 회상했다.",
+   "새 방식은 주로 튼튼한 책에 사용되었고, 기존 방식은 주로 깨지기 쉬운 유리 제품에 사용되었다.",
+   "포장 담당자들은 배송 파손이 늘어난 것을 확인한 뒤 새 방식을 선택하는 경향이 높아졌다.",
+   "상점의 전체 파손율은 누구도 새 방식을 사용하기 전부터 이미 낮아진 상태였다.",
+   "규모가 큰 후속 시험에서 다른 조건이 동일한 소포들을 두 방식에 무작위로 배정하고 같은 조건으로 배송했는데, 새 방식의 파손율이 더 낮았다."
+  ],
+  "answer": 4,
+  "solution_en": "The colleague identifies the fragility of the goods as a possible confounder. If sturdier goods received the new arrangement, their lower damage rate might not result from the padding arrangement. Option 5 compares otherwise identical parcels under the same shipping conditions, with the arrangement randomly assigned. Its result supports the supervisor's causal explanation while directly addressing the colleague's alternative explanation.",
+  "solution_ko": "동료는 물품이 깨지기 쉬운 정도가 교란 요인일 수 있다고 지적한다. 튼튼한 물품에 새 방식이 적용되었다면 낮은 파손율은 완충재 배치 때문이 아닐 수 있다. ⑤의 시험은 다른 조건이 동일한 소포를 두 방식에 무작위로 배정하고 배송 조건도 같게 유지한다. 이러한 비교에서 새 방식의 파손율이 더 낮다는 결과는 동료의 대안 설명을 배제하면서 관리자의 인과 설명을 뒷받침한다.",
+  "traps": [
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You treated an experienced packer's successful week as support for the new arrangement.",
+     "The anecdote concerns only the old arrangement and supplies no comparison favoring the new one.",
+     "Expertise and memorable examples cannot replace evidence comparing the proposed cause with its alternative."
+    ],
+    "lines_ko": [
+     "숙련자의 성공 사례를 새 방식에 대한 지지 근거로 선택한 오류.",
+     "기존 방식만의 사례이므로 새 방식의 우수성을 보여 주는 비교가 없음.",
+     "경력이나 인상적인 사례를 두 방식의 비교 증거와 구별할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You credited the new arrangement for an advantage in the goods selected.",
+     "Sturdier contents explain lower damage without any protective improvement from the arrangement.",
+     "Ask whether the compared groups differed before the proposed cause could act."
+    ],
+    "lines_ko": [
+     "선택된 물품의 유리한 특성을 새 방식의 효과로 돌린 오류.",
+     "튼튼한 내용물만으로도 배치 방식의 개선 없이 낮은 파손율 설명 가능.",
+     "원인 후보가 작용하기 전에 비교 집단이 달랐는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You used damage influencing packaging choices to support packaging influencing damage.",
+     "The evidence explains adoption of the new arrangement, not its protective effect.",
+     "Keep the proposed causal direction separate from the reverse direction."
+    ],
+    "lines_ko": [
+     "파손이 포장 선택에 미친 영향을 포장이 파손에 미친 영향의 근거로 사용한 오류.",
+     "이는 새 방식의 선택 이유를 설명할 뿐 보호 효과를 보여 주지 못함.",
+     "주장된 인과 방향과 그 역방향을 구별할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You attributed an earlier improvement to a change introduced later.",
+     "A decline preceding the new arrangement cannot demonstrate its protective effect.",
+     "Check that the proposed cause precedes the effect offered as evidence."
+    ],
+    "lines_ko": [
+     "먼저 나타난 개선을 나중에 도입된 변화의 효과로 돌린 오류.",
+     "새 방식 도입 전의 파손율 하락은 그 방식의 보호 효과를 보여 주지 못함.",
+     "원인 후보가 근거로 제시된 결과보다 앞서는지 확인할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

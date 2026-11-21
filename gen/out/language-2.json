@@ -1,0 +1,166 @@
+[
+ {
+  "id": "language-2-01",
+  "track": "language",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "A library notice says its bag lockers are free and explains that 'free' means no payment is required to use them. A visitor agrees that neither a fee nor a deposit is required. However, collecting a bag takes several minutes, and the visitor regards any use of time as a cost. The visitor concludes that the lockers are not free and that the notice is therefore false.",
+  "passage_ko": "도서관 안내문에는 가방 보관함이 무료이며, 여기서 ‘무료’란 이용할 때 돈을 낼 필요가 없다는 뜻이라고 명시되어 있다. 한 방문객도 보관함 이용에 요금이나 보증금이 필요하지 않다는 점은 인정한다. 그러나 가방을 찾는 데에는 몇 분이 걸리고, 이 방문객은 시간을 쓰는 것도 비용이라고 본다. 이에 방문객은 보관함이 무료가 아니므로 안내문의 내용이 거짓이라고 결론 내린다.",
+  "prompt_en": "Which one of the following most accurately describes the flaw in the visitor's argument?",
+  "prompt_ko": "방문객의 논증에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It rejects the notice's claim by applying a different meaning of 'free' from the one the notice specifies.",
+   "It treats the absence of a deposit as sufficient evidence that no usage fee is required.",
+   "It generalizes from one visitor's retrieval time to the retrieval time of every locker user.",
+   "It treats the notice's statement about payment as evidence that retrieving a bag takes no time.",
+   "It concludes that the library deliberately concealed a payment requirement."
+  ],
+  "options_ko": [
+   "안내문이 명시한 것과 다른 의미의 ‘무료’를 적용하여 안내문의 주장을 부정한다.",
+   "보증금이 없다는 사실만으로 이용 요금도 없다고 판단한다.",
+   "한 방문객이 가방을 찾는 데 걸린 시간을 모든 보관함 이용자에게 일반화한다.",
+   "돈을 낼 필요가 없다는 안내문을 근거로 가방을 찾는 데 시간이 걸리지 않는다고 판단한다.",
+   "도서관이 돈을 내야 한다는 사실을 고의로 숨겼다고 결론 내린다."
+  ],
+  "answer": 0,
+  "solution_en": "The notice explicitly defines 'free' as requiring no payment. The visitor accepts that this condition is satisfied. The visitor then uses 'free' to mean involving no cost of any kind, including time. A time cost can defeat that broader claim without contradicting the notice's narrower claim, so option 1 identifies the flaw.",
+  "solution_ko": "안내문은 ‘무료’를 돈을 낼 필요가 없다는 의미로 명시적으로 정의한다. 방문객도 그 조건이 충족된다는 점은 인정한다. 그런데 결론에서는 시간까지 포함하여 어떤 비용도 들지 않아야 ‘무료’라고 보는 다른 의미를 적용한다. 시간이 든다는 사실은 이처럼 넓은 의미의 무료 여부와 관련될 뿐, 안내문이 명시한 의미의 무료를 부정하지 못하므로 정답은 ①이다.",
+  "traps": [
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated two accepted facts as a premise and its conclusion.",
+     "The visitor accepts both absences independently, rather than deriving one from the other.",
+     "Check whether the argument actually uses the conditional inference you identify."
+    ],
+    "lines_ko": [
+     "각각 인정된 두 사실을 전제와 결론의 관계로 읽은 판단.",
+     "방문객은 요금과 보증금이 없음을 각각 인정하며, 하나에서 다른 하나를 도출하지 않음.",
+     "지적한 조건 추론이 실제 논증에 사용되었는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You reconstructed a sample-based generalization that the passage never presents.",
+     "The passage gives no individual timing observation from which a general rule is inferred.",
+     "Identify an actual sample before diagnosing a faulty generalization."
+    ],
+    "lines_ko": [
+     "제시되지 않은 표본을 근거로 일반화가 이루어졌다고 판단.",
+     "개인의 측정 결과에서 일반적 소요 시간을 도출하는 과정은 제시되지 않음.",
+     "성급한 일반화를 지적하려면 실제 표본과 일반화 과정을 확인할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You attributed a no-time inference to the visitor.",
+     "The visitor explicitly says retrieval takes time, rather than inferring that it takes none.",
+     "Keep the argument's actual claims separate from claims it never makes."
+    ],
+    "lines_ko": [
+     "방문객이 시간이 들지 않는다고 추론한 것으로 판단.",
+     "방문객은 오히려 가방을 찾는 데 시간이 든다고 명시적으로 주장.",
+     "실제 주장과 제시되지 않은 주장을 구별할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You expanded a claim of falsity into an accusation of deliberate concealment.",
+     "The visitor alleges neither a hidden payment requirement nor an intention to deceive.",
+     "Do not add claims about intent when identifying an argument's conclusion."
+    ],
+    "lines_ko": [
+     "내용이 거짓이라는 판단을 고의적 은폐라는 비난으로 확대.",
+     "방문객은 숨겨진 납부 의무나 기만 의도를 주장하지 않음.",
+     "결론을 파악할 때 의도에 관한 주장을 덧붙이지 말 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "language-2-02",
+  "track": "language",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A shop defines a 'reusable' shipping box as one that can safely carry another shipment. Under its rules, a box is labeled 'returnable' only if it is reusable and the shop accepts it back. The shop promises a deposit refund for every box labeled 'returnable'. The blue box is reusable and accepted back; the green box is labeled 'returnable'.",
+  "passage_ko": "어느 상점은 물품을 한 번 더 안전하게 운송할 수 있는 배송 상자를 ‘재사용 가능’ 상자로 정의한다. 상점 규정에 따르면 ‘반납 가능’ 표시가 붙은 상자는 반드시 재사용이 가능하고 상점이 돌려받는 상자이다. 상점은 ‘반납 가능’ 표시가 붙은 모든 상자에 대해 보증금 환급을 보장한다. 파란 상자는 재사용이 가능하고 상점이 돌려받는 상자이며, 초록 상자에는 ‘반납 가능’ 표시가 붙어 있다.",
+  "prompt_en": "If the statements above are true, which one of the following must also be true?",
+  "prompt_ko": "윗글의 내용이 참일 때 반드시 참인 것은?",
+  "options_en": [
+   "The blue box has a 'returnable' label.",
+   "Every box the shop accepts back qualifies for a deposit refund.",
+   "The shop does not accept back any box that is not reusable.",
+   "The green box can safely carry another shipment and qualifies for a deposit refund.",
+   "The green box can safely carry any number of additional shipments."
+  ],
+  "options_ko": [
+   "파란 상자에는 ‘반납 가능’ 표시가 붙어 있다.",
+   "상점이 돌려받는 모든 상자는 보증금 환급 대상이다.",
+   "상점은 재사용이 불가능한 상자를 하나도 돌려받지 않는다.",
+   "초록 상자는 물품을 한 번 더 안전하게 운송할 수 있고 보증금 환급 대상이다.",
+   "초록 상자는 횟수에 제한 없이 물품을 계속 안전하게 운송할 수 있다."
+  ],
+  "answer": 3,
+  "solution_en": "A 'returnable' label requires both reusability and acceptance by the shop. Since the green box has that label, it is reusable and therefore can safely carry another shipment. The refund promise also applies directly to the green box. Thus option 4 must be true; the passage does not guarantee labels for all eligible boxes, refunds for all accepted boxes, or unlimited reuse.",
+  "solution_ko": "‘반납 가능’ 표시가 붙으려면 재사용이 가능하고 상점이 돌려받는 상자여야 한다. 초록 상자에는 그 표시가 있으므로 재사용이 가능하며, 정의에 따라 물품을 한 번 더 안전하게 운송할 수 있다. 또한 표시가 붙은 모든 상자에 대한 보증금 환급 보장이 초록 상자에도 적용된다. 따라서 반드시 참인 것은 ④이며, 조건을 충족한 모든 상자에 표시가 붙는다거나 반납받는 모든 상자에 보증금을 환급한다거나 무제한 재사용이 가능하다는 내용은 도출되지 않는다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated the label's requirements as a guarantee of receiving the label.",
+     "Being reusable and accepted back is necessary for labeling, but not stated to be sufficient.",
+     "For 'A only if B,' do not infer A merely from B."
+    ],
+    "lines_ko": [
+     "표시를 받기 위한 필요조건을 표시가 붙는 충분조건으로 판단.",
+     "재사용 가능성과 반납 수용은 필요조건일 뿐, 충분조건으로 제시되지 않음.",
+     "A의 필요조건이 B일 때 B만으로 A를 도출하지 말 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You extended the refund promise from labeled boxes to all accepted boxes.",
+     "Acceptance alone does not establish that a box has the label or qualifies for refunds.",
+     "Keep a promise restricted to the group it explicitly covers."
+    ],
+    "lines_ko": [
+     "표시가 붙은 상자에 대한 환급 보장을 반납받는 모든 상자로 확대.",
+     "반납 수용만으로 표시의 존재나 환급 자격이 확인되지는 않음.",
+     "보장의 적용 범위를 명시된 집단으로 한정할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You applied a labeling restriction to the shop's acceptance policy.",
+     "The rule restricts which boxes receive labels, not which boxes the shop may accept.",
+     "Attach each requirement to the action it actually governs."
+    ],
+    "lines_ko": [
+     "표시 부착에 관한 제한을 상점의 반납 수용 기준에 적용.",
+     "규정은 표시를 붙일 상자를 제한할 뿐, 돌려받을 상자의 범위를 제한하지 않음.",
+     "각 조건이 실제로 규율하는 행위를 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You expanded 'another shipment' into an unlimited number of shipments.",
+     "The definition guarantees another safe use, not indefinite durability.",
+     "Preserve the stated extent of a definition when applying it."
+    ],
+    "lines_ko": [
+     "‘한 번 더 운송’을 횟수 제한 없는 운송으로 확대.",
+     "정의가 보장하는 것은 추가 사용 가능성이지 영구적인 내구성이 아님.",
+     "정의를 적용할 때 명시된 범위를 유지할 것."
+    ]
+   }
+  ]
+ }
+]

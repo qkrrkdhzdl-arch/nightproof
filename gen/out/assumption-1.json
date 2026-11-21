@@ -1,0 +1,166 @@
+[
+ {
+  "id": "assumption-1-01",
+  "track": "assumption",
+  "level": 1,
+  "question_type": "assumption",
+  "passage_en": "A library currently processes all returned books at its front desk. A proposed return locker would automatically record books placed in it, eliminating their desk processing, but staff would still need to collect and sort them. The manager concludes that installing the locker would reduce total weekly staff time because fewer books would require desk processing. Weekly return numbers would stay constant, and all staff tasks other than desk processing and collecting and sorting locker returns would take the same time as before.",
+  "passage_ko": "한 도서관은 현재 모든 반납 도서를 안내 데스크에서 처리한다. 설치를 검토 중인 무인 반납함은 투입된 책을 자동으로 기록하므로 해당 도서의 데스크 처리 업무는 없어지지만, 직원이 책을 수거하고 분류하는 일은 여전히 필요하다. 관리자는 데스크에서 처리할 책이 줄어들기 때문에 반납함을 설치하면 직원들의 주당 총 업무 시간이 감소할 것이라고 결론 내린다. 주당 반납 도서 수는 일정하며, 데스크 처리와 반납함 도서의 수거·분류를 제외한 모든 업무의 소요 시간은 이전과 같다고 가정한다.",
+  "prompt_en": "Which one of the following is an assumption required by the manager's argument?",
+  "prompt_ko": "관리자의 논증에 필요한 가정으로 가장 적절한 것은?",
+  "options_en": [
+   "Collecting and sorting locker returns would take less than half the weekly staff time eliminated at the desk.",
+   "The additional weekly staff time for collecting and sorting locker returns would be less than the weekly staff time saved at the desk.",
+   "Every returned book would be placed in the locker rather than handed to staff at the desk.",
+   "The locker's purchase price would be lower than the value of one year's staff-time savings.",
+   "Any change that reduces desk-processing time also reduces total staff time."
+  ],
+  "options_ko": [
+   "반납함 도서를 수거하고 분류하는 데 드는 주당 업무 시간은 데스크에서 절약되는 주당 업무 시간의 절반 미만일 것이다.",
+   "반납함 도서의 수거와 분류에 추가로 드는 주당 업무 시간은 데스크에서 절약되는 주당 업무 시간보다 적을 것이다.",
+   "반납되는 모든 책은 데스크의 직원에게 전달되지 않고 반납함에 투입될 것이다.",
+   "반납함의 구입 가격은 1년 동안 절약되는 직원 업무 시간의 금전적 가치보다 낮을 것이다.",
+   "데스크 처리 시간을 줄이는 모든 변화는 직원들의 총 업무 시간도 줄인다."
+  ],
+  "answer": 1,
+  "solution_en": "The manager moves from less desk processing to less total staff time. However, collecting and sorting locker returns adds work that must be counted against the desk-time savings. Since all other task times remain unchanged, total time decreases only if the added time is smaller than the time saved. Option 1 states this necessary comparison; neither a particular savings margin, universal locker use, purchase-price savings, nor a rule covering every possible change is required.",
+  "solution_ko": "관리자는 데스크 처리 업무의 감소를 근거로 총 업무 시간의 감소를 추론한다. 그러나 반납함 도서를 수거하고 분류하는 데 추가로 드는 시간을 데스크에서 절약되는 시간과 비교해야 한다. 다른 모든 업무의 소요 시간이 같으므로, 총 업무 시간이 감소하려면 추가 시간이 절약 시간보다 적어야 한다. 두 번째 선택지가 이 필수 조건을 제시하며, 특정한 절감 비율이나 모든 이용자의 반납함 사용, 구입 비용의 회수, 모든 변화에 적용되는 일반 법칙은 필요하지 않다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated a large savings margin as a necessary one.",
+     "Added work could exceed half the saved time while remaining below the full amount.",
+     "Require a net reduction, not an unnecessarily large reduction."
+    ],
+    "lines_ko": [
+     "큰 폭의 시간 절감을 필수 조건으로 판단한 오류.",
+     "추가 시간이 절약 시간의 절반을 넘어도 총시간 감소 가능.",
+     "필요한 것은 순감소이며, 특정한 감소 폭은 아님."
+    ]
+   },
+   null,
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You expanded fewer desk returns into no desk returns.",
+     "Partial locker use can save time if its added work is smaller.",
+     "Do not turn a reduction into complete elimination."
+    ],
+    "lines_ko": [
+     "데스크 반납의 감소를 데스크 반납의 완전한 소멸로 확대한 오류.",
+     "일부만 반납함을 이용해도 추가 업무보다 절약 시간이 크면 총시간 감소 가능.",
+     "일부 감소와 전면적인 제거를 구별할 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You changed a claim about staff time into a claim about financial value.",
+     "The manager concludes that time decreases, not that the purchase pays for itself.",
+     "Keep the required assumption within the conclusion's stated measure."
+    ],
+    "lines_ko": [
+     "업무 시간에 관한 주장을 금전적 가치에 관한 주장으로 바꾼 오류.",
+     "결론은 시간 감소이며, 구입 비용의 회수 여부가 아님.",
+     "결론이 사용하는 평가 기준을 유지할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You demanded a universal rule to support this particular proposal.",
+     "This locker could save total time even if other desk-saving changes do not.",
+     "Test the proposal's own tradeoff, not every imaginable change."
+    ],
+    "lines_ko": [
+     "특정 제안의 결론을 위해 보편적인 법칙을 요구한 오류.",
+     "다른 변화가 실패하더라도 이 반납함은 총시간을 줄일 수 있음.",
+     "모든 변화가 아니라 해당 제안의 시간 증감을 비교할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "assumption-1-02",
+  "track": "assumption",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A community music room gives a permanent weekly slot only to applicants who attended at least three trial sessions and returned every borrowed key on time. Meeting those conditions does not guarantee a slot, because the room has limited space. Every applicant who attended at least three trial sessions received a feedback sheet. Among this month's applicants, at least one received a permanent weekly slot, and at least one who received a feedback sheet returned a borrowed key late.",
+  "passage_ko": "한 공동 음악 연습실은 체험 이용에 세 번 이상 참여하고 빌린 열쇠를 매번 제때 반납한 신청자에게만 매주 이용할 고정 시간대를 배정한다. 이용 가능한 시간대가 한정되어 있으므로 이 두 조건을 충족하더라도 배정이 보장되지는 않는다. 체험 이용에 세 번 이상 참여한 신청자는 모두 평가서를 받았다. 이번 달 신청자 중 적어도 한 명은 고정 시간대를 배정받았으며, 평가서를 받은 신청자 중 적어도 한 명은 빌린 열쇠를 늦게 반납한 적이 있다.",
+  "prompt_en": "If the statements above are true, which one of the following must also be true?",
+  "prompt_ko": "윗글의 내용이 참일 때 반드시 참인 것은?",
+  "options_en": [
+   "Every applicant who received a feedback sheet attended at least three trial sessions.",
+   "Every applicant who returned all borrowed keys on time attended at least three trial sessions.",
+   "No applicant who was denied a permanent weekly slot attended at least three trial sessions.",
+   "At least one of this month's applicants who received a permanent weekly slot returned a borrowed key late.",
+   "At least one of this month's applicants who received a feedback sheet did not receive a permanent weekly slot."
+  ],
+  "options_ko": [
+   "평가서를 받은 신청자는 모두 체험 이용에 세 번 이상 참여했다.",
+   "빌린 열쇠를 매번 제때 반납한 신청자는 모두 체험 이용에 세 번 이상 참여했다.",
+   "고정 시간대를 배정받지 못한 신청자 중 체험 이용에 세 번 이상 참여한 사람은 없다.",
+   "이번 달에 고정 시간대를 배정받은 신청자 중 적어도 한 명은 빌린 열쇠를 늦게 반납한 적이 있다.",
+   "이번 달에 평가서를 받은 신청자 중 적어도 한 명은 고정 시간대를 배정받지 못했다."
+  ],
+  "answer": 4,
+  "solution_en": "Receiving a permanent weekly slot requires returning every borrowed key on time. Therefore, an applicant who returned a key late cannot have received such a slot. The passage identifies at least one applicant this month who both received a feedback sheet and returned a key late. That applicant supplies the case described in option 4, regardless of how many trial sessions the applicant attended.",
+  "solution_ko": "고정 시간대를 배정받으려면 빌린 열쇠를 매번 제때 반납했어야 한다. 따라서 열쇠를 늦게 반납한 적이 있는 신청자는 고정 시간대를 배정받을 수 없다. 지문에 따르면 이번 달 신청자 중 평가서를 받았으면서 열쇠를 늦게 반납한 사람이 적어도 한 명 있다. 그 사람의 체험 이용 횟수와 관계없이, 이 사실로부터 다섯 번째 선택지가 도출된다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You reversed the rule connecting trial attendance to feedback sheets.",
+     "Three sessions guarantee a sheet, but sheets might also go to other applicants.",
+     "Do not reverse a one-way conditional."
+    ],
+    "lines_ko": [
+     "체험 이용 횟수에서 평가서 수령으로 향하는 조건의 방향을 뒤집은 오류.",
+     "세 번 이상 참여하면 평가서를 받지만, 다른 신청자의 수령도 가능.",
+     "일방향 조건문의 역을 단정하지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated one eligibility requirement as sufficient for another.",
+     "Timely key returns and trial attendance are separate requirements for receiving a slot.",
+     "Two necessary conditions need not imply each other."
+    ],
+    "lines_ko": [
+     "하나의 자격 요건을 다른 요건의 충분조건으로 판단한 오류.",
+     "열쇠의 정시 반납과 체험 이용 횟수는 서로 별개의 배정 요건.",
+     "두 필요조건 사이의 함축 관계를 단정하지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You assumed that denial proves an attendance requirement was unmet.",
+     "Applicants can meet the requirements yet receive no slot because space is limited.",
+     "Failure to obtain an outcome does not establish failure of its prerequisites."
+    ],
+    "lines_ko": [
+     "배정받지 못했다는 사실로 체험 이용 요건의 미충족을 단정한 오류.",
+     "요건을 모두 충족해도 시간대 부족으로 배정받지 못할 수 있음.",
+     "결과의 부재만으로 필요조건의 부재를 추론하지 말 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You assigned one applicant's late return to the group receiving permanent slots.",
+     "The late-returning applicant cannot belong to that group under the stated rule.",
+     "Keep separate existential claims separate unless the passage connects their members."
+    ],
+    "lines_ko": [
+     "어떤 신청자의 지각 반납을 고정 시간대 배정자 집단에 옮겨 붙인 오류.",
+     "제시된 규칙상 지각 반납자는 그 집단에 속할 수 없음.",
+     "서로 다른 존재 진술의 대상을 근거 없이 동일시하지 말 것."
+    ]
+   },
+   null
+  ]
+ }
+]

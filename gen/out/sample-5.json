@@ -1,0 +1,166 @@
+[
+ {
+  "id": "sample-5-01",
+  "track": "sample",
+  "level": 2,
+  "question_type": "weaken",
+  "passage_en": "A library is deciding whether to offer a new workshop in the morning or evening. It asked 800 visitors arriving after six in the evening which time they preferred, and 72 percent chose evening. The director concludes that a majority of all the library's users would prefer the evening workshop. She maintains that, because the survey included far more respondents than any previous library survey, its result provides a reliable guide to the preferences of all users.",
+  "passage_ko": "한 도서관이 새 강좌를 오전과 저녁 중 언제 개설할지 검토하고 있다. 오후 6시 이후에 방문한 이용자 800명에게 선호 시간을 물었더니 72%가 저녁을 선택했다. 관장은 이를 근거로 전체 이용자의 과반수가 저녁 강좌를 선호할 것이라고 결론 내렸다. 이번 조사의 응답자 수가 도서관의 역대 어느 조사보다 많으므로, 그 결과가 전체 이용자의 선호를 판단할 만한 신뢰성 있는 근거라는 것이다.",
+  "prompt_en": "Which one of the following, if true, most weakens the director's argument?",
+  "prompt_ko": "다음 중 참일 경우 관장의 논증을 가장 약화하는 것은?",
+  "options_en": [
+   "The survey had twice as many respondents as the library's previous largest survey.",
+   "A librarian with twenty years of experience also believes that most users would prefer an evening workshop.",
+   "An independent check confirmed that every respondent's stated preference was recorded correctly.",
+   "Users who visit only before noon constitute 70 percent of all users, and 80 percent of that group prefer the morning workshop.",
+   "One evening respondent reports that every library user in her household would choose the evening workshop."
+  ],
+  "options_ko": [
+   "이번 조사의 응답자 수는 종전 최대 규모 조사의 두 배였다.",
+   "20년 경력의 사서도 전체 이용자의 과반수가 저녁 강좌를 선호할 것이라고 생각한다.",
+   "독립적인 점검 결과, 모든 응답자의 선호가 정확하게 기록된 것으로 확인되었다.",
+   "오전에만 방문하는 이용자가 전체 이용자의 70%이며, 이들 중 80%는 오전 강좌를 선호한다.",
+   "저녁을 선택한 한 응답자는 도서관을 이용하는 자기 가족 모두가 저녁 강좌를 선택할 것이라고 말했다."
+  ],
+  "answer": 3,
+  "solution_en": "The fourth option establishes that at least 56 percent of all users prefer morning: 70 percent multiplied by 80 percent. Thus, a majority cannot prefer evening, contrary to the director's conclusion. It also identifies a large group excluded by the survey's timing. Increasing respondent numbers or recording answers accurately does not repair that exclusion. The librarian's opinion and the household report favor the director's conclusion rather than weaken it.",
+  "solution_ko": "④에 따르면 전체 이용자의 적어도 56%가 오전을 선호한다. 이는 70%에 80%를 곱한 값이므로, 전체 이용자의 과반수가 저녁을 선호한다는 관장의 결론과 양립할 수 없다. 또한 조사 시간 때문에 배제된 집단이 전체 이용자의 큰 비중을 차지한다는 점도 드러난다. 응답자 수를 늘리거나 응답을 정확히 기록하는 것만으로는 이러한 배제 문제가 해결되지 않는다. 사서의 의견과 한 가족의 사례는 관장의 결론과 같은 방향이므로 약화 근거가 아니다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated a larger sample as a reason to reject its result.",
+     "More respondents do not expose the missing users or contradict the conclusion.",
+     "Distinguish sample size from how respondents were selected."
+    ],
+    "lines_ko": [
+     "표본 규모가 크다는 사실을 결과의 반박 근거로 선택한 오류.",
+     "응답자 증가만으로 누락된 이용자 집단이나 결론의 오류가 드러나지는 않음.",
+     "표본의 크기와 표본의 선정 방식을 구별할 것."
+    ]
+   },
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You selected an experienced librarian's agreement as a challenge to the director.",
+     "That opinion favors the conclusion; it does not undermine it.",
+     "Check the direction of testimony before considering the speaker's experience."
+    ],
+    "lines_ko": [
+     "숙련된 사서의 동의를 관장에 대한 반박으로 선택한 오류.",
+     "해당 의견은 결론을 지지하는 방향이며 결론을 약화하지 않음.",
+     "발언자의 경력보다 증언이 향하는 방향을 먼저 확인할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated confirmation of accurate recording as evidence against the inference.",
+     "Accuracy supports the reported responses but does not establish population coverage.",
+     "Separate measurement accuracy from whether the sample represents the population."
+    ],
+    "lines_ko": [
+     "기록의 정확성 확인을 추론에 불리한 근거로 선택한 오류.",
+     "정확한 기록은 응답 내용의 신뢰성을 높일 뿐 모집단의 대표성을 보장하지 않음.",
+     "측정의 정확성과 표본의 대표성을 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "authority_anecdote",
+    "lines_en": [
+     "You used one household's evening preference to challenge an evening-preference conclusion.",
+     "The anecdote points in the same direction as the director's claim.",
+     "A narrow anecdote is not automatically counterevidence to a generalization."
+    ],
+    "lines_ko": [
+     "한 가족의 저녁 선호를 저녁 선호라는 결론의 반박으로 선택한 오류.",
+     "해당 사례는 관장의 주장과 같은 방향을 가리킴.",
+     "제한된 사례라는 이유만으로 일반화의 반례가 되는 것은 아님."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sample-5-02",
+  "track": "sample",
+  "level": 2,
+  "question_type": "strengthen",
+  "passage_en": "A shop sells reusable lunch containers and wants to assess whether their latches last two years. It surveyed 600 customers who were still using their containers two years after purchase, and 90 percent reported that the latches still closed securely. The manager concludes that most containers sold two years ago still have secure latches. She argues that 600 responses provide a sufficiently large basis for that conclusion.",
+  "passage_ko": "한 상점이 판매한 다회용 도시락통의 잠금장치가 2년 동안 제대로 작동하는지 알아보려 한다. 구매 후 2년이 지난 시점에도 도시락통을 사용 중인 고객 600명을 조사한 결과, 90%가 잠금장치가 여전히 단단히 잠긴다고 응답했다. 점장은 2년 전에 판매한 도시락통의 과반수가 지금도 제대로 잠긴다고 결론 내렸다. 응답자가 600명이므로 이러한 결론을 내리기에 표본이 충분히 크다는 것이다.",
+  "prompt_en": "Which one of the following, if true, most strengthens the manager's argument?",
+  "prompt_ko": "다음 중 참일 경우 점장의 논증을 가장 강화하는 것은?",
+  "options_en": [
+   "A separate random sample drawn from all containers sold two years ago found 82 percent with secure latches, counting every discarded container as a failure.",
+   "Most containers sold two years ago were discarded after their latches broke and have not been repaired.",
+   "Of all containers sold two years ago whose latches remain secure, 90 percent are still being used.",
+   "Among customers still using their containers, those with secure latches were much more likely to answer the survey.",
+   "Many respondents rated replacement containers received after the latches on their original containers broke."
+  ],
+  "options_ko": [
+   "2년 전에 판매한 도시락통 전체에서 별도로 무작위 표본을 뽑아 조사하자, 폐기된 제품을 모두 고장 난 것으로 처리하고도 82%의 잠금장치가 제대로 작동했다.",
+   "2년 전에 판매한 도시락통의 과반수는 잠금장치가 고장 나 폐기되었으며, 이후 수리되지 않았다.",
+   "2년 전에 판매한 도시락통 중 잠금장치가 여전히 제대로 작동하는 제품의 90%가 현재도 사용되고 있다.",
+   "도시락통을 계속 사용하는 고객 중에서도 잠금장치가 제대로 작동하는 제품을 가진 고객이 조사에 응답할 가능성이 훨씬 높았다.",
+   "많은 응답자가 원래 구매한 도시락통의 잠금장치가 고장 난 뒤 받은 교환 제품을 평가했다."
+  ],
+  "answer": 0,
+  "solution_en": "The first option samples the full sales group rather than only customers who continued using their containers. Even when discarded containers count as failures, its 82 percent result supports the claim that most original containers remain secure. The second option directly contradicts that claim, while the third reverses the relevant conditional proportion. The fourth reveals additional response bias favoring successful containers. The fifth substitutes replacement containers for the original products whose durability is at issue.",
+  "solution_ko": "①은 계속 사용하는 고객에게 한정하지 않고 해당 시기에 판매된 제품 전체에서 표본을 추출한 조사이다. 폐기된 제품을 모두 고장으로 처리해도 82%가 정상이라는 결과는 원래 판매된 제품의 과반수가 여전히 제대로 잠긴다는 주장을 뒷받침한다. ②는 그 주장에 정면으로 배치되며, ③은 필요한 비율과 조건의 방향이 반대이다. ④는 정상 제품을 가진 고객 쪽으로 응답이 편중되었음을 보여 준다. ⑤는 내구성을 판단해야 할 원래 제품 대신 교환 제품이 평가되었다는 문제를 드러낸다.",
+  "traps": [
+   null,
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You retained the survey's favorable percentage while overlooking failures outside its sample.",
+     "If most original containers failed and remain unrepaired, the manager's conclusion is false.",
+     "Count excluded failures when evaluating a claim about all products."
+    ],
+    "lines_ko": [
+     "표본 밖의 고장 제품을 놓친 채 조사의 높은 정상 비율만 유지한 오류.",
+     "원래 제품의 과반수가 고장 난 채 수리되지 않았다면 점장의 결론은 거짓.",
+     "전체 제품에 관한 주장을 평가할 때는 제외된 고장 제품도 포함할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You read the usage rate among secure containers as their share of all sales.",
+     "Most secure containers could remain in use even if very few containers remain secure.",
+     "Keep the conditioning group fixed when interpreting a percentage."
+    ],
+    "lines_ko": [
+     "정상 제품 중 사용 비율을 전체 판매 제품 중 정상 비율로 읽은 오류.",
+     "정상 제품이 극소수여도 그중 대부분은 계속 사용될 수 있음.",
+     "비율을 해석할 때 분모가 되는 집단을 고정할 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated selective responses from successful users as stronger evidence of general durability.",
+     "That selection can inflate the reported success rate even among continuing users.",
+     "Check who answers, not merely how many answers arrive."
+    ],
+    "lines_ko": [
+     "정상 제품 사용자에게 편중된 응답을 전체 내구성의 강화 근거로 선택한 오류.",
+     "이러한 편중은 계속 사용하는 고객 집단 안에서도 정상 비율을 부풀릴 수 있음.",
+     "응답 수뿐 아니라 어떤 사람이 응답했는지도 확인할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You counted working replacements as evidence that the original containers lasted.",
+     "A replacement's secure latch does not show that the original latch survived two years.",
+     "Track the same products throughout a durability comparison."
+    ],
+    "lines_ko": [
+     "교환 제품의 정상 작동을 원래 제품이 오래 버텼다는 근거로 간주한 오류.",
+     "교환 제품이 제대로 잠겨도 원래 잠금장치가 2년간 버텼다는 뜻은 아님.",
+     "내구성을 비교할 때는 처음부터 끝까지 동일한 제품을 추적할 것."
+    ]
+   }
+  ]
+ }
+]

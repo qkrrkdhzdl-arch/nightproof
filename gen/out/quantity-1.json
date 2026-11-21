@@ -1,0 +1,166 @@
+[
+ {
+  "id": "quantity-1-01",
+  "track": "quantity",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "At a community gym, a member may enter the practice room after six only if that member has booked a session for that time. Even with a booking, no member may enter after six unless the member also carries an access card. Some members who have booked sessions after six do not carry access cards. These rules apply to every member, and having both a booking and an access card does not by itself guarantee permission to enter.",
+  "passage_ko": "한 지역 체육관에서는 오후 6시 이후 연습실에 입장하려면 해당 시간대의 이용을 예약해야 한다. 예약한 회원이라도 출입 카드를 소지하지 않으면 오후 6시 이후에는 입장할 수 없다. 오후 6시 이후 이용을 예약한 회원 중에는 출입 카드를 소지하지 않은 회원이 일부 있다. 이 규칙은 모든 회원에게 적용되며, 예약을 하고 출입 카드를 소지했다는 사실만으로 입장이 보장되는 것은 아니다.",
+  "prompt_en": "Which one of the following must be true?",
+  "prompt_ko": "위 내용으로부터 반드시 참인 것은?",
+  "options_en": [
+   "Every member who has booked a session after six is permitted to enter at that time.",
+   "Every member who has booked a session after six lacks an access card.",
+   "Every member denied permission to enter after six lacks a booking for that time.",
+   "Some members who have booked sessions after six are not permitted to enter at that time.",
+   "No member without an access card is permitted to enter the practice room at any time."
+  ],
+  "options_ko": [
+   "오후 6시 이후 이용을 예약한 회원은 모두 해당 시간에 입장할 수 있다.",
+   "오후 6시 이후 이용을 예약한 회원은 모두 출입 카드를 소지하지 않는다.",
+   "오후 6시 이후 입장이 허용되지 않는 회원은 모두 해당 시간대의 예약이 없다.",
+   "오후 6시 이후 이용을 예약한 회원 중에는 해당 시간에 입장할 수 없는 회원이 일부 있다.",
+   "출입 카드를 소지하지 않은 회원은 어느 시간에도 연습실에 입장할 수 없다."
+  ],
+  "answer": 3,
+  "solution_en": "A booking is required for entry after six, but it is not enough. Carrying an access card is another requirement. Some members have bookings after six but lack access cards, so those members are not permitted to enter then. Thus, some booked members cannot enter, as the fourth option states. The passage does not extend its access-card requirement to earlier hours.",
+  "solution_ko": "오후 6시 이후 입장하려면 예약이 필요하지만, 예약만으로 충분하지는 않다. 출입 카드 소지도 필요한 조건이다. 해당 시간대의 예약은 있으나 출입 카드가 없는 회원이 일부 있으므로, 그 회원들은 해당 시간에 입장할 수 없다. 따라서 예약한 회원 중 입장할 수 없는 회원이 일부 있다는 네 번째 선택지가 반드시 참이다. 한편, 지문은 오후 6시 이전에도 출입 카드가 필요한지는 밝히지 않는다.",
+  "traps": [
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You treated a booking as enough for entry.",
+     "The rules require an access card as well.",
+     "Distinguish a necessary condition from a sufficient condition."
+    ],
+    "lines_ko": [
+     "예약을 입장의 충분조건으로 판단한 오류.",
+     "규칙상 출입 카드 소지도 필요한 조건.",
+     "필요조건과 충분조건의 구별."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You extended a statement about some booked members to all booked members.",
+     "The passage identifies only some booked members as lacking cards.",
+     "Keep the original quantifier when drawing a conclusion."
+    ],
+    "lines_ko": [
+     "예약한 일부 회원에 관한 진술을 전체 회원으로 확대한 오류.",
+     "카드가 없다고 명시된 대상은 예약한 회원 중 일부.",
+     "결론에서도 원래 수량 표현의 범위 유지."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You inferred a missing booking from denied entry.",
+     "Members with bookings can be denied entry because they lack cards.",
+     "Failure to obtain permission does not identify which requirement is missing."
+    ],
+    "lines_ko": [
+     "입장 불허로부터 예약이 없다고 추론한 오류.",
+     "예약이 있어도 카드가 없으면 입장 불가.",
+     "결과의 불성립만으로 특정 필요조건의 부재를 단정하지 말 것."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You applied the access-card rule to every hour.",
+     "The stated restriction concerns entry after six.",
+     "Keep time limits attached to the rules they qualify."
+    ],
+    "lines_ko": [
+     "출입 카드 규칙을 모든 시간대로 확대한 오류.",
+     "명시된 제한의 적용 범위는 오후 6시 이후.",
+     "규칙에 붙은 시간적 범위 유지."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "quantity-1-02",
+  "track": "quantity",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "An online second-hand marketplace publishes a monthly summary of buyer reviews. In April, 20 percent of all reviews gave the lowest rating, while in May, 10 percent did so. Each review was counted once, and the same rating scale was used in both months. The marketplace's manager concludes that May contained exactly half as many lowest-rated reviews as April, even though the summary does not report the total number of reviews in either month.",
+  "passage_ko": "한 온라인 중고 거래 사이트는 구매 후기의 월별 집계 자료를 공개한다. 4월에는 전체 후기의 20퍼센트가 최저 평점을 주었고, 5월에는 그 비율이 10퍼센트였다. 각 후기는 한 번씩만 집계되었으며, 두 달 모두 같은 평점 체계를 사용했다. 집계 자료에는 각 달의 전체 후기 수가 나와 있지 않지만, 사이트 관리자는 5월의 최저 평점 후기 수가 4월의 정확히 절반이라고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately describes the flaw in the manager's reasoning?",
+  "prompt_ko": "관리자의 추론에 나타난 오류를 가장 적절하게 지적한 것은?",
+  "options_en": [
+   "It treats a halved percentage as a halved count without establishing that the monthly totals were equal.",
+   "It generalizes from submitted reviews to the satisfaction of all buyers, including those who submitted none.",
+   "It concludes that the total number of reviews fell because the percentage giving the lowest rating fell.",
+   "It treats the passage of one month as the cause of the lower percentage of lowest-rated reviews.",
+   "It assumes that any decrease in the number of lowest-rated reviews must decrease their percentage of all reviews."
+  ],
+  "options_ko": [
+   "두 달의 전체 후기 수가 같은지 확인하지 않고, 비율이 절반이 된 것을 개수가 절반이 된 것으로 판단했다.",
+   "작성된 후기를 근거로 후기를 작성하지 않은 구매자까지 포함한 모든 구매자의 만족도를 일반화했다.",
+   "최저 평점 후기의 비율이 감소했다는 이유로 전체 후기 수가 감소했다고 결론 내렸다.",
+   "한 달이 지났다는 사실을 최저 평점 후기 비율이 낮아진 원인으로 판단했다.",
+   "최저 평점 후기 수가 줄어들면 전체 후기에서 차지하는 비율도 반드시 낮아진다고 전제했다."
+  ],
+  "answer": 0,
+  "solution_en": "The number of lowest-rated reviews equals the total number of reviews multiplied by their percentage. The percentage fell from 20 percent to 10 percent, but neither monthly total is given. For example, 100 reviews in April and 200 in May would yield 20 lowest-rated reviews in each month. The count would be halved only if the monthly totals were equal. The first option therefore identifies the unsupported step in the argument.",
+  "solution_ko": "최저 평점 후기 수는 전체 후기 수에 최저 평점 후기의 비율을 곱한 값이다. 그 비율은 20퍼센트에서 10퍼센트로 낮아졌지만, 각 달의 전체 후기 수는 제시되지 않았다. 예를 들어 전체 후기가 4월에 100개, 5월에 200개였다면 최저 평점 후기는 두 달 모두 20개이다. 최저 평점 후기 수가 정확히 절반이 되려면 두 달의 전체 후기 수가 같아야 한다. 따라서 첫 번째 선택지가 근거 없이 이루어진 추론을 정확히 지적한다.",
+  "traps": [
+   null,
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You read the conclusion as a claim about all buyers' satisfaction.",
+     "The manager concludes only something about the number of submitted reviews.",
+     "Identify the conclusion's population before diagnosing an overgeneralization."
+    ],
+    "lines_ko": [
+     "결론을 모든 구매자의 만족도에 관한 주장으로 읽은 오류.",
+     "관리자의 결론은 작성된 후기의 수에만 관한 주장.",
+     "일반화 오류를 판단하기 전에 결론의 대상 집단 확인."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You replaced the lowest-rated review count with the total review count.",
+     "The manager's conclusion concerns one rating category, not all reviews.",
+     "Separate a subgroup's size from the size of the whole group."
+    ],
+    "lines_ko": [
+     "최저 평점 후기 수를 전체 후기 수로 바꿔 읽은 오류.",
+     "관리자의 결론은 전체가 아닌 특정 평점 범주의 후기 수에 관한 주장.",
+     "부분 집단의 크기와 전체 집단의 크기 구별."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You interpreted a monthly comparison as a causal explanation.",
+     "The manager gives no explanation for why the percentage changed.",
+     "Do not attribute a causal claim to a purely numerical inference."
+    ],
+    "lines_ko": [
+     "월별 비교를 인과적 설명으로 해석한 오류.",
+     "관리자는 비율이 변한 원인에 관해 설명하지 않음.",
+     "수량에 관한 추론에 인과 주장을 덧붙이지 말 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You reversed the direction of the manager's inference.",
+     "The manager moves from a percentage change to a count change, not the reverse.",
+     "Match the alleged error to the argument's actual direction."
+    ],
+    "lines_ko": [
+     "관리자가 실제로 한 추론의 방향을 뒤집은 오류.",
+     "실제 추론은 개수 변화에서 비율 변화가 아니라 그 반대 방향.",
+     "지적한 오류와 실제 논증의 추론 방향을 대조할 것."
+    ]
+   }
+  ]
+ }
+]

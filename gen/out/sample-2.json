@@ -1,0 +1,166 @@
+[
+ {
+  "id": "sample-2-01",
+  "track": "sample",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "Three years ago, 4,000 people joined a gym. A manager recently surveyed the 900 people from that group who have kept their memberships continuously, and all 900 replied. Of these respondents, 82 percent said they were satisfied with the gym's services over the past three years. The manager concludes that about 82 percent of all 4,000 original members were satisfied with those services over that period.",
+  "passage_ko": "3년 전 한 헬스장에 4,000명이 가입했다. 관리자는 이들 중 지금까지 회원 자격을 계속 유지한 900명을 최근 설문 조사했고, 900명 모두 응답했다. 응답자의 82%는 지난 3년간 이용한 헬스장 서비스에 만족했다고 답했다. 관리자는 이를 근거로 당시 가입한 4,000명 전체에서도 약 82%가 그 기간에 이용한 서비스에 만족했을 것이라고 결론 내렸다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the manager's reasoning?",
+  "prompt_ko": "관리자의 추론에 나타난 오류를 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It treats the respondents' satisfaction as proof that keeping a membership causes satisfaction.",
+   "It surveys fewer than half of the original members, although a valid sample must include a majority.",
+   "It assumes that dissatisfaction is the only reason anyone ends a gym membership.",
+   "It generalises from members who stayed without establishing that their satisfaction represents that of members who left.",
+   "It assumes that most current gym members belong to the group that joined three years ago."
+  ],
+  "options_ko": [
+   "응답자들의 만족을 근거로 회원 자격을 유지하는 것이 만족을 유발한다고 단정한다.",
+   "타당한 표본은 모집단의 과반수를 포함해야 하는데도 최초 가입자의 절반 미만만 조사한다.",
+   "불만족만이 헬스장 회원 자격을 종료하는 이유라고 가정한다.",
+   "계속 남아 있는 회원들의 만족도가 탈퇴한 회원들의 만족도를 대표하는지 확인하지 않고 전체로 일반화한다.",
+   "현재 회원의 대부분이 3년 전 가입한 집단에 속한다고 가정한다."
+  ],
+  "answer": 3,
+  "solution_en": "The survey includes only original members who stayed, while the conclusion also covers those who left. Members who left could have been less satisfied, so the observed percentage need not represent the original group. Surveying 900 people and obtaining replies from all of them does not remove this selection problem. A valid sample need not contain a majority of its population. The manager neither makes a causal claim nor assumes that dissatisfaction is the sole reason for leaving. The proportion of current members who joined three years ago is not required for the inference.",
+  "solution_ko": "조사 대상은 최초 가입자 중 계속 남아 있는 회원뿐이지만, 결론의 대상에는 탈퇴한 회원도 포함된다. 탈퇴한 회원들의 만족도가 더 낮을 수 있으므로, 조사에서 나온 비율이 최초 가입자 전체를 대표한다고 볼 수 없다. 900명을 조사했고 전원이 응답했다는 사실도 이러한 표본 선정의 문제를 해소하지 못한다. 타당한 표본이 반드시 모집단의 과반수를 포함해야 하는 것은 아니다. 관리자는 인과관계를 주장하지도, 불만족이 유일한 탈퇴 이유라고 가정하지도 않는다. 현재 회원 중 3년 전 가입자의 비율 역시 이 추론에 필요한 조건이 아니다.",
+  "traps": [
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You read a satisfaction estimate as a claim about what causes satisfaction.",
+     "The manager estimates a percentage without explaining why members are satisfied.",
+     "Distinguish generalising a result from identifying its cause."
+    ],
+    "lines_ko": [
+     "만족도 추정을 만족의 원인에 관한 주장으로 읽음.",
+     "관리자는 만족의 이유가 아니라 만족한 사람의 비율을 추정함.",
+     "결과의 일반화와 원인의 규명을 구별할 것."
+    ]
+   },
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You made majority coverage a requirement for a valid sample.",
+     "Smaller samples can represent populations; selection is the problem here.",
+     "Check how people were selected, not whether most people were included."
+    ],
+    "lines_ko": [
+     "모집단 과반수의 포함을 타당한 표본의 필수 조건으로 삼음.",
+     "작은 표본도 대표성을 가질 수 있으며, 여기서는 선정 방식이 문제임.",
+     "포함된 인원의 비중보다 선정 방식을 확인할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You attributed an exclusive explanation of departures to the manager.",
+     "The manager gives no explanation of why anyone left.",
+     "Criticise the unsupported generalisation without inventing an additional premise."
+    ],
+    "lines_ko": [
+     "관리자가 탈퇴 이유를 하나로 한정했다고 해석함.",
+     "관리자는 사람들이 왜 탈퇴했는지 설명하지 않음.",
+     "새 전제를 덧붙이지 말고 근거 없는 일반화를 비판할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You shifted attention to the composition of the current membership.",
+     "The conclusion concerns original members, not all current members.",
+     "Keep the target population fixed when assessing a sample."
+    ],
+    "lines_ko": [
+     "판단 대상을 현재 회원의 구성으로 바꿈.",
+     "결론의 대상은 현재 회원 전체가 아니라 최초 가입자 전체임.",
+     "표본을 평가할 때 일반화의 대상 집단을 유지할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sample-2-02",
+  "track": "sample",
+  "level": 2,
+  "question_type": "must_be_true",
+  "passage_en": "A library has 1,000 members, classified by their usual visiting time into 200 evening members and 800 daytime members. It sends every member a survey asking whether the library should extend its evening hours. Exactly 100 members from each group return the survey; 80 evening respondents and 40 daytime respondents support the extension, while all other respondents oppose it. No information about the views of members who did not respond is available.",
+  "passage_ko": "한 도서관의 회원 1,000명은 주로 방문하는 시간대에 따라 야간 회원 200명과 주간 회원 800명으로 구분된다. 도서관은 야간 운영시간 연장에 찬성하는지 묻는 설문지를 모든 회원에게 보냈다. 두 집단에서 각각 정확히 100명이 응답했으며, 야간 응답자 80명과 주간 응답자 40명이 찬성하고 나머지 응답자는 모두 반대했다. 응답하지 않은 회원들의 의견에 대해서는 알려진 바가 없다.",
+  "prompt_en": "Which one of the following must be true on the information given?",
+  "prompt_ko": "위 정보로부터 반드시 참이라고 할 수 있는 것은?",
+  "options_en": [
+   "At least 60 percent of all library members support extending evening hours.",
+   "The survey response rate among evening members was four times that among daytime members.",
+   "More evening members than daytime members support extending evening hours.",
+   "Every member who did not return the survey opposes extending evening hours.",
+   "Supporting longer evening hours makes a member more likely to visit in the evening."
+  ],
+  "options_ko": [
+   "전체 도서관 회원의 적어도 60%는 야간 운영시간 연장에 찬성한다.",
+   "야간 회원의 설문 응답률은 주간 회원의 설문 응답률의 네 배이다.",
+   "야간 운영시간 연장에 찬성하는 회원 수는 주간 회원보다 야간 회원에서 더 많다.",
+   "설문에 응답하지 않은 회원은 모두 야간 운영시간 연장에 반대한다.",
+   "야간 운영시간 연장에 찬성하는 것은 회원이 야간에 방문할 가능성을 높인다."
+  ],
+  "answer": 1,
+  "solution_en": "The evening response rate is 100 out of 200, or 50 percent. The daytime response rate is 100 out of 800, or 12.5 percent, so the former is exactly four times the latter. Although 60 percent of respondents support the extension, the passage does not establish that percentage for all members. Unknown views among nonrespondents also prevent a comparison of the total numbers of supporters in the two groups or a conclusion that all nonrespondents oppose the extension. Finally, the survey provides no basis for claiming that support causes evening visits.",
+  "solution_ko": "야간 회원의 응답률은 200명 중 100명으로 50%이다. 주간 회원의 응답률은 800명 중 100명으로 12.5%이므로, 야간 회원의 응답률이 정확히 네 배이다. 응답자 중 찬성자의 비율은 60%이지만, 이 비율이 전체 회원에게도 적용된다는 근거는 없다. 무응답자의 의견을 모르므로 두 집단의 전체 찬성자 수를 비교하거나 무응답자가 모두 반대한다고 단정할 수도 없다. 또한 이 설문은 찬성 의견이 야간 방문을 유발한다는 인과관계의 근거를 제공하지 않는다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You applied the respondents' support percentage to all members.",
+     "The views of 800 nonrespondents remain unknown.",
+     "Keep a respondent percentage separate from a population percentage."
+    ],
+    "lines_ko": [
+     "응답자의 찬성 비율을 전체 회원에게 적용함.",
+     "무응답자 800명의 의견은 알려지지 않음.",
+     "응답자 비율과 모집단 비율을 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You extended the respondents' supporter counts to the full groups.",
+     "Unsurveyed views could reverse which group has more supporters.",
+     "Compare known counts without assuming the same ordering for unknown totals."
+    ],
+    "lines_ko": [
+     "응답자 사이의 찬성자 수 비교를 각 집단 전체로 확대함.",
+     "무응답자의 의견에 따라 전체 찬성자 수의 대소가 뒤바뀔 수 있음.",
+     "확인된 인원수의 대소를 미확인 전체 인원수에 적용하지 말 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You treated recorded support and opposition as the only possibilities for every member.",
+     "A supporter could simply have left the survey unanswered.",
+     "Distinguish not expressing support from expressing opposition."
+    ],
+    "lines_ko": [
+     "찬성 응답과 반대만이 모든 회원에게 가능한 경우라고 판단함.",
+     "찬성하는 회원도 설문에 응답하지 않았을 수 있음.",
+     "찬성을 표시하지 않은 것과 반대를 표시한 것을 구별할 것."
+    ]
+   },
+   {
+    "tag": "causal_confusion",
+    "lines_en": [
+     "You turned a difference in reported support into a causal claim.",
+     "The survey does not establish what causes members' visiting times.",
+     "Do not infer causal direction from a group comparison."
+    ],
+    "lines_ko": [
+     "집단별 찬성 비율의 차이를 인과관계로 해석함.",
+     "설문은 회원들의 방문 시간대를 결정하는 원인을 밝히지 않음.",
+     "집단 간 비교만으로 인과관계의 방향을 추론하지 말 것."
+    ]
+   }
+  ]
+ }
+]

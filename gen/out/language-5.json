@@ -1,0 +1,166 @@
+[
+ {
+  "id": "language-5-01",
+  "track": "language",
+  "level": 1,
+  "question_type": "flaw",
+  "passage_en": "A library advertises “free home delivery” to its members, explaining that it adds no delivery charge to a book loan. Joining the library requires an annual payment, and visitors cannot use home delivery until they join. A reviewer takes the advertisement to establish that home delivery is free for anyone who wants it. The reviewer concludes that a visitor who has never joined can obtain a first home delivery without paying the library anything.",
+  "passage_ko": "한 도서관은 회원에게 ‘무료 도서 배송’을 제공한다고 광고하면서, 도서를 빌릴 때 별도의 배송료를 부과하지 않는다는 뜻이라고 설명한다. 회원이 되려면 연회비를 내야 하며, 비회원은 가입하기 전까지 배송 서비스를 이용할 수 없다. 한 논평자는 이 광고를 근거로 배송을 원하는 사람은 누구나 무료로 서비스를 이용할 수 있다고 주장한다. 따라서 가입한 적이 없는 방문자도 도서관에 아무런 돈을 내지 않고 첫 배송을 받을 수 있다는 것이다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the reviewer's argument?",
+  "prompt_ko": "논평자의 논증에 나타난 결함을 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It mistakes the freedom to decline delivery for the absence of a delivery charge.",
+   "It shifts from no separate delivery charge to no payment being required to access delivery.",
+   "It treats payment of the membership fee as a guarantee that every requested book will be delivered.",
+   "It assumes that membership payments and delivery charges are the library's only possible sources of funding.",
+   "It generalizes from a sample of existing members' experiences to the expenses of all new visitors."
+  ],
+  "options_ko": [
+   "배송을 이용하지 않을 자유가 있다는 것을 배송료가 없다는 뜻으로 잘못 이해한다.",
+   "별도의 배송료가 없다는 의미를 배송 이용에 어떠한 지출도 필요하지 않다는 의미로 바꾼다.",
+   "회비를 내면 요청한 모든 도서가 반드시 배송된다고 간주한다.",
+   "회비와 배송료만이 도서관의 재원이 될 수 있다고 가정한다.",
+   "일부 기존 회원의 경험을 모든 신규 방문자가 부담할 비용에 일반화한다."
+  ],
+  "answer": 1,
+  "solution_en": "The advertisement defines “free” as the absence of a separate delivery charge. The reviewer instead uses “free” to mean that accessing delivery requires no payment at all. These meanings differ because joining requires an annual payment and joining is necessary for delivery. A visitor who has never joined must therefore pay before using the service. The argument fails by shifting the meaning of “free,” not by drawing on a sample or making claims about funding.",
+  "solution_ko": "광고에서 ‘무료’는 별도의 배송료가 없다는 뜻이다. 그러나 논평자는 이를 배송 서비스를 이용하기 위해 아무런 돈도 낼 필요가 없다는 뜻으로 사용한다. 배송을 이용하려면 회원이어야 하고 가입에는 연회비가 필요하므로, 두 의미는 다르다. 가입한 적이 없는 방문자는 배송을 이용하기 전에 비용을 지불해야 한다. 따라서 이 논증의 결함은 표본에 의존하거나 재원에 관해 가정한 데 있는 것이 아니라, ‘무료’의 의미를 바꾼 데 있다.",
+  "traps": [
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You read “free” as freedom to refuse the service.",
+     "Neither the advertisement nor the reviewer discusses whether delivery is optional.",
+     "Identify the meanings actually used, not every possible meaning of a word."
+    ],
+    "lines_ko": [
+     "‘무료’를 서비스 이용을 거절할 자유로 읽은 것.",
+     "광고도 논평자도 배송 이용의 선택 가능성을 논하지 않음.",
+     "단어의 가능한 모든 뜻이 아니라 실제 사용된 의미를 구별할 것."
+    ]
+   },
+   null,
+   {
+    "tag": "necessary_sufficient",
+    "lines_en": [
+     "You read the membership requirement as a guarantee of fulfillment.",
+     "The reviewer discusses payment, not whether every requested book will be delivered.",
+     "Keep access requirements separate from guarantees about particular requests."
+    ],
+    "lines_ko": [
+     "회원 자격이라는 필요조건을 배송 이행의 보장으로 읽은 것.",
+     "논평자의 주장은 비용에 관한 것이며 모든 신청 도서의 배송에 관한 것이 아님.",
+     "이용 자격과 개별 신청의 이행 보장을 구별할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You treated two mentioned payments as an exhaustive list of funding sources.",
+     "The argument makes no claim about how the library finances its operations.",
+     "Do not infer an exclusive choice merely because two possibilities appear."
+    ],
+    "lines_ko": [
+     "언급된 두 가지 비용을 가능한 재원의 전부로 간주한 것.",
+     "논증은 도서관의 운영 재원에 관해 주장하지 않음.",
+     "두 가능성이 언급되었다는 이유만으로 양자택일을 추론하지 말 것."
+    ]
+   },
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated the advertisement as a sample of members' experiences.",
+     "No members' experiences are presented as evidence.",
+     "Distinguish an advertised rule from observations about a sample."
+    ],
+    "lines_ko": [
+     "광고를 일부 회원의 경험을 모은 표본으로 간주한 것.",
+     "회원의 경험은 근거로 제시되지 않음.",
+     "광고에 명시된 이용 조건과 표본에 대한 관찰을 구별할 것."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "language-5-02",
+  "track": "language",
+  "level": 2,
+  "question_type": "flaw",
+  "passage_en": "A bus operator defines a “reliable route” as one on which more than half of completed trips arrive on time, with canceled trips excluded. Its monthly report examines every completed trip on a particular route and finds that the route meets this definition. A commuter notes that cancellations cannot change that classification under the operator's rule. The commuter therefore concludes that more than half of all trips scheduled on that route that month arrived on time.",
+  "passage_ko": "한 버스 회사는 운행을 마친 회차 중 절반 넘게 정시에 도착한 노선을 ‘믿을 만한 노선’으로 정의하며, 운행이 취소된 회차는 계산에서 제외한다. 월간 보고서는 특정 노선에서 그달 운행을 마친 모든 회차를 조사한 결과, 이 노선이 해당 정의를 충족한다고 밝혔다. 한 통근자는 회사의 기준에 따르면 운행 취소 여부는 이러한 분류를 바꿀 수 없다고 지적한다. 그러므로 그달 해당 노선에서 운행이 예정되어 있던 전체 회차 중 절반 넘게 정시에 도착했다고 결론짓는다.",
+  "prompt_en": "Which one of the following most accurately identifies the flaw in the commuter's argument?",
+  "prompt_ko": "통근자의 논증에 나타난 결함을 가장 정확하게 지적한 것은?",
+  "options_en": [
+   "It generalizes from a small sample of completed trips to every completed trip on the route.",
+   "It assumes that a trip must either arrive on time or be canceled, excluding completed trips that arrive late.",
+   "It assumes that cancellations cannot inconvenience passengers because they do not affect the route's classification.",
+   "It interprets the label “reliable route” as a guarantee that every completed trip arrives on time.",
+   "It transfers a majority claim about completed trips to all scheduled trips without accounting for canceled trips."
+  ],
+  "options_ko": [
+   "운행을 마친 일부 회차에 대한 조사 결과를 운행을 마친 모든 회차에 일반화한다.",
+   "운행 회차는 정시에 도착하거나 취소되는 경우뿐이라고 가정하여, 늦게 도착한 경우를 배제한다.",
+   "운행 취소가 노선의 분류에 영향을 주지 않는다는 이유로 승객에게 불편도 주지 않는다고 가정한다.",
+   "‘믿을 만한 노선’이라는 분류를 운행을 마친 모든 회차가 정시에 도착한다는 보장으로 해석한다.",
+   "취소된 회차를 고려하지 않은 채, 운행을 마친 회차의 과반수에 관한 판단을 예정된 전체 회차에 적용한다."
+  ],
+  "answer": 4,
+  "solution_en": "The report's majority claim concerns only trips that were completed. The commuter's conclusion concerns all scheduled trips, including those canceled. For example, six on-time trips out of ten completed trips meet the definition, even if twenty trips were scheduled. In that case, only six of twenty scheduled trips arrived on time, so the conclusion is false. Cancellations do not affect the operator's classification, but they do affect the proportion used in the conclusion.",
+  "solution_ko": "보고서가 과반수라고 판단한 범위는 운행을 마친 회차에 한정된다. 반면 통근자의 결론은 취소된 회차까지 포함한 전체 예정 회차를 대상으로 한다. 예를 들어 운행을 마친 10회 중 6회가 정시에 도착했다면, 예정된 운행이 20회였더라도 회사의 정의는 충족한다. 그러나 이 경우 예정된 20회 중 정시에 도착한 것은 6회뿐이므로 통근자의 결론은 거짓이다. 운행 취소는 회사의 분류에는 영향을 주지 않지만, 결론에서 사용하는 비율에는 영향을 준다.",
+  "traps": [
+   {
+    "tag": "hasty_generalization",
+    "lines_en": [
+     "You treated the report as a survey of only some completed trips.",
+     "The report explicitly examines every completed trip that month.",
+     "Check whether evidence is sampled before diagnosing an unrepresentative sample."
+    ],
+    "lines_ko": [
+     "보고서가 운행을 마친 일부 회차만 조사했다고 읽은 것.",
+     "보고서는 그달 운행을 마친 모든 회차를 조사했다고 명시함.",
+     "표본의 대표성을 문제 삼기 전에 일부만 조사했는지 확인할 것."
+    ]
+   },
+   {
+    "tag": "false_dilemma",
+    "lines_en": [
+     "You read the argument as allowing only on-time trips or cancellations.",
+     "A majority of completed trips can be on time while others arrive late.",
+     "Do not turn a majority claim into an exhaustive division of possibilities."
+    ],
+    "lines_ko": [
+     "정시 도착과 운행 취소만 가능하다는 논증으로 읽은 것.",
+     "운행을 마친 회차의 과반수가 정시에 도착해도 나머지는 늦게 도착할 수 있음.",
+     "과반수에 관한 진술을 가능한 경우의 완전한 양분으로 바꾸지 말 것."
+    ]
+   },
+   {
+    "tag": "scope_shift",
+    "lines_en": [
+     "You extended a claim about classification to a claim about passenger inconvenience.",
+     "The commuter makes no claim about passengers' experiences.",
+     "Keep the stated conclusion separate from broader judgments the label might suggest."
+    ],
+    "lines_ko": [
+     "분류에 관한 주장을 승객의 불편에 관한 주장으로 확대하여 읽은 것.",
+     "통근자는 승객의 경험에 관해 주장하지 않음.",
+     "명시된 결론과 해당 명칭이 연상시키는 더 넓은 평가를 구별할 것."
+    ]
+   },
+   {
+    "tag": "strawman_equivocation",
+    "lines_en": [
+     "You replaced the commuter's majority claim with a claim about every completed trip.",
+     "The conclusion says more than half, not all.",
+     "Preserve the argument's quantifier when identifying its flaw."
+    ],
+    "lines_ko": [
+     "통근자의 과반수 주장을 운행을 마친 모든 회차에 관한 주장으로 바꾼 것.",
+     "결론은 전부가 아니라 절반을 넘는다고 서술함.",
+     "결함을 판단할 때 논증에 사용된 수량 표현을 그대로 유지할 것."
+    ]
+   },
+   null
+  ]
+ }
+]

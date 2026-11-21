@@ -1,0 +1,2 @@
+gen/out/*.raw*.txt
+gen/out/*.prompt.txt
